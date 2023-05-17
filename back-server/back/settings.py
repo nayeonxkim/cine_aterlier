@@ -36,16 +36,18 @@ INSTALLED_APPS = [
     'articles',
     'rest_framework',
     'requests',
-    'mypackage',
     'corsheaders',
+    'django_seed',
+
+
     'rest_framework.authtoken',
     'dj_rest_auth',
 
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'dj_rest_auth.registration',
+    # 'django.contrib.sites',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'dj_rest_auth.registration',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -157,4 +159,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'accounts.User'
+# AUTH_USER_MODEL = 'accounts.User'
