@@ -1,0 +1,2522 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 181,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 182,
+    "fields": {
+        "tmdb_id": 640146,
+        "original_title": "Ant-Man and the Wasp: Quantumania",
+        "title": "앤트맨과 와스프: 퀀텀매니아",
+        "overview": "슈퍼히어로 파트너인 스캇 랭과 호프 반 다인, 호프의 부모 재닛 반 다인과 행크 핌, 그리고 스캇의 딸 캐시 랭까지 미지의 양자 영역 세계 속에 빠져버린 앤트맨 패밀리. 그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 캉을 만나며, 그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…",
+        "release_date": "2023-02-15",
+        "poster_path": "/sz6mTIDDQmR3DYgJudiTmoW2gR5.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 183,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 184,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 185,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 186,
+    "fields": {
+        "tmdb_id": 868759,
+        "original_title": "Ghosted",
+        "title": "고스팅",
+        "overview": "선량한 남자 콜은 수수께끼 같은 세이디에게 푹 빠지지만 곧 그녀가 비밀 요원이라는 충격적인 사실을 알게 된다. 두 번째 데이트 약속을 하기도 전에 콜과 세이디는 세상을 구하기 위한 국제적 모험에 휩쓸린다.",
+        "release_date": "2023-04-18",
+        "poster_path": "/zCsg0CgncQkLiAgk1zkmt15OhM8.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 187,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 188,
+    "fields": {
+        "tmdb_id": 76600,
+        "original_title": "Avatar: The Way of Water",
+        "title": "아바타: 물의 길",
+        "overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+        "release_date": "2022-12-14",
+        "poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 189,
+    "fields": {
+        "tmdb_id": 1102776,
+        "original_title": "AKA",
+        "title": "에이전트 A.K.A.",
+        "overview": "한 치도 흔들림이 없는 특수 작전 요원. 하지만 범죄 조직 침투 임무 중, 우연히 상관의 어린 아들과 가까워지면서 굳은 신념이 시험대에 오른다.",
+        "release_date": "2023-04-28",
+        "poster_path": "/zLQc0AF6yWkW6piLlFvjDU8FznN.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 190,
+    "fields": {
+        "tmdb_id": 677179,
+        "original_title": "Creed III",
+        "title": "크리드 3",
+        "overview": "록키의 후계자인 크리드는 월드 챔피언으로 권투계를 장악한 후 완벽한 삶을 살던 중 과거 친형제 같았던 데미안과 재회한다. 오랜 시간 감옥 생활을 마치고 나온 데미안은 그가 꿈꾸던 인생을 사는 크리드와 충돌하며 그의 모든 것을 빼앗으려 하고, 크리드는 이에 맞서 자신의 미래를 지키기 위한 일생일대의 대결을 준비하는데…",
+        "release_date": "2023-03-01",
+        "poster_path": "/56HGRCoEY2OmO1yZro77IvldDpE.jpg",
+        "genre_id": 18,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 191,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 192,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 193,
+    "fields": {
+        "tmdb_id": 785759,
+        "original_title": "Two Witches",
+        "title": "투 위치스",
+        "overview": "임신한 새라는 식당에서 사악한 눈빛으로 노려보는 늙은 마녀와 마주친다. 그 후 새라는 아기가 잡아 먹히는 끔찍한 환상과 악몽에 시달린다. 늙은 마녀는 남편의 친구 더스틴의 집으로 가는 새라를 뒤따른다. 새라는 남편 사이먼과 함께 더스틴과 멜리사 부부의 외딴집에 도착한다. 주술에 빠져 있는 멜리사는 새라를 위해 위자 보드로 영을 소환한다. 얼마 후 나쁜 기운을 없애는 양초의 촛불이 저절로 꺼지고 화장실 앞에서 넋을 잃고 서 있던 새라는 아무것도 기억하지 못한다. 어둠 속에서 늙은 마녀가 아기를 먹는 모습을 본 사이먼은 심장마비로 사망한다. 새라가 어딘가로 사라지고 더스틴과 멜리사가 혼란에 빠진 가운데 경찰은 사이먼의 죽음과 새라의 실종을 가정폭력 때문이라고 발표한다. 악마가 새라의 태아를 먹은 늙은 마녀에게 안식을 허락하는데...",
+        "release_date": "2023-03-02",
+        "poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 194,
+    "fields": {
+        "tmdb_id": 385687,
+        "original_title": "Fast X",
+        "title": "분노의 질주: 라이드 오어 다이",
+        "overview": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+        "release_date": "2023-05-17",
+        "poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 195,
+    "fields": {
+        "tmdb_id": 727340,
+        "original_title": "Hunt",
+        "title": "헌트",
+        "overview": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
+        "release_date": "2022-08-10",
+        "poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 196,
+    "fields": {
+        "tmdb_id": 948713,
+        "original_title": "The Last Kingdom: Seven Kings Must Die",
+        "title": "세븐 킹스 머스트 다이",
+        "overview": "에드워드 왕이 서거하자 뜻을 모으는 베반버그의 우트레드와 그의 동지들. 마침내 잉글랜드 통일이라는 꿈을 이루기 위해 분열된 왕국을 뒤흔들 모험에 뛰어든다.",
+        "release_date": "2023-04-14",
+        "poster_path": "/ddt9jdbkjjBh3ezUejJlY6Dho6l.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 197,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 198,
+    "fields": {
+        "tmdb_id": 420808,
+        "original_title": "Peter Pan & Wendy",
+        "title": "피터팬 & 웬디",
+        "overview": "어느 날, 모험을 꿈꾸는 소녀 ‘웬디’의 창문으로 우연히 찾아온 ‘피터팬’. 신비로운 요정의 도움으로 ‘웬디’는 밤하늘을 날아 새로운 친구들과 놀라운 모험이 가득한 마법의 땅 ‘네버랜드’에 도착하게 되는데… 오늘 밤 , 창문을 닫지 마세요! 당신에게도 피터팬이 찾아올지 모르니",
+        "release_date": "2023-04-20",
+        "poster_path": "/x5ex5Dk1jekuOHy7BBrX4jJ0csO.jpg",
+        "genre_id": 10751,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 199,
+    "fields": {
+        "tmdb_id": 315162,
+        "original_title": "Puss in Boots: The Last Wish",
+        "title": "장화신은 고양이: 끝내주는 모험",
+        "overview": "아홉 개의 목숨 중 단 하나의 목숨만 남은 장화신은 고양이.  마지막 남은 목숨을 지키기 위해 히어로의 삶 대신 반려묘의 삶을 선택한 그에게 찾아온 마지막 기회, 바로 소원을 들어주는 소원별이 있는 곳을 알려주는 지도!  잃어버린 목숨을 되찾고 다시 히어로가 되기를 꿈꾸는 장화신은 고양이는 뜻밖에 동료가 된 앙숙 파트너 '키티 말랑손', 그저 친구들과 함께라면 모든 게 행복한 강아지 '페로'와 함께 소원별을 찾기 위해 길을 떠난다.  그리고 소원별을 노리는 또 다른 빌런들과 마주치게 되는데…",
+        "release_date": "2022-12-07",
+        "poster_path": "/rKgvctIuPXyuqOzCQ16VGdnHxKx.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 200,
+    "fields": {
+        "tmdb_id": 283995,
+        "original_title": "Guardians of the Galaxy Vol. 2",
+        "title": "가디언즈 오브 갤럭시 Vol. 2",
+        "overview": "타노스에 맞서 은하계를 구하고 최고의 해결사로 등극한 스타로드 일행. 하지만 소버린 행성의 여사제 아이샤를 돕던 중 옛버릇을 고치지 못하고 행성의 배터리를 훔쳤다가 소버린 종족에 쫓기는 신세가 된다. 그 과정에서 피터의 아버지 에고가 그들을 돕는다. 아픈 엄마와 어린 자신을 버리고 떠난 아버지에 대한 원망이 컸던 피터는 에고의 행성에서 아버지의 능력을 확인하곤 그 힘에 이끌린다. 하지만 가모라는 에고의 행성에서 이상한 기운을 감지한다. 한편 반란군에 의해 위기에 처한 욘두는 로켓과 그루트의 도움으로 목숨을 구한다.",
+        "release_date": "2017-04-19",
+        "poster_path": "/uDuwGhQgffd5GQ695oUfy5oZGqP.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 201,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 202,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 203,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 204,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 205,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 206,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 207,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 208,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 209,
+    "fields": {
+        "tmdb_id": 493529,
+        "original_title": "Dungeons & Dragons: Honor Among Thieves",
+        "title": "던전 앤 드래곤 - 도적들의 명예",
+        "overview": "한때는 명예로운 기사였지만, 어떤 사건 이후 홀가, 사이먼, 포지와 함께 도적질을 하게 된 에드긴. 소피나의 제안으로 부활의 서판을 얻기 위해 코린의 성에 잠입하지만 포지와 소피나의 배신으로 실패하고 감옥에 갇힌다. 기발한 방법으로 탈옥에 성공한 에드긴과 홀가는 소중한 사람들과 다시 만나고, 부활의 서판도 되찾기 위해  자신만의 팀을 꾸리기 시작한다. 옛 동료인 소질 없는 소서러 사이먼과 새롭게 합류한 변신 천재 드루이드 도릭, 재미 빼고 다 가진 팔라딘 젠크까지 어딘가 2% 부족한 오합지졸로 가득한 이 팀, 과연 무사히 모험을 끝마칠 수 있을까?",
+        "release_date": "2023-03-23",
+        "poster_path": "/eg4vGqZo1BpjY3ZoCUAGk09Pq7T.jpg",
+        "genre_id": 12,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 210,
+    "fields": {
+        "tmdb_id": 876969,
+        "original_title": "Assassin Club",
+        "title": "어쎄신 클럽",
+        "overview": "오랫동안 킬러 생활을 하면서 무의미한 삶을 살던 모건은 소피를 만나면서부터 인간다운 인생을 꿈꾸기 시작한다. 그래서 고민 끝에 킬러 생활을 청산하려고 하지만, 자신도 모르는 사이에 자신이 누군가 설계한 킬러들의 RPG 게임에 합류했다는 사실을 깨닫는다. 플레이어는 총 7명. 처음에는 영문을 몰라 어리둥절해 하던 킬러들. 하지만 곧 전투본능을 되살려 돈과 목숨을 지키기 위해서 치열한 사투를 벌인다. 그렇게 죽고 죽이는 게임 끝에 마침내 단 두 명의 킬러만이 남는다. 바로 모건과 정체불명의 인물 포크! 포크는 게임 설계자를 찾아 제거하자고 하면서 모건에게 접근하는데... 과연 모건은 최후의 승리자가 되고 킬러들의 세계에서 벗어날 수 있을까?",
+        "release_date": "2023-02-24",
+        "poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 211,
+    "fields": {
+        "tmdb_id": 882569,
+        "original_title": "Guy Ritchie's The Covenant",
+        "title": "더 커버넌트",
+        "overview": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
+        "release_date": "2023-04-19",
+        "poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+        "genre_id": 10752,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 212,
+    "fields": {
+        "tmdb_id": 700391,
+        "original_title": "65",
+        "title": "65",
+        "overview": "우주 비행 중 행성과의 치명적인 충돌이 일어난 후, 조종사 밀스와 유일한 탑승 생존자 코아는 6,500만 년 전 공룡의 시대 지구에 불시착한다.  모든 것이 위험과 죽음과 맞닿아 있는 상황, 그들은 거대한 행성과의 충돌 전, 반드시 지구를 탈출해야만 한다!",
+        "release_date": "2023-03-02",
+        "poster_path": "/o9ItQpKVvhGcAcJFyIpFM7YYKuv.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 213,
+    "fields": {
+        "tmdb_id": 804150,
+        "original_title": "Cocaine Bear",
+        "title": "코카인 베어",
+        "overview": "1985년 마약 밀매업자의 비행기 추락 사고로 인해 비행기에 실려있던 코카인이 조지아주 채터후치 국유림에 떨어지고 코카인을 손에 넣기 위한 마약상들과 관광객들이 코카인을 먹은 흑곰에 의해 처참하게 죽임을 당한다는 내용의 실화를 바탕으로 한 영화",
+        "release_date": "2023-02-22",
+        "poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
+        "genre_id": 53,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 214,
+    "fields": {
+        "tmdb_id": 1008005,
+        "original_title": "La niña de la comunión",
+        "title": "La niña de la comunión",
+        "overview": "",
+        "release_date": "2023-02-10",
+        "poster_path": "/sGSzha9K65abyvzBwXXnSV2sHWV.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 215,
+    "fields": {
+        "tmdb_id": 842675,
+        "original_title": "The Wandering Earth 2",
+        "title": "유랑지구 2",
+        "overview": "태양계 소멸의 위기를 맞은 인류는 지구 표면에 거대한 엔진을 달아 궤도를 옮기는 ‘유랑지구 프로젝트’에 돌입한다. 하지만, 데이터베이스로 영생을 가지려는 ‘디지털 라이프’와 대립하게 되며 프로젝트는 난관에 부딪히게 되고, 그 과정 속 달과의 충돌이라는 예상치 못한 대재앙에 놓이게 되는데… 살아남기 위한 선택은 단 하나, 달을 파괴하라!",
+        "release_date": "2023-01-22",
+        "poster_path": "/pajq0n6FZivirCg1ifpe4zYKvsA.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 216,
+    "fields": {
+        "tmdb_id": 816904,
+        "original_title": "Momias",
+        "title": "머미즈",
+        "overview": "고대 세 명의 미라가 고고학자 카나비 경이 훔친 왕실 소유의 오래된 반지를 찾기 위해 런던으로 떠난 여정을 그린 애니메이션",
+        "release_date": "2023-01-05",
+        "poster_path": "/g5vkJAPj4XFlaOXZMYE97LZ7lns.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 217,
+    "fields": {
+        "tmdb_id": 980078,
+        "original_title": "Winnie the Pooh: Blood and Honey",
+        "title": "곰돌이 푸: 피와 꿀",
+        "overview": "어릴 적 친구로부터 버림받은 곰돌이 ‘푸’와 ‘피글렛’  참을 수 없는 분노와 배신감을 느끼며 잔혹한 복수를 시작한다.",
+        "release_date": "2023-01-27",
+        "poster_path": "/fcCbzcEbAEQ5gWzx7EX78qLEVFw.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 218,
+    "fields": {
+        "tmdb_id": 649609,
+        "original_title": "Renfield",
+        "title": "렌필드",
+        "overview": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+        "release_date": "2023-04-07",
+        "poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 219,
+    "fields": {
+        "tmdb_id": 964980,
+        "original_title": "Air",
+        "title": "에어",
+        "overview": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
+        "release_date": "2023-04-05",
+        "poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
+        "genre_id": 18,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 220,
+    "fields": {
+        "tmdb_id": 1118721,
+        "original_title": "Quiero Tu Vida",
+        "title": "Quiero Tu Vida",
+        "overview": "",
+        "release_date": "2023-05-03",
+        "poster_path": "/hk2kW6uwTEa8cxDeF1UPfIpEYkF.jpg",
+        "genre_id": 35,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 221,
+    "fields": {
+        "tmdb_id": 238,
+        "original_title": "The Godfather",
+        "title": "대부",
+        "overview": "시실리에서 이민온 뒤, 정치권까지 영향력을 미치는 거물로 자리잡은 돈 꼴레오네는 갖가지 고민을 호소하는 사람들의 문제를 해결해주며 대부라 불리운다. 한편 솔로소라는 인물은 꼴레오네가와 라이벌인 탓타리아 패밀리와 손잡고 새로운 마약 사업을 제안한다. 돈 꼴레오네가 마약 사업에 참여하지 않기로 하자, 돈 꼴레오네를 저격해 그는 중상을 입고 사경을 헤매게 된다. 그 뒤, 돈 꼴레오네의 아들 소니는 조직력을 총 동원해 다른 패밀리들과 피를 부르는 전쟁을 시작하는데... 가족의 사업과 상관없이 대학에 진학한 뒤 인텔리로 지내왔던 막내 아들 마이클은 아버지가 총격을 당한 뒤, 아버지를 구하기 위해 위험천만한 협상 자리에 나선다.",
+        "release_date": "1972-03-14",
+        "poster_path": "/cOwVs8eYA4G9ZQs7hIRSoiZr46Q.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 222,
+    "fields": {
+        "tmdb_id": 278,
+        "original_title": "The Shawshank Redemption",
+        "title": "쇼생크 탈출",
+        "overview": "촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 쓰레기들만 모인 그곳에서 그는 이루 말할 수 없는 억압과 짐승보다 못한 취급을 당한다. 그러던 어느 날, 간수의 세금을 면제받게 해 준 덕분에 그는 일약 교도소의 비공식 회계사로 일하게 된다. 그 와중에 교도소 소장은 죄수들을 이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데...",
+        "release_date": "1994-09-23",
+        "poster_path": "/oAt6OtpwYCdJI76AVtVKW1eorYx.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 223,
+    "fields": {
+        "tmdb_id": 772071,
+        "original_title": "Cuando Sea Joven",
+        "title": "Cuando Sea Joven",
+        "overview": "",
+        "release_date": "2022-09-14",
+        "poster_path": "/6gIJuFHh5Lj4dNaPG3TzIMl7L68.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 224,
+    "fields": {
+        "tmdb_id": 240,
+        "original_title": "The Godfather Part II",
+        "title": "대부 2",
+        "overview": "아버지의 장례식 도중에 맏아들 파올로가 총에 맞아 죽고, 비토(로버트 드니로)는 겨우 도망쳐 미국으로 건너온다. 대부로 성장한 후 비토는 다시 치치오를 찾아 복수를 한다. 새롭게 등장한 젊은 대부 마이클(알 파치노)은 본거지를 라스베가스로 옮기고 가족의 사업을 가능한 합법적인 것으로 바꾸려고 애쓴다. 그런 과중 중에 자신을 제거하려는 음모를 알게되고 그는 냉혹하고 신속하게 반대파들을 제거, 조직을 더욱 확대해 나간다. 이를 위해 마이클은 배신한 형마저 죽이고, 일 때문에 아내와 헤어지는 등 인간적으로는 계속 외로워져 가는데...",
+        "release_date": "1974-12-20",
+        "poster_path": "/cj9UsJEN5bNf6ZoF1BbKjKN81hc.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 225,
+    "fields": {
+        "tmdb_id": 19404,
+        "original_title": "Dilwale Dulhania Le Jayenge",
+        "title": "용감한 자가 신부를 데려가리",
+        "overview": "영국에서 유학중인 라즈(샤룩 칸)와 인도 처녀 심란(까졸).  심란은 부모님이 정해주신 약혼자가 있는데 약혼을 앞두고 친구들과 유럽 여행을 떠나게 된다.  여행 중 우연히 만남 샤룩과 까졸. 두 남녀의 연속된 우연과 좌충우돌 사랑 만들기.  그렇게 사랑하게 된 그들이지만 까졸은 약혼자가 있는 몸. 인도로 돌아가게 된다.  샤룩 또한 그녀를 못 잊어 인도로 뒤 따라 들어가지만 엄격한 까졸의 부모를 설득하기가 힘이 든다. 도망가자는 까졸의 제안을 거부하고 샤룩은 끝내 그녀의 부모님의 허락을 얻어 내기 위해 고군분투한다.",
+        "release_date": "1995-10-19",
+        "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 226,
+    "fields": {
+        "tmdb_id": 424,
+        "original_title": "Schindler's List",
+        "title": "쉰들러 리스트",
+        "overview": "2차 세계대전 당시 독일군이 점령한 폴란드. 시류에 맞춰 자신의 성공을 추구하는 기회주의자 쉰들러는 유태인이 경영하는 그릇 공장을 인수한다. 그는 공장을 인수하기 위해 나찌 당원이 되고 독일군에게 뇌물을 바치는 등 갖은 방법을 동원한다. 그러나 냉혹한 기회주의자였던 쉰들러는 유태인 회계사인 스턴과 친분을 맺으면서 냉혹한 유태인 학살에 대한 양심의 소리를 듣기 시작한다. 마침내 그는 강제 수용소로 끌려가 죽음을 맞게될 유태인들을 구해내기로 결심하고, 독일군 장교에게 빼내는 사람 숫자대로 뇌물을 주는 방법으로 유태인들을 구해내려는 계획을 세우는데...",
+        "release_date": "1993-12-15",
+        "poster_path": "/oyyUcGwLX7LTFS1pQbLrQpyzIyt.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 227,
+    "fields": {
+        "tmdb_id": 129,
+        "original_title": "Spirited Away",
+        "title": "센과 치히로의 행방불명",
+        "overview": "평범한 열 살 짜리 소녀 치히로 식구는 이사 가던 중 길을 잘못 들어 낡은 터널을 지나가게 된다. 터널 저편엔 폐허가 된 놀이공원이 있었고 그곳엔 이상한 기운이 흘렀다. 인기척 하나 없는 이 마을의 낯선 분위기에 불길한 기운을 느낀 치히로는 부모님에게 돌아가자고 조르지만 부모님은 호기심에 들떠 마을 곳곳을 돌아다니기 시작한다. 어느 음식점에 도착한 치히로의 부모님은 그 곳에 차려진 음식들을 보고 즐거워하며 허겁지겁 먹어대다가 돼지로 변해버린다. 겁에 질려 당황하는 치히로에게 낯선 소년 하쿠가 나타나 빨리 이곳을 나가라고 소리치는데...",
+        "release_date": "2001-07-20",
+        "poster_path": "/u1L4qxIu5sC2P082uMHYt7Ifvnj.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 228,
+    "fields": {
+        "tmdb_id": 389,
+        "original_title": "12 Angry Men",
+        "title": "12명의 성난 사람들",
+        "overview": "뉴욕시의 법정에 아버지를 칼로 찌른 한 소년의 살인혐의를 두고, 12인의 배심원들은 만장일치 합의를 통해 소년의 유무죄 여부를 가려줄 것을 요구받는다. 판사는 유죄일 경우 이 소년은 사형이 불가피하다는 것을 이들에게 미리 일러둔다.  배심원 방에 모인 이들은 투표를 통해 유무죄 여부를 가리기로 한다. 사람들이 전부 소년이 유죄로 판단하는 가운데, 오직 한 배심원만이 소년이 무죄라고 주장하는데...",
+        "release_date": "1957-04-10",
+        "poster_path": "/xzh6Rq9cKnE1M309PzC5S5QWF9S.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 229,
+    "fields": {
+        "tmdb_id": 372058,
+        "original_title": "Your name.",
+        "title": "너의 이름은.",
+        "overview": "시골에 사는 소녀 미츠하(가미시라이시 모네)는 어느 날 잠에서 깬 후 자신의 몸이 남자로 바뀐 걸 알게 된다. 같은 시간, 도쿄에 사는 소년 타키(가미키 류노스케) 역시 이 기이한 상황을 겪고 있다. 낯선 가족, 낯선 친구들, 낯선 풍경들... 서로에게 이어진 끈을 알게 된 둘은 둘만의 규칙을 정하고 점차 상황을 받아들이기 시작한다. 서로에게 남긴 메모를 확인하며  점점 친구가 되어가는 타키와 미츠하. 언제부턴가 더 이상 몸이 바뀌지 않자  자신들이 특별하게 이어져있었음을 깨달은  타키는 미츠하를 만나러 가는데...",
+        "release_date": "2016-08-26",
+        "poster_path": "/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 230,
+    "fields": {
+        "tmdb_id": 496243,
+        "original_title": "Parasite",
+        "title": "기생충",
+        "overview": "전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고  있는데.....",
+        "release_date": "2019-05-30",
+        "poster_path": "/jjHccoFjbqlfr4VGLVLT7yek0Xn.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 231,
+    "fields": {
+        "tmdb_id": 155,
+        "original_title": "The Dark Knight",
+        "title": "다크 나이트",
+        "overview": "범죄와 부정부패를 제거하여 고담시를 지키려는 배트맨. 그는 짐 고든 형사와 패기 넘치는 고담시 지방 검사 하비 덴트와 함께 도시를 범죄 조직으로부터 영원히 구원하고자 한다. 세 명의 의기투합으로 위기에 처한 악당들이 모인 자리에 보라색 양복을 입고 얼굴에 짙게 화장을 한 괴이한 존재가 나타나 배트맨을 죽이자는 사상 초유의 제안을 한다. 그는 바로 어떠한 룰도, 목적도 없는 사상 최악의 악당 미치광이 살인광대 조커. 배트맨을 죽이고 고담시를 끝장내버리기 위한 조커의 광기 어린 행각에 도시는 혼란에 빠지는데...",
+        "release_date": "2008-07-14",
+        "poster_path": "/f6dNinWX8rBM79JXKcShkfSh2oA.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 232,
+    "fields": {
+        "tmdb_id": 497,
+        "original_title": "The Green Mile",
+        "title": "그린 마일",
+        "overview": "미국 루이지애나의 콜드 마운틴 교도소. 폴은 사형수 감방의 간수장으로 일하고 있다. 그의 일은 사형수들을 감독하고, 그린 마일이라 불리는 초록색 복도를 거쳐 그들을 사형 집행장까지 안내하는 것. 폴은 그들이 죽음을 맞이하는 순간까지 평화롭게 지낼 수 있도록 최선을 다한다. 어느 날 존 커피라는 사형수가 이송되어 온다. 그는 쌍둥이 여자아이를 살해한 흉악범. 하지만 순진한 눈망울에 겁을 잔뜩 집어먹은 그의 모습에 폴은 당혹감을 느낀다. 게다가 그는 초자연적 능력으로 폴의 지병을 깨끗하게 치료해주기까지 한다. 존을 전기 의자로 데려가야 할 날이 다가오면서 폴은 그가 무죄라는 확신을 갖게 되는데...",
+        "release_date": "1999-12-10",
+        "poster_path": "/yuSpRhrTIJa5JN8oESrfD2bndp1.jpg",
+        "genre_id": 14,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 233,
+    "fields": {
+        "tmdb_id": 680,
+        "original_title": "Pulp Fiction",
+        "title": "펄프 픽션",
+        "overview": "펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 섥히면서 예상치 못한 인과관계가 만들어지는데...",
+        "release_date": "1994-09-10",
+        "poster_path": "/6lXRHGoEbnnBUKsuqpL9JxD4DzT.jpg",
+        "genre_id": 53,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 234,
+    "fields": {
+        "tmdb_id": 429,
+        "original_title": "The Good the Bad and the Ugly",
+        "title": "석양의 무법자",
+        "overview": "미국의 남북전쟁이 한창인 때, 블론디는 멕시코인 총잡이 투코와 함께 동업 중이다. 블론디는 현상범 투코를 잡아 현상금을 받고, 투코가 교수형을 당하는 순간 구해주는 역할. 한편 세텐자라 불리우는 범죄자는 엄청나 돈이 묻힌 비밀장소를 추적 중이다. 그런데, 투코와 실랑이를 벌이던 블론디는 돈이 묻힌 장소를 죽어가는 사람에게 듣게 되고, 결국 둘은 돈을 찾아 나서는데...",
+        "release_date": "1966-12-23",
+        "poster_path": "/s7qPuoj4liolAtmx9vcL6AyaZzR.jpg",
+        "genre_id": 37,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 235,
+    "fields": {
+        "tmdb_id": 13,
+        "original_title": "Forrest Gump",
+        "title": "포레스트 검프",
+        "overview": "불편한 다리, 남들보다 조금 떨어지는 지능을 가진 포레스트 검프는 헌신적인 어머니의 보살핌과 첫사랑 제니와의 만남으로 편견과 괴롭힘 속에서도 따뜻한 마음을 지니고 성장한다. 또래들의 괴롭힘을 피해 도망치던 포레스트는 누구보다 빠르게 달릴 수 있는 자신의 재능을 깨닫는다. 그의 재능을 알아 본 대학에서 그를 미식축구 선수로 발탁하고, 졸업 후에도 뛰어난 신체능력으로 군에 들어가 무공훈장을 수여받는 등 탄탄한 인생 가도에 오르게 된 포레스트. 하지만 어머니가 병에 걸려 죽음을 맞이하고, 첫사랑 제니 역시 그의 곁을 떠나가며 다시 한 번 인생의 전환점을 맞이하게 되는데...",
+        "release_date": "1994-06-23",
+        "poster_path": "/xdJxoq0dtkchOkUz5UVKuxn7a2V.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 236,
+    "fields": {
+        "tmdb_id": 122,
+        "original_title": "The Lord of the Rings: The Return of the King",
+        "title": "반지의 제왕: 왕의 귀환",
+        "overview": "사우론이 인간들의 마지막 요새인 곤도르를 향해 야욕을 드러내고 있는 한편, 아라곤은 쇠락해가고 있는 곤도르의 재건을 위해 왕위 계승을 신중하게 결정지어야만 하는 상황. 이제 중간대륙의 미래는 그의 어깨에 달려있는 것. 사우론이 이끄는 어둠의 군대와의 마지막 전투를 위해 간달프는 곤도르에 흩어져 있던 병사들을 모으고, 로한의 왕 세오덴에게 도움을 받기도 하지만 사우론의 군대에 비하면 열세를 면치 못한다. 그러나 그들은 중간대륙을 사우론의 야욕으로부터 지키려는 사명감과, 마지막 반지 운반자에게 임무를 끝낼 기회를 주기 위해 어둠의 군대를 향해 돌진하게 되는데...",
+        "release_date": "2003-12-01",
+        "poster_path": "/tAXXuEAKLk2mOEIJzwajJQEnVZu.jpg",
+        "genre_id": 12,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 237,
+    "fields": {
+        "tmdb_id": 372754,
+        "original_title": "classmate",
+        "title": "동급생",
+        "overview": "밴드 활동을 하며 여자에게도 인기가 많은 쿠사카베 히카루.  고교 입시에서 만점을 받은 인재 사죠 리히토. 도무지 접점이 없어 보이는 두 남학생은 합창 대회 연습을 계기로 친해진다. 음을 느끼고 목소리에 귀를 기울이고 화음을 만들어가며 둘의 마음은 공명하기 시작하는데… 느긋하게 고조되다 뜻밖의 순간에 터져버리는 사랑의 감정. 순수하고 솔직한 쿠사카베 히카루와 그를 밀어내면서도 조금씩 마음을 열어가는 사죠 리히토.  청춘의 풋풋함 속에서 고민하고, 망설이며 앞으로 나아가고자 하는 그들이 깨달은 마음이란…",
+        "release_date": "2016-02-20",
+        "poster_path": "/jNJ9shLhjRavjrCGRnoTmYB18d2.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 238,
+    "fields": {
+        "tmdb_id": 769,
+        "original_title": "GoodFellas",
+        "title": "좋은 친구들",
+        "overview": "아일랜드계 이탈리아인 헨리 힐와 토미는 13살에 마피아에 입문해 지미와 함께 트럭이나 공항 화물을 훔치는 일을 한다. 결혼 후에도 마피아 생활을 계속하는 헨리는 이제 조직에서도 안정된 위치와 경제적 여유를 갖는다.  어느 날 헨리와 지미는 공항터미널 사건을 모의해 현금 6백만 달러라는 엄청한 돈을 훔친다. 이 사건을 은폐하기 위해 혈안이 된 지미는 모의에 참여했던 사람들을 죽이고, 토미는 마피아 조직에 가담했다가 살해당한다. 엎친데 덮친격으로 헨리마저 마약거래로 경찰서에 잡혀 들어가는데...",
+        "release_date": "1990-09-12",
+        "poster_path": "/zF9hSBS1t7PVFLo01GrJ3OjGi67.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 239,
+    "fields": {
+        "tmdb_id": 704264,
+        "original_title": "Primal: Tales of Savagery",
+        "title": "Primal: Tales of Savagery",
+        "overview": "",
+        "release_date": "2019-11-21",
+        "poster_path": "/9NBBkdxH0TjQEBSN2AzeE1sgsF9.jpg",
+        "genre_id": 28,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 240,
+    "fields": {
+        "tmdb_id": 995133,
+        "original_title": "The Boy, the Mole, the Fox and the Horse",
+        "title": "소년과 두더지와 여우와 말",
+        "overview": "논모어와 배드 로봇 프로덕션을 만나 아름다운 애니메이션으로 재탄생한 찰리 맥커시의 베스트셀러. 친절과 용기, 희망의 의미를 찾아가는 네 친구들의 낯설지만 깊은 유대를 만나보세요.",
+        "release_date": "2022-12-25",
+        "poster_path": "/oQRgyQCzcyZvE6w5heM9ktVY0LT.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 241,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 242,
+    "fields": {
+        "tmdb_id": 640146,
+        "original_title": "Ant-Man and the Wasp: Quantumania",
+        "title": "앤트맨과 와스프: 퀀텀매니아",
+        "overview": "슈퍼히어로 파트너인 스캇 랭과 호프 반 다인, 호프의 부모 재닛 반 다인과 행크 핌, 그리고 스캇의 딸 캐시 랭까지 미지의 양자 영역 세계 속에 빠져버린 앤트맨 패밀리. 그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 캉을 만나며, 그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…",
+        "release_date": "2023-02-15",
+        "poster_path": "/sz6mTIDDQmR3DYgJudiTmoW2gR5.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 243,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 244,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 245,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 246,
+    "fields": {
+        "tmdb_id": 868759,
+        "original_title": "Ghosted",
+        "title": "고스팅",
+        "overview": "선량한 남자 콜은 수수께끼 같은 세이디에게 푹 빠지지만 곧 그녀가 비밀 요원이라는 충격적인 사실을 알게 된다. 두 번째 데이트 약속을 하기도 전에 콜과 세이디는 세상을 구하기 위한 국제적 모험에 휩쓸린다.",
+        "release_date": "2023-04-18",
+        "poster_path": "/zCsg0CgncQkLiAgk1zkmt15OhM8.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 247,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 248,
+    "fields": {
+        "tmdb_id": 76600,
+        "original_title": "Avatar: The Way of Water",
+        "title": "아바타: 물의 길",
+        "overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+        "release_date": "2022-12-14",
+        "poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 249,
+    "fields": {
+        "tmdb_id": 1102776,
+        "original_title": "AKA",
+        "title": "에이전트 A.K.A.",
+        "overview": "한 치도 흔들림이 없는 특수 작전 요원. 하지만 범죄 조직 침투 임무 중, 우연히 상관의 어린 아들과 가까워지면서 굳은 신념이 시험대에 오른다.",
+        "release_date": "2023-04-28",
+        "poster_path": "/zLQc0AF6yWkW6piLlFvjDU8FznN.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 250,
+    "fields": {
+        "tmdb_id": 677179,
+        "original_title": "Creed III",
+        "title": "크리드 3",
+        "overview": "록키의 후계자인 크리드는 월드 챔피언으로 권투계를 장악한 후 완벽한 삶을 살던 중 과거 친형제 같았던 데미안과 재회한다. 오랜 시간 감옥 생활을 마치고 나온 데미안은 그가 꿈꾸던 인생을 사는 크리드와 충돌하며 그의 모든 것을 빼앗으려 하고, 크리드는 이에 맞서 자신의 미래를 지키기 위한 일생일대의 대결을 준비하는데…",
+        "release_date": "2023-03-01",
+        "poster_path": "/56HGRCoEY2OmO1yZro77IvldDpE.jpg",
+        "genre_id": 18,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 251,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 252,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 253,
+    "fields": {
+        "tmdb_id": 785759,
+        "original_title": "Two Witches",
+        "title": "투 위치스",
+        "overview": "임신한 새라는 식당에서 사악한 눈빛으로 노려보는 늙은 마녀와 마주친다. 그 후 새라는 아기가 잡아 먹히는 끔찍한 환상과 악몽에 시달린다. 늙은 마녀는 남편의 친구 더스틴의 집으로 가는 새라를 뒤따른다. 새라는 남편 사이먼과 함께 더스틴과 멜리사 부부의 외딴집에 도착한다. 주술에 빠져 있는 멜리사는 새라를 위해 위자 보드로 영을 소환한다. 얼마 후 나쁜 기운을 없애는 양초의 촛불이 저절로 꺼지고 화장실 앞에서 넋을 잃고 서 있던 새라는 아무것도 기억하지 못한다. 어둠 속에서 늙은 마녀가 아기를 먹는 모습을 본 사이먼은 심장마비로 사망한다. 새라가 어딘가로 사라지고 더스틴과 멜리사가 혼란에 빠진 가운데 경찰은 사이먼의 죽음과 새라의 실종을 가정폭력 때문이라고 발표한다. 악마가 새라의 태아를 먹은 늙은 마녀에게 안식을 허락하는데...",
+        "release_date": "2023-03-02",
+        "poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 254,
+    "fields": {
+        "tmdb_id": 385687,
+        "original_title": "Fast X",
+        "title": "분노의 질주: 라이드 오어 다이",
+        "overview": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+        "release_date": "2023-05-17",
+        "poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 255,
+    "fields": {
+        "tmdb_id": 727340,
+        "original_title": "Hunt",
+        "title": "헌트",
+        "overview": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
+        "release_date": "2022-08-10",
+        "poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 256,
+    "fields": {
+        "tmdb_id": 948713,
+        "original_title": "The Last Kingdom: Seven Kings Must Die",
+        "title": "세븐 킹스 머스트 다이",
+        "overview": "에드워드 왕이 서거하자 뜻을 모으는 베반버그의 우트레드와 그의 동지들. 마침내 잉글랜드 통일이라는 꿈을 이루기 위해 분열된 왕국을 뒤흔들 모험에 뛰어든다.",
+        "release_date": "2023-04-14",
+        "poster_path": "/ddt9jdbkjjBh3ezUejJlY6Dho6l.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 257,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 258,
+    "fields": {
+        "tmdb_id": 420808,
+        "original_title": "Peter Pan & Wendy",
+        "title": "피터팬 & 웬디",
+        "overview": "어느 날, 모험을 꿈꾸는 소녀 ‘웬디’의 창문으로 우연히 찾아온 ‘피터팬’. 신비로운 요정의 도움으로 ‘웬디’는 밤하늘을 날아 새로운 친구들과 놀라운 모험이 가득한 마법의 땅 ‘네버랜드’에 도착하게 되는데… 오늘 밤 , 창문을 닫지 마세요! 당신에게도 피터팬이 찾아올지 모르니",
+        "release_date": "2023-04-20",
+        "poster_path": "/x5ex5Dk1jekuOHy7BBrX4jJ0csO.jpg",
+        "genre_id": 10751,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 259,
+    "fields": {
+        "tmdb_id": 315162,
+        "original_title": "Puss in Boots: The Last Wish",
+        "title": "장화신은 고양이: 끝내주는 모험",
+        "overview": "아홉 개의 목숨 중 단 하나의 목숨만 남은 장화신은 고양이.  마지막 남은 목숨을 지키기 위해 히어로의 삶 대신 반려묘의 삶을 선택한 그에게 찾아온 마지막 기회, 바로 소원을 들어주는 소원별이 있는 곳을 알려주는 지도!  잃어버린 목숨을 되찾고 다시 히어로가 되기를 꿈꾸는 장화신은 고양이는 뜻밖에 동료가 된 앙숙 파트너 '키티 말랑손', 그저 친구들과 함께라면 모든 게 행복한 강아지 '페로'와 함께 소원별을 찾기 위해 길을 떠난다.  그리고 소원별을 노리는 또 다른 빌런들과 마주치게 되는데…",
+        "release_date": "2022-12-07",
+        "poster_path": "/rKgvctIuPXyuqOzCQ16VGdnHxKx.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 260,
+    "fields": {
+        "tmdb_id": 283995,
+        "original_title": "Guardians of the Galaxy Vol. 2",
+        "title": "가디언즈 오브 갤럭시 Vol. 2",
+        "overview": "타노스에 맞서 은하계를 구하고 최고의 해결사로 등극한 스타로드 일행. 하지만 소버린 행성의 여사제 아이샤를 돕던 중 옛버릇을 고치지 못하고 행성의 배터리를 훔쳤다가 소버린 종족에 쫓기는 신세가 된다. 그 과정에서 피터의 아버지 에고가 그들을 돕는다. 아픈 엄마와 어린 자신을 버리고 떠난 아버지에 대한 원망이 컸던 피터는 에고의 행성에서 아버지의 능력을 확인하곤 그 힘에 이끌린다. 하지만 가모라는 에고의 행성에서 이상한 기운을 감지한다. 한편 반란군에 의해 위기에 처한 욘두는 로켓과 그루트의 도움으로 목숨을 구한다.",
+        "release_date": "2017-04-19",
+        "poster_path": "/uDuwGhQgffd5GQ695oUfy5oZGqP.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 261,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 262,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 263,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 264,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 265,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 266,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 267,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 268,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 269,
+    "fields": {
+        "tmdb_id": 493529,
+        "original_title": "Dungeons & Dragons: Honor Among Thieves",
+        "title": "던전 앤 드래곤 - 도적들의 명예",
+        "overview": "한때는 명예로운 기사였지만, 어떤 사건 이후 홀가, 사이먼, 포지와 함께 도적질을 하게 된 에드긴. 소피나의 제안으로 부활의 서판을 얻기 위해 코린의 성에 잠입하지만 포지와 소피나의 배신으로 실패하고 감옥에 갇힌다. 기발한 방법으로 탈옥에 성공한 에드긴과 홀가는 소중한 사람들과 다시 만나고, 부활의 서판도 되찾기 위해  자신만의 팀을 꾸리기 시작한다. 옛 동료인 소질 없는 소서러 사이먼과 새롭게 합류한 변신 천재 드루이드 도릭, 재미 빼고 다 가진 팔라딘 젠크까지 어딘가 2% 부족한 오합지졸로 가득한 이 팀, 과연 무사히 모험을 끝마칠 수 있을까?",
+        "release_date": "2023-03-23",
+        "poster_path": "/eg4vGqZo1BpjY3ZoCUAGk09Pq7T.jpg",
+        "genre_id": 12,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 270,
+    "fields": {
+        "tmdb_id": 876969,
+        "original_title": "Assassin Club",
+        "title": "어쎄신 클럽",
+        "overview": "오랫동안 킬러 생활을 하면서 무의미한 삶을 살던 모건은 소피를 만나면서부터 인간다운 인생을 꿈꾸기 시작한다. 그래서 고민 끝에 킬러 생활을 청산하려고 하지만, 자신도 모르는 사이에 자신이 누군가 설계한 킬러들의 RPG 게임에 합류했다는 사실을 깨닫는다. 플레이어는 총 7명. 처음에는 영문을 몰라 어리둥절해 하던 킬러들. 하지만 곧 전투본능을 되살려 돈과 목숨을 지키기 위해서 치열한 사투를 벌인다. 그렇게 죽고 죽이는 게임 끝에 마침내 단 두 명의 킬러만이 남는다. 바로 모건과 정체불명의 인물 포크! 포크는 게임 설계자를 찾아 제거하자고 하면서 모건에게 접근하는데... 과연 모건은 최후의 승리자가 되고 킬러들의 세계에서 벗어날 수 있을까?",
+        "release_date": "2023-02-24",
+        "poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 271,
+    "fields": {
+        "tmdb_id": 882569,
+        "original_title": "Guy Ritchie's The Covenant",
+        "title": "더 커버넌트",
+        "overview": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
+        "release_date": "2023-04-19",
+        "poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+        "genre_id": 10752,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 272,
+    "fields": {
+        "tmdb_id": 700391,
+        "original_title": "65",
+        "title": "65",
+        "overview": "우주 비행 중 행성과의 치명적인 충돌이 일어난 후, 조종사 밀스와 유일한 탑승 생존자 코아는 6,500만 년 전 공룡의 시대 지구에 불시착한다.  모든 것이 위험과 죽음과 맞닿아 있는 상황, 그들은 거대한 행성과의 충돌 전, 반드시 지구를 탈출해야만 한다!",
+        "release_date": "2023-03-02",
+        "poster_path": "/o9ItQpKVvhGcAcJFyIpFM7YYKuv.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 273,
+    "fields": {
+        "tmdb_id": 804150,
+        "original_title": "Cocaine Bear",
+        "title": "코카인 베어",
+        "overview": "1985년 마약 밀매업자의 비행기 추락 사고로 인해 비행기에 실려있던 코카인이 조지아주 채터후치 국유림에 떨어지고 코카인을 손에 넣기 위한 마약상들과 관광객들이 코카인을 먹은 흑곰에 의해 처참하게 죽임을 당한다는 내용의 실화를 바탕으로 한 영화",
+        "release_date": "2023-02-22",
+        "poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
+        "genre_id": 53,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 274,
+    "fields": {
+        "tmdb_id": 1008005,
+        "original_title": "La niña de la comunión",
+        "title": "La niña de la comunión",
+        "overview": "",
+        "release_date": "2023-02-10",
+        "poster_path": "/sGSzha9K65abyvzBwXXnSV2sHWV.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 275,
+    "fields": {
+        "tmdb_id": 842675,
+        "original_title": "The Wandering Earth 2",
+        "title": "유랑지구 2",
+        "overview": "태양계 소멸의 위기를 맞은 인류는 지구 표면에 거대한 엔진을 달아 궤도를 옮기는 ‘유랑지구 프로젝트’에 돌입한다. 하지만, 데이터베이스로 영생을 가지려는 ‘디지털 라이프’와 대립하게 되며 프로젝트는 난관에 부딪히게 되고, 그 과정 속 달과의 충돌이라는 예상치 못한 대재앙에 놓이게 되는데… 살아남기 위한 선택은 단 하나, 달을 파괴하라!",
+        "release_date": "2023-01-22",
+        "poster_path": "/pajq0n6FZivirCg1ifpe4zYKvsA.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 276,
+    "fields": {
+        "tmdb_id": 816904,
+        "original_title": "Momias",
+        "title": "머미즈",
+        "overview": "고대 세 명의 미라가 고고학자 카나비 경이 훔친 왕실 소유의 오래된 반지를 찾기 위해 런던으로 떠난 여정을 그린 애니메이션",
+        "release_date": "2023-01-05",
+        "poster_path": "/g5vkJAPj4XFlaOXZMYE97LZ7lns.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 277,
+    "fields": {
+        "tmdb_id": 980078,
+        "original_title": "Winnie the Pooh: Blood and Honey",
+        "title": "곰돌이 푸: 피와 꿀",
+        "overview": "어릴 적 친구로부터 버림받은 곰돌이 ‘푸’와 ‘피글렛’  참을 수 없는 분노와 배신감을 느끼며 잔혹한 복수를 시작한다.",
+        "release_date": "2023-01-27",
+        "poster_path": "/fcCbzcEbAEQ5gWzx7EX78qLEVFw.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 278,
+    "fields": {
+        "tmdb_id": 649609,
+        "original_title": "Renfield",
+        "title": "렌필드",
+        "overview": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+        "release_date": "2023-04-07",
+        "poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 279,
+    "fields": {
+        "tmdb_id": 964980,
+        "original_title": "Air",
+        "title": "에어",
+        "overview": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
+        "release_date": "2023-04-05",
+        "poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
+        "genre_id": 18,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 280,
+    "fields": {
+        "tmdb_id": 1118721,
+        "original_title": "Quiero Tu Vida",
+        "title": "Quiero Tu Vida",
+        "overview": "",
+        "release_date": "2023-05-03",
+        "poster_path": "/hk2kW6uwTEa8cxDeF1UPfIpEYkF.jpg",
+        "genre_id": 35,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 281,
+    "fields": {
+        "tmdb_id": 238,
+        "original_title": "The Godfather",
+        "title": "대부",
+        "overview": "시실리에서 이민온 뒤, 정치권까지 영향력을 미치는 거물로 자리잡은 돈 꼴레오네는 갖가지 고민을 호소하는 사람들의 문제를 해결해주며 대부라 불리운다. 한편 솔로소라는 인물은 꼴레오네가와 라이벌인 탓타리아 패밀리와 손잡고 새로운 마약 사업을 제안한다. 돈 꼴레오네가 마약 사업에 참여하지 않기로 하자, 돈 꼴레오네를 저격해 그는 중상을 입고 사경을 헤매게 된다. 그 뒤, 돈 꼴레오네의 아들 소니는 조직력을 총 동원해 다른 패밀리들과 피를 부르는 전쟁을 시작하는데... 가족의 사업과 상관없이 대학에 진학한 뒤 인텔리로 지내왔던 막내 아들 마이클은 아버지가 총격을 당한 뒤, 아버지를 구하기 위해 위험천만한 협상 자리에 나선다.",
+        "release_date": "1972-03-14",
+        "poster_path": "/cOwVs8eYA4G9ZQs7hIRSoiZr46Q.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 282,
+    "fields": {
+        "tmdb_id": 278,
+        "original_title": "The Shawshank Redemption",
+        "title": "쇼생크 탈출",
+        "overview": "촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 쓰레기들만 모인 그곳에서 그는 이루 말할 수 없는 억압과 짐승보다 못한 취급을 당한다. 그러던 어느 날, 간수의 세금을 면제받게 해 준 덕분에 그는 일약 교도소의 비공식 회계사로 일하게 된다. 그 와중에 교도소 소장은 죄수들을 이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데...",
+        "release_date": "1994-09-23",
+        "poster_path": "/oAt6OtpwYCdJI76AVtVKW1eorYx.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 283,
+    "fields": {
+        "tmdb_id": 772071,
+        "original_title": "Cuando Sea Joven",
+        "title": "Cuando Sea Joven",
+        "overview": "",
+        "release_date": "2022-09-14",
+        "poster_path": "/6gIJuFHh5Lj4dNaPG3TzIMl7L68.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 284,
+    "fields": {
+        "tmdb_id": 240,
+        "original_title": "The Godfather Part II",
+        "title": "대부 2",
+        "overview": "아버지의 장례식 도중에 맏아들 파올로가 총에 맞아 죽고, 비토(로버트 드니로)는 겨우 도망쳐 미국으로 건너온다. 대부로 성장한 후 비토는 다시 치치오를 찾아 복수를 한다. 새롭게 등장한 젊은 대부 마이클(알 파치노)은 본거지를 라스베가스로 옮기고 가족의 사업을 가능한 합법적인 것으로 바꾸려고 애쓴다. 그런 과중 중에 자신을 제거하려는 음모를 알게되고 그는 냉혹하고 신속하게 반대파들을 제거, 조직을 더욱 확대해 나간다. 이를 위해 마이클은 배신한 형마저 죽이고, 일 때문에 아내와 헤어지는 등 인간적으로는 계속 외로워져 가는데...",
+        "release_date": "1974-12-20",
+        "poster_path": "/cj9UsJEN5bNf6ZoF1BbKjKN81hc.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 285,
+    "fields": {
+        "tmdb_id": 19404,
+        "original_title": "Dilwale Dulhania Le Jayenge",
+        "title": "용감한 자가 신부를 데려가리",
+        "overview": "영국에서 유학중인 라즈(샤룩 칸)와 인도 처녀 심란(까졸).  심란은 부모님이 정해주신 약혼자가 있는데 약혼을 앞두고 친구들과 유럽 여행을 떠나게 된다.  여행 중 우연히 만남 샤룩과 까졸. 두 남녀의 연속된 우연과 좌충우돌 사랑 만들기.  그렇게 사랑하게 된 그들이지만 까졸은 약혼자가 있는 몸. 인도로 돌아가게 된다.  샤룩 또한 그녀를 못 잊어 인도로 뒤 따라 들어가지만 엄격한 까졸의 부모를 설득하기가 힘이 든다. 도망가자는 까졸의 제안을 거부하고 샤룩은 끝내 그녀의 부모님의 허락을 얻어 내기 위해 고군분투한다.",
+        "release_date": "1995-10-19",
+        "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 286,
+    "fields": {
+        "tmdb_id": 424,
+        "original_title": "Schindler's List",
+        "title": "쉰들러 리스트",
+        "overview": "2차 세계대전 당시 독일군이 점령한 폴란드. 시류에 맞춰 자신의 성공을 추구하는 기회주의자 쉰들러는 유태인이 경영하는 그릇 공장을 인수한다. 그는 공장을 인수하기 위해 나찌 당원이 되고 독일군에게 뇌물을 바치는 등 갖은 방법을 동원한다. 그러나 냉혹한 기회주의자였던 쉰들러는 유태인 회계사인 스턴과 친분을 맺으면서 냉혹한 유태인 학살에 대한 양심의 소리를 듣기 시작한다. 마침내 그는 강제 수용소로 끌려가 죽음을 맞게될 유태인들을 구해내기로 결심하고, 독일군 장교에게 빼내는 사람 숫자대로 뇌물을 주는 방법으로 유태인들을 구해내려는 계획을 세우는데...",
+        "release_date": "1993-12-15",
+        "poster_path": "/oyyUcGwLX7LTFS1pQbLrQpyzIyt.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 287,
+    "fields": {
+        "tmdb_id": 129,
+        "original_title": "Spirited Away",
+        "title": "센과 치히로의 행방불명",
+        "overview": "평범한 열 살 짜리 소녀 치히로 식구는 이사 가던 중 길을 잘못 들어 낡은 터널을 지나가게 된다. 터널 저편엔 폐허가 된 놀이공원이 있었고 그곳엔 이상한 기운이 흘렀다. 인기척 하나 없는 이 마을의 낯선 분위기에 불길한 기운을 느낀 치히로는 부모님에게 돌아가자고 조르지만 부모님은 호기심에 들떠 마을 곳곳을 돌아다니기 시작한다. 어느 음식점에 도착한 치히로의 부모님은 그 곳에 차려진 음식들을 보고 즐거워하며 허겁지겁 먹어대다가 돼지로 변해버린다. 겁에 질려 당황하는 치히로에게 낯선 소년 하쿠가 나타나 빨리 이곳을 나가라고 소리치는데...",
+        "release_date": "2001-07-20",
+        "poster_path": "/u1L4qxIu5sC2P082uMHYt7Ifvnj.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 288,
+    "fields": {
+        "tmdb_id": 389,
+        "original_title": "12 Angry Men",
+        "title": "12명의 성난 사람들",
+        "overview": "뉴욕시의 법정에 아버지를 칼로 찌른 한 소년의 살인혐의를 두고, 12인의 배심원들은 만장일치 합의를 통해 소년의 유무죄 여부를 가려줄 것을 요구받는다. 판사는 유죄일 경우 이 소년은 사형이 불가피하다는 것을 이들에게 미리 일러둔다.  배심원 방에 모인 이들은 투표를 통해 유무죄 여부를 가리기로 한다. 사람들이 전부 소년이 유죄로 판단하는 가운데, 오직 한 배심원만이 소년이 무죄라고 주장하는데...",
+        "release_date": "1957-04-10",
+        "poster_path": "/xzh6Rq9cKnE1M309PzC5S5QWF9S.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 289,
+    "fields": {
+        "tmdb_id": 372058,
+        "original_title": "Your name.",
+        "title": "너의 이름은.",
+        "overview": "시골에 사는 소녀 미츠하(가미시라이시 모네)는 어느 날 잠에서 깬 후 자신의 몸이 남자로 바뀐 걸 알게 된다. 같은 시간, 도쿄에 사는 소년 타키(가미키 류노스케) 역시 이 기이한 상황을 겪고 있다. 낯선 가족, 낯선 친구들, 낯선 풍경들... 서로에게 이어진 끈을 알게 된 둘은 둘만의 규칙을 정하고 점차 상황을 받아들이기 시작한다. 서로에게 남긴 메모를 확인하며  점점 친구가 되어가는 타키와 미츠하. 언제부턴가 더 이상 몸이 바뀌지 않자  자신들이 특별하게 이어져있었음을 깨달은  타키는 미츠하를 만나러 가는데...",
+        "release_date": "2016-08-26",
+        "poster_path": "/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 290,
+    "fields": {
+        "tmdb_id": 496243,
+        "original_title": "Parasite",
+        "title": "기생충",
+        "overview": "전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고  있는데.....",
+        "release_date": "2019-05-30",
+        "poster_path": "/jjHccoFjbqlfr4VGLVLT7yek0Xn.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 291,
+    "fields": {
+        "tmdb_id": 155,
+        "original_title": "The Dark Knight",
+        "title": "다크 나이트",
+        "overview": "범죄와 부정부패를 제거하여 고담시를 지키려는 배트맨. 그는 짐 고든 형사와 패기 넘치는 고담시 지방 검사 하비 덴트와 함께 도시를 범죄 조직으로부터 영원히 구원하고자 한다. 세 명의 의기투합으로 위기에 처한 악당들이 모인 자리에 보라색 양복을 입고 얼굴에 짙게 화장을 한 괴이한 존재가 나타나 배트맨을 죽이자는 사상 초유의 제안을 한다. 그는 바로 어떠한 룰도, 목적도 없는 사상 최악의 악당 미치광이 살인광대 조커. 배트맨을 죽이고 고담시를 끝장내버리기 위한 조커의 광기 어린 행각에 도시는 혼란에 빠지는데...",
+        "release_date": "2008-07-14",
+        "poster_path": "/f6dNinWX8rBM79JXKcShkfSh2oA.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 292,
+    "fields": {
+        "tmdb_id": 497,
+        "original_title": "The Green Mile",
+        "title": "그린 마일",
+        "overview": "미국 루이지애나의 콜드 마운틴 교도소. 폴은 사형수 감방의 간수장으로 일하고 있다. 그의 일은 사형수들을 감독하고, 그린 마일이라 불리는 초록색 복도를 거쳐 그들을 사형 집행장까지 안내하는 것. 폴은 그들이 죽음을 맞이하는 순간까지 평화롭게 지낼 수 있도록 최선을 다한다. 어느 날 존 커피라는 사형수가 이송되어 온다. 그는 쌍둥이 여자아이를 살해한 흉악범. 하지만 순진한 눈망울에 겁을 잔뜩 집어먹은 그의 모습에 폴은 당혹감을 느낀다. 게다가 그는 초자연적 능력으로 폴의 지병을 깨끗하게 치료해주기까지 한다. 존을 전기 의자로 데려가야 할 날이 다가오면서 폴은 그가 무죄라는 확신을 갖게 되는데...",
+        "release_date": "1999-12-10",
+        "poster_path": "/yuSpRhrTIJa5JN8oESrfD2bndp1.jpg",
+        "genre_id": 14,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 293,
+    "fields": {
+        "tmdb_id": 680,
+        "original_title": "Pulp Fiction",
+        "title": "펄프 픽션",
+        "overview": "펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 섥히면서 예상치 못한 인과관계가 만들어지는데...",
+        "release_date": "1994-09-10",
+        "poster_path": "/6lXRHGoEbnnBUKsuqpL9JxD4DzT.jpg",
+        "genre_id": 53,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 294,
+    "fields": {
+        "tmdb_id": 429,
+        "original_title": "The Good the Bad and the Ugly",
+        "title": "석양의 무법자",
+        "overview": "미국의 남북전쟁이 한창인 때, 블론디는 멕시코인 총잡이 투코와 함께 동업 중이다. 블론디는 현상범 투코를 잡아 현상금을 받고, 투코가 교수형을 당하는 순간 구해주는 역할. 한편 세텐자라 불리우는 범죄자는 엄청나 돈이 묻힌 비밀장소를 추적 중이다. 그런데, 투코와 실랑이를 벌이던 블론디는 돈이 묻힌 장소를 죽어가는 사람에게 듣게 되고, 결국 둘은 돈을 찾아 나서는데...",
+        "release_date": "1966-12-23",
+        "poster_path": "/s7qPuoj4liolAtmx9vcL6AyaZzR.jpg",
+        "genre_id": 37,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 295,
+    "fields": {
+        "tmdb_id": 13,
+        "original_title": "Forrest Gump",
+        "title": "포레스트 검프",
+        "overview": "불편한 다리, 남들보다 조금 떨어지는 지능을 가진 포레스트 검프는 헌신적인 어머니의 보살핌과 첫사랑 제니와의 만남으로 편견과 괴롭힘 속에서도 따뜻한 마음을 지니고 성장한다. 또래들의 괴롭힘을 피해 도망치던 포레스트는 누구보다 빠르게 달릴 수 있는 자신의 재능을 깨닫는다. 그의 재능을 알아 본 대학에서 그를 미식축구 선수로 발탁하고, 졸업 후에도 뛰어난 신체능력으로 군에 들어가 무공훈장을 수여받는 등 탄탄한 인생 가도에 오르게 된 포레스트. 하지만 어머니가 병에 걸려 죽음을 맞이하고, 첫사랑 제니 역시 그의 곁을 떠나가며 다시 한 번 인생의 전환점을 맞이하게 되는데...",
+        "release_date": "1994-06-23",
+        "poster_path": "/xdJxoq0dtkchOkUz5UVKuxn7a2V.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 296,
+    "fields": {
+        "tmdb_id": 122,
+        "original_title": "The Lord of the Rings: The Return of the King",
+        "title": "반지의 제왕: 왕의 귀환",
+        "overview": "사우론이 인간들의 마지막 요새인 곤도르를 향해 야욕을 드러내고 있는 한편, 아라곤은 쇠락해가고 있는 곤도르의 재건을 위해 왕위 계승을 신중하게 결정지어야만 하는 상황. 이제 중간대륙의 미래는 그의 어깨에 달려있는 것. 사우론이 이끄는 어둠의 군대와의 마지막 전투를 위해 간달프는 곤도르에 흩어져 있던 병사들을 모으고, 로한의 왕 세오덴에게 도움을 받기도 하지만 사우론의 군대에 비하면 열세를 면치 못한다. 그러나 그들은 중간대륙을 사우론의 야욕으로부터 지키려는 사명감과, 마지막 반지 운반자에게 임무를 끝낼 기회를 주기 위해 어둠의 군대를 향해 돌진하게 되는데...",
+        "release_date": "2003-12-01",
+        "poster_path": "/tAXXuEAKLk2mOEIJzwajJQEnVZu.jpg",
+        "genre_id": 12,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 297,
+    "fields": {
+        "tmdb_id": 372754,
+        "original_title": "classmate",
+        "title": "동급생",
+        "overview": "밴드 활동을 하며 여자에게도 인기가 많은 쿠사카베 히카루.  고교 입시에서 만점을 받은 인재 사죠 리히토. 도무지 접점이 없어 보이는 두 남학생은 합창 대회 연습을 계기로 친해진다. 음을 느끼고 목소리에 귀를 기울이고 화음을 만들어가며 둘의 마음은 공명하기 시작하는데… 느긋하게 고조되다 뜻밖의 순간에 터져버리는 사랑의 감정. 순수하고 솔직한 쿠사카베 히카루와 그를 밀어내면서도 조금씩 마음을 열어가는 사죠 리히토.  청춘의 풋풋함 속에서 고민하고, 망설이며 앞으로 나아가고자 하는 그들이 깨달은 마음이란…",
+        "release_date": "2016-02-20",
+        "poster_path": "/jNJ9shLhjRavjrCGRnoTmYB18d2.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 298,
+    "fields": {
+        "tmdb_id": 769,
+        "original_title": "GoodFellas",
+        "title": "좋은 친구들",
+        "overview": "아일랜드계 이탈리아인 헨리 힐와 토미는 13살에 마피아에 입문해 지미와 함께 트럭이나 공항 화물을 훔치는 일을 한다. 결혼 후에도 마피아 생활을 계속하는 헨리는 이제 조직에서도 안정된 위치와 경제적 여유를 갖는다.  어느 날 헨리와 지미는 공항터미널 사건을 모의해 현금 6백만 달러라는 엄청한 돈을 훔친다. 이 사건을 은폐하기 위해 혈안이 된 지미는 모의에 참여했던 사람들을 죽이고, 토미는 마피아 조직에 가담했다가 살해당한다. 엎친데 덮친격으로 헨리마저 마약거래로 경찰서에 잡혀 들어가는데...",
+        "release_date": "1990-09-12",
+        "poster_path": "/zF9hSBS1t7PVFLo01GrJ3OjGi67.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 299,
+    "fields": {
+        "tmdb_id": 704264,
+        "original_title": "Primal: Tales of Savagery",
+        "title": "Primal: Tales of Savagery",
+        "overview": "",
+        "release_date": "2019-11-21",
+        "poster_path": "/9NBBkdxH0TjQEBSN2AzeE1sgsF9.jpg",
+        "genre_id": 28,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 300,
+    "fields": {
+        "tmdb_id": 995133,
+        "original_title": "The Boy, the Mole, the Fox and the Horse",
+        "title": "소년과 두더지와 여우와 말",
+        "overview": "논모어와 배드 로봇 프로덕션을 만나 아름다운 애니메이션으로 재탄생한 찰리 맥커시의 베스트셀러. 친절과 용기, 희망의 의미를 찾아가는 네 친구들의 낯설지만 깊은 유대를 만나보세요.",
+        "release_date": "2022-12-25",
+        "poster_path": "/oQRgyQCzcyZvE6w5heM9ktVY0LT.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 301,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 302,
+    "fields": {
+        "tmdb_id": 640146,
+        "original_title": "Ant-Man and the Wasp: Quantumania",
+        "title": "앤트맨과 와스프: 퀀텀매니아",
+        "overview": "슈퍼히어로 파트너인 스캇 랭과 호프 반 다인, 호프의 부모 재닛 반 다인과 행크 핌, 그리고 스캇의 딸 캐시 랭까지 미지의 양자 영역 세계 속에 빠져버린 앤트맨 패밀리. 그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 캉을 만나며, 그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…",
+        "release_date": "2023-02-15",
+        "poster_path": "/sz6mTIDDQmR3DYgJudiTmoW2gR5.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 303,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 304,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 305,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 306,
+    "fields": {
+        "tmdb_id": 868759,
+        "original_title": "Ghosted",
+        "title": "고스팅",
+        "overview": "선량한 남자 콜은 수수께끼 같은 세이디에게 푹 빠지지만 곧 그녀가 비밀 요원이라는 충격적인 사실을 알게 된다. 두 번째 데이트 약속을 하기도 전에 콜과 세이디는 세상을 구하기 위한 국제적 모험에 휩쓸린다.",
+        "release_date": "2023-04-18",
+        "poster_path": "/zCsg0CgncQkLiAgk1zkmt15OhM8.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 307,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 308,
+    "fields": {
+        "tmdb_id": 76600,
+        "original_title": "Avatar: The Way of Water",
+        "title": "아바타: 물의 길",
+        "overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+        "release_date": "2022-12-14",
+        "poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 309,
+    "fields": {
+        "tmdb_id": 1102776,
+        "original_title": "AKA",
+        "title": "에이전트 A.K.A.",
+        "overview": "한 치도 흔들림이 없는 특수 작전 요원. 하지만 범죄 조직 침투 임무 중, 우연히 상관의 어린 아들과 가까워지면서 굳은 신념이 시험대에 오른다.",
+        "release_date": "2023-04-28",
+        "poster_path": "/zLQc0AF6yWkW6piLlFvjDU8FznN.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 310,
+    "fields": {
+        "tmdb_id": 677179,
+        "original_title": "Creed III",
+        "title": "크리드 3",
+        "overview": "록키의 후계자인 크리드는 월드 챔피언으로 권투계를 장악한 후 완벽한 삶을 살던 중 과거 친형제 같았던 데미안과 재회한다. 오랜 시간 감옥 생활을 마치고 나온 데미안은 그가 꿈꾸던 인생을 사는 크리드와 충돌하며 그의 모든 것을 빼앗으려 하고, 크리드는 이에 맞서 자신의 미래를 지키기 위한 일생일대의 대결을 준비하는데…",
+        "release_date": "2023-03-01",
+        "poster_path": "/56HGRCoEY2OmO1yZro77IvldDpE.jpg",
+        "genre_id": 18,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 311,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 312,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 313,
+    "fields": {
+        "tmdb_id": 785759,
+        "original_title": "Two Witches",
+        "title": "투 위치스",
+        "overview": "임신한 새라는 식당에서 사악한 눈빛으로 노려보는 늙은 마녀와 마주친다. 그 후 새라는 아기가 잡아 먹히는 끔찍한 환상과 악몽에 시달린다. 늙은 마녀는 남편의 친구 더스틴의 집으로 가는 새라를 뒤따른다. 새라는 남편 사이먼과 함께 더스틴과 멜리사 부부의 외딴집에 도착한다. 주술에 빠져 있는 멜리사는 새라를 위해 위자 보드로 영을 소환한다. 얼마 후 나쁜 기운을 없애는 양초의 촛불이 저절로 꺼지고 화장실 앞에서 넋을 잃고 서 있던 새라는 아무것도 기억하지 못한다. 어둠 속에서 늙은 마녀가 아기를 먹는 모습을 본 사이먼은 심장마비로 사망한다. 새라가 어딘가로 사라지고 더스틴과 멜리사가 혼란에 빠진 가운데 경찰은 사이먼의 죽음과 새라의 실종을 가정폭력 때문이라고 발표한다. 악마가 새라의 태아를 먹은 늙은 마녀에게 안식을 허락하는데...",
+        "release_date": "2023-03-02",
+        "poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
+        "genre_id": 27,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 314,
+    "fields": {
+        "tmdb_id": 385687,
+        "original_title": "Fast X",
+        "title": "분노의 질주: 라이드 오어 다이",
+        "overview": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+        "release_date": "2023-05-17",
+        "poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 315,
+    "fields": {
+        "tmdb_id": 727340,
+        "original_title": "Hunt",
+        "title": "헌트",
+        "overview": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
+        "release_date": "2022-08-10",
+        "poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
+        "genre_id": 53,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 316,
+    "fields": {
+        "tmdb_id": 948713,
+        "original_title": "The Last Kingdom: Seven Kings Must Die",
+        "title": "세븐 킹스 머스트 다이",
+        "overview": "에드워드 왕이 서거하자 뜻을 모으는 베반버그의 우트레드와 그의 동지들. 마침내 잉글랜드 통일이라는 꿈을 이루기 위해 분열된 왕국을 뒤흔들 모험에 뛰어든다.",
+        "release_date": "2023-04-14",
+        "poster_path": "/ddt9jdbkjjBh3ezUejJlY6Dho6l.jpg",
+        "genre_id": 28,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 317,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 318,
+    "fields": {
+        "tmdb_id": 420808,
+        "original_title": "Peter Pan & Wendy",
+        "title": "피터팬 & 웬디",
+        "overview": "어느 날, 모험을 꿈꾸는 소녀 ‘웬디’의 창문으로 우연히 찾아온 ‘피터팬’. 신비로운 요정의 도움으로 ‘웬디’는 밤하늘을 날아 새로운 친구들과 놀라운 모험이 가득한 마법의 땅 ‘네버랜드’에 도착하게 되는데… 오늘 밤 , 창문을 닫지 마세요! 당신에게도 피터팬이 찾아올지 모르니",
+        "release_date": "2023-04-20",
+        "poster_path": "/x5ex5Dk1jekuOHy7BBrX4jJ0csO.jpg",
+        "genre_id": 10751,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 319,
+    "fields": {
+        "tmdb_id": 315162,
+        "original_title": "Puss in Boots: The Last Wish",
+        "title": "장화신은 고양이: 끝내주는 모험",
+        "overview": "아홉 개의 목숨 중 단 하나의 목숨만 남은 장화신은 고양이.  마지막 남은 목숨을 지키기 위해 히어로의 삶 대신 반려묘의 삶을 선택한 그에게 찾아온 마지막 기회, 바로 소원을 들어주는 소원별이 있는 곳을 알려주는 지도!  잃어버린 목숨을 되찾고 다시 히어로가 되기를 꿈꾸는 장화신은 고양이는 뜻밖에 동료가 된 앙숙 파트너 '키티 말랑손', 그저 친구들과 함께라면 모든 게 행복한 강아지 '페로'와 함께 소원별을 찾기 위해 길을 떠난다.  그리고 소원별을 노리는 또 다른 빌런들과 마주치게 되는데…",
+        "release_date": "2022-12-07",
+        "poster_path": "/rKgvctIuPXyuqOzCQ16VGdnHxKx.jpg",
+        "genre_id": 16,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 320,
+    "fields": {
+        "tmdb_id": 283995,
+        "original_title": "Guardians of the Galaxy Vol. 2",
+        "title": "가디언즈 오브 갤럭시 Vol. 2",
+        "overview": "타노스에 맞서 은하계를 구하고 최고의 해결사로 등극한 스타로드 일행. 하지만 소버린 행성의 여사제 아이샤를 돕던 중 옛버릇을 고치지 못하고 행성의 배터리를 훔쳤다가 소버린 종족에 쫓기는 신세가 된다. 그 과정에서 피터의 아버지 에고가 그들을 돕는다. 아픈 엄마와 어린 자신을 버리고 떠난 아버지에 대한 원망이 컸던 피터는 에고의 행성에서 아버지의 능력을 확인하곤 그 힘에 이끌린다. 하지만 가모라는 에고의 행성에서 이상한 기운을 감지한다. 한편 반란군에 의해 위기에 처한 욘두는 로켓과 그루트의 도움으로 목숨을 구한다.",
+        "release_date": "2017-04-19",
+        "poster_path": "/uDuwGhQgffd5GQ695oUfy5oZGqP.jpg",
+        "genre_id": 878,
+        "api_category": "popular"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 321,
+    "fields": {
+        "tmdb_id": 713704,
+        "original_title": "Evil Dead Rise",
+        "title": "이블 데드 라이즈",
+        "overview": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+        "release_date": "2023-04-12",
+        "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 322,
+    "fields": {
+        "tmdb_id": 502356,
+        "original_title": "The Super Mario Bros. Movie",
+        "title": "슈퍼 마리오 브라더스",
+        "overview": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+        "release_date": "2023-04-05",
+        "poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 323,
+    "fields": {
+        "tmdb_id": 758323,
+        "original_title": "The Pope's Exorcist",
+        "title": "엑소시스트: 더 바티칸",
+        "overview": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+        "release_date": "2023-04-05",
+        "poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 324,
+    "fields": {
+        "tmdb_id": 447365,
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "overview": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+        "release_date": "2023-05-03",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 325,
+    "fields": {
+        "tmdb_id": 594767,
+        "original_title": "Shazam! Fury of the Gods",
+        "title": "샤잠! 신들의 분노",
+        "overview": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+        "release_date": "2023-03-15",
+        "poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 326,
+    "fields": {
+        "tmdb_id": 934433,
+        "original_title": "Scream VI",
+        "title": "스크림 6",
+        "overview": "",
+        "release_date": "2023-03-08",
+        "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 327,
+    "fields": {
+        "tmdb_id": 603692,
+        "original_title": "John Wick: Chapter 4",
+        "title": "존 윅 4",
+        "overview": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+        "release_date": "2023-03-22",
+        "poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 328,
+    "fields": {
+        "tmdb_id": 1111140,
+        "original_title": "Two Sinners and a Mule",
+        "title": "두 죄인과 노새",
+        "overview": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
+        "release_date": "2023-04-21",
+        "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+        "genre_id": 37,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 329,
+    "fields": {
+        "tmdb_id": 493529,
+        "original_title": "Dungeons & Dragons: Honor Among Thieves",
+        "title": "던전 앤 드래곤 - 도적들의 명예",
+        "overview": "한때는 명예로운 기사였지만, 어떤 사건 이후 홀가, 사이먼, 포지와 함께 도적질을 하게 된 에드긴. 소피나의 제안으로 부활의 서판을 얻기 위해 코린의 성에 잠입하지만 포지와 소피나의 배신으로 실패하고 감옥에 갇힌다. 기발한 방법으로 탈옥에 성공한 에드긴과 홀가는 소중한 사람들과 다시 만나고, 부활의 서판도 되찾기 위해  자신만의 팀을 꾸리기 시작한다. 옛 동료인 소질 없는 소서러 사이먼과 새롭게 합류한 변신 천재 드루이드 도릭, 재미 빼고 다 가진 팔라딘 젠크까지 어딘가 2% 부족한 오합지졸로 가득한 이 팀, 과연 무사히 모험을 끝마칠 수 있을까?",
+        "release_date": "2023-03-23",
+        "poster_path": "/eg4vGqZo1BpjY3ZoCUAGk09Pq7T.jpg",
+        "genre_id": 12,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 330,
+    "fields": {
+        "tmdb_id": 876969,
+        "original_title": "Assassin Club",
+        "title": "어쎄신 클럽",
+        "overview": "오랫동안 킬러 생활을 하면서 무의미한 삶을 살던 모건은 소피를 만나면서부터 인간다운 인생을 꿈꾸기 시작한다. 그래서 고민 끝에 킬러 생활을 청산하려고 하지만, 자신도 모르는 사이에 자신이 누군가 설계한 킬러들의 RPG 게임에 합류했다는 사실을 깨닫는다. 플레이어는 총 7명. 처음에는 영문을 몰라 어리둥절해 하던 킬러들. 하지만 곧 전투본능을 되살려 돈과 목숨을 지키기 위해서 치열한 사투를 벌인다. 그렇게 죽고 죽이는 게임 끝에 마침내 단 두 명의 킬러만이 남는다. 바로 모건과 정체불명의 인물 포크! 포크는 게임 설계자를 찾아 제거하자고 하면서 모건에게 접근하는데... 과연 모건은 최후의 승리자가 되고 킬러들의 세계에서 벗어날 수 있을까?",
+        "release_date": "2023-02-24",
+        "poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
+        "genre_id": 28,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 331,
+    "fields": {
+        "tmdb_id": 882569,
+        "original_title": "Guy Ritchie's The Covenant",
+        "title": "더 커버넌트",
+        "overview": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
+        "release_date": "2023-04-19",
+        "poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+        "genre_id": 10752,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 332,
+    "fields": {
+        "tmdb_id": 700391,
+        "original_title": "65",
+        "title": "65",
+        "overview": "우주 비행 중 행성과의 치명적인 충돌이 일어난 후, 조종사 밀스와 유일한 탑승 생존자 코아는 6,500만 년 전 공룡의 시대 지구에 불시착한다.  모든 것이 위험과 죽음과 맞닿아 있는 상황, 그들은 거대한 행성과의 충돌 전, 반드시 지구를 탈출해야만 한다!",
+        "release_date": "2023-03-02",
+        "poster_path": "/o9ItQpKVvhGcAcJFyIpFM7YYKuv.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 333,
+    "fields": {
+        "tmdb_id": 804150,
+        "original_title": "Cocaine Bear",
+        "title": "코카인 베어",
+        "overview": "1985년 마약 밀매업자의 비행기 추락 사고로 인해 비행기에 실려있던 코카인이 조지아주 채터후치 국유림에 떨어지고 코카인을 손에 넣기 위한 마약상들과 관광객들이 코카인을 먹은 흑곰에 의해 처참하게 죽임을 당한다는 내용의 실화를 바탕으로 한 영화",
+        "release_date": "2023-02-22",
+        "poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
+        "genre_id": 53,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 334,
+    "fields": {
+        "tmdb_id": 1008005,
+        "original_title": "La niña de la comunión",
+        "title": "La niña de la comunión",
+        "overview": "",
+        "release_date": "2023-02-10",
+        "poster_path": "/sGSzha9K65abyvzBwXXnSV2sHWV.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 335,
+    "fields": {
+        "tmdb_id": 842675,
+        "original_title": "The Wandering Earth 2",
+        "title": "유랑지구 2",
+        "overview": "태양계 소멸의 위기를 맞은 인류는 지구 표면에 거대한 엔진을 달아 궤도를 옮기는 ‘유랑지구 프로젝트’에 돌입한다. 하지만, 데이터베이스로 영생을 가지려는 ‘디지털 라이프’와 대립하게 되며 프로젝트는 난관에 부딪히게 되고, 그 과정 속 달과의 충돌이라는 예상치 못한 대재앙에 놓이게 되는데… 살아남기 위한 선택은 단 하나, 달을 파괴하라!",
+        "release_date": "2023-01-22",
+        "poster_path": "/pajq0n6FZivirCg1ifpe4zYKvsA.jpg",
+        "genre_id": 878,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 336,
+    "fields": {
+        "tmdb_id": 816904,
+        "original_title": "Momias",
+        "title": "머미즈",
+        "overview": "고대 세 명의 미라가 고고학자 카나비 경이 훔친 왕실 소유의 오래된 반지를 찾기 위해 런던으로 떠난 여정을 그린 애니메이션",
+        "release_date": "2023-01-05",
+        "poster_path": "/g5vkJAPj4XFlaOXZMYE97LZ7lns.jpg",
+        "genre_id": 16,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 337,
+    "fields": {
+        "tmdb_id": 980078,
+        "original_title": "Winnie the Pooh: Blood and Honey",
+        "title": "곰돌이 푸: 피와 꿀",
+        "overview": "어릴 적 친구로부터 버림받은 곰돌이 ‘푸’와 ‘피글렛’  참을 수 없는 분노와 배신감을 느끼며 잔혹한 복수를 시작한다.",
+        "release_date": "2023-01-27",
+        "poster_path": "/fcCbzcEbAEQ5gWzx7EX78qLEVFw.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 338,
+    "fields": {
+        "tmdb_id": 649609,
+        "original_title": "Renfield",
+        "title": "렌필드",
+        "overview": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+        "release_date": "2023-04-07",
+        "poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
+        "genre_id": 27,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 339,
+    "fields": {
+        "tmdb_id": 964980,
+        "original_title": "Air",
+        "title": "에어",
+        "overview": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
+        "release_date": "2023-04-05",
+        "poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
+        "genre_id": 18,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 340,
+    "fields": {
+        "tmdb_id": 1118721,
+        "original_title": "Quiero Tu Vida",
+        "title": "Quiero Tu Vida",
+        "overview": "",
+        "release_date": "2023-05-03",
+        "poster_path": "/hk2kW6uwTEa8cxDeF1UPfIpEYkF.jpg",
+        "genre_id": 35,
+        "api_category": "now_playing"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 341,
+    "fields": {
+        "tmdb_id": 238,
+        "original_title": "The Godfather",
+        "title": "대부",
+        "overview": "시실리에서 이민온 뒤, 정치권까지 영향력을 미치는 거물로 자리잡은 돈 꼴레오네는 갖가지 고민을 호소하는 사람들의 문제를 해결해주며 대부라 불리운다. 한편 솔로소라는 인물은 꼴레오네가와 라이벌인 탓타리아 패밀리와 손잡고 새로운 마약 사업을 제안한다. 돈 꼴레오네가 마약 사업에 참여하지 않기로 하자, 돈 꼴레오네를 저격해 그는 중상을 입고 사경을 헤매게 된다. 그 뒤, 돈 꼴레오네의 아들 소니는 조직력을 총 동원해 다른 패밀리들과 피를 부르는 전쟁을 시작하는데... 가족의 사업과 상관없이 대학에 진학한 뒤 인텔리로 지내왔던 막내 아들 마이클은 아버지가 총격을 당한 뒤, 아버지를 구하기 위해 위험천만한 협상 자리에 나선다.",
+        "release_date": "1972-03-14",
+        "poster_path": "/cOwVs8eYA4G9ZQs7hIRSoiZr46Q.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 342,
+    "fields": {
+        "tmdb_id": 278,
+        "original_title": "The Shawshank Redemption",
+        "title": "쇼생크 탈출",
+        "overview": "촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 쓰레기들만 모인 그곳에서 그는 이루 말할 수 없는 억압과 짐승보다 못한 취급을 당한다. 그러던 어느 날, 간수의 세금을 면제받게 해 준 덕분에 그는 일약 교도소의 비공식 회계사로 일하게 된다. 그 와중에 교도소 소장은 죄수들을 이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데...",
+        "release_date": "1994-09-23",
+        "poster_path": "/oAt6OtpwYCdJI76AVtVKW1eorYx.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 343,
+    "fields": {
+        "tmdb_id": 772071,
+        "original_title": "Cuando Sea Joven",
+        "title": "Cuando Sea Joven",
+        "overview": "",
+        "release_date": "2022-09-14",
+        "poster_path": "/6gIJuFHh5Lj4dNaPG3TzIMl7L68.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 344,
+    "fields": {
+        "tmdb_id": 240,
+        "original_title": "The Godfather Part II",
+        "title": "대부 2",
+        "overview": "아버지의 장례식 도중에 맏아들 파올로가 총에 맞아 죽고, 비토(로버트 드니로)는 겨우 도망쳐 미국으로 건너온다. 대부로 성장한 후 비토는 다시 치치오를 찾아 복수를 한다. 새롭게 등장한 젊은 대부 마이클(알 파치노)은 본거지를 라스베가스로 옮기고 가족의 사업을 가능한 합법적인 것으로 바꾸려고 애쓴다. 그런 과중 중에 자신을 제거하려는 음모를 알게되고 그는 냉혹하고 신속하게 반대파들을 제거, 조직을 더욱 확대해 나간다. 이를 위해 마이클은 배신한 형마저 죽이고, 일 때문에 아내와 헤어지는 등 인간적으로는 계속 외로워져 가는데...",
+        "release_date": "1974-12-20",
+        "poster_path": "/cj9UsJEN5bNf6ZoF1BbKjKN81hc.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 345,
+    "fields": {
+        "tmdb_id": 19404,
+        "original_title": "Dilwale Dulhania Le Jayenge",
+        "title": "용감한 자가 신부를 데려가리",
+        "overview": "영국에서 유학중인 라즈(샤룩 칸)와 인도 처녀 심란(까졸).  심란은 부모님이 정해주신 약혼자가 있는데 약혼을 앞두고 친구들과 유럽 여행을 떠나게 된다.  여행 중 우연히 만남 샤룩과 까졸. 두 남녀의 연속된 우연과 좌충우돌 사랑 만들기.  그렇게 사랑하게 된 그들이지만 까졸은 약혼자가 있는 몸. 인도로 돌아가게 된다.  샤룩 또한 그녀를 못 잊어 인도로 뒤 따라 들어가지만 엄격한 까졸의 부모를 설득하기가 힘이 든다. 도망가자는 까졸의 제안을 거부하고 샤룩은 끝내 그녀의 부모님의 허락을 얻어 내기 위해 고군분투한다.",
+        "release_date": "1995-10-19",
+        "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 346,
+    "fields": {
+        "tmdb_id": 424,
+        "original_title": "Schindler's List",
+        "title": "쉰들러 리스트",
+        "overview": "2차 세계대전 당시 독일군이 점령한 폴란드. 시류에 맞춰 자신의 성공을 추구하는 기회주의자 쉰들러는 유태인이 경영하는 그릇 공장을 인수한다. 그는 공장을 인수하기 위해 나찌 당원이 되고 독일군에게 뇌물을 바치는 등 갖은 방법을 동원한다. 그러나 냉혹한 기회주의자였던 쉰들러는 유태인 회계사인 스턴과 친분을 맺으면서 냉혹한 유태인 학살에 대한 양심의 소리를 듣기 시작한다. 마침내 그는 강제 수용소로 끌려가 죽음을 맞게될 유태인들을 구해내기로 결심하고, 독일군 장교에게 빼내는 사람 숫자대로 뇌물을 주는 방법으로 유태인들을 구해내려는 계획을 세우는데...",
+        "release_date": "1993-12-15",
+        "poster_path": "/oyyUcGwLX7LTFS1pQbLrQpyzIyt.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 347,
+    "fields": {
+        "tmdb_id": 129,
+        "original_title": "Spirited Away",
+        "title": "센과 치히로의 행방불명",
+        "overview": "평범한 열 살 짜리 소녀 치히로 식구는 이사 가던 중 길을 잘못 들어 낡은 터널을 지나가게 된다. 터널 저편엔 폐허가 된 놀이공원이 있었고 그곳엔 이상한 기운이 흘렀다. 인기척 하나 없는 이 마을의 낯선 분위기에 불길한 기운을 느낀 치히로는 부모님에게 돌아가자고 조르지만 부모님은 호기심에 들떠 마을 곳곳을 돌아다니기 시작한다. 어느 음식점에 도착한 치히로의 부모님은 그 곳에 차려진 음식들을 보고 즐거워하며 허겁지겁 먹어대다가 돼지로 변해버린다. 겁에 질려 당황하는 치히로에게 낯선 소년 하쿠가 나타나 빨리 이곳을 나가라고 소리치는데...",
+        "release_date": "2001-07-20",
+        "poster_path": "/u1L4qxIu5sC2P082uMHYt7Ifvnj.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 348,
+    "fields": {
+        "tmdb_id": 389,
+        "original_title": "12 Angry Men",
+        "title": "12명의 성난 사람들",
+        "overview": "뉴욕시의 법정에 아버지를 칼로 찌른 한 소년의 살인혐의를 두고, 12인의 배심원들은 만장일치 합의를 통해 소년의 유무죄 여부를 가려줄 것을 요구받는다. 판사는 유죄일 경우 이 소년은 사형이 불가피하다는 것을 이들에게 미리 일러둔다.  배심원 방에 모인 이들은 투표를 통해 유무죄 여부를 가리기로 한다. 사람들이 전부 소년이 유죄로 판단하는 가운데, 오직 한 배심원만이 소년이 무죄라고 주장하는데...",
+        "release_date": "1957-04-10",
+        "poster_path": "/xzh6Rq9cKnE1M309PzC5S5QWF9S.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 349,
+    "fields": {
+        "tmdb_id": 372058,
+        "original_title": "Your name.",
+        "title": "너의 이름은.",
+        "overview": "시골에 사는 소녀 미츠하(가미시라이시 모네)는 어느 날 잠에서 깬 후 자신의 몸이 남자로 바뀐 걸 알게 된다. 같은 시간, 도쿄에 사는 소년 타키(가미키 류노스케) 역시 이 기이한 상황을 겪고 있다. 낯선 가족, 낯선 친구들, 낯선 풍경들... 서로에게 이어진 끈을 알게 된 둘은 둘만의 규칙을 정하고 점차 상황을 받아들이기 시작한다. 서로에게 남긴 메모를 확인하며  점점 친구가 되어가는 타키와 미츠하. 언제부턴가 더 이상 몸이 바뀌지 않자  자신들이 특별하게 이어져있었음을 깨달은  타키는 미츠하를 만나러 가는데...",
+        "release_date": "2016-08-26",
+        "poster_path": "/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 350,
+    "fields": {
+        "tmdb_id": 496243,
+        "original_title": "Parasite",
+        "title": "기생충",
+        "overview": "전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고  있는데.....",
+        "release_date": "2019-05-30",
+        "poster_path": "/jjHccoFjbqlfr4VGLVLT7yek0Xn.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 351,
+    "fields": {
+        "tmdb_id": 155,
+        "original_title": "The Dark Knight",
+        "title": "다크 나이트",
+        "overview": "범죄와 부정부패를 제거하여 고담시를 지키려는 배트맨. 그는 짐 고든 형사와 패기 넘치는 고담시 지방 검사 하비 덴트와 함께 도시를 범죄 조직으로부터 영원히 구원하고자 한다. 세 명의 의기투합으로 위기에 처한 악당들이 모인 자리에 보라색 양복을 입고 얼굴에 짙게 화장을 한 괴이한 존재가 나타나 배트맨을 죽이자는 사상 초유의 제안을 한다. 그는 바로 어떠한 룰도, 목적도 없는 사상 최악의 악당 미치광이 살인광대 조커. 배트맨을 죽이고 고담시를 끝장내버리기 위한 조커의 광기 어린 행각에 도시는 혼란에 빠지는데...",
+        "release_date": "2008-07-14",
+        "poster_path": "/f6dNinWX8rBM79JXKcShkfSh2oA.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 352,
+    "fields": {
+        "tmdb_id": 497,
+        "original_title": "The Green Mile",
+        "title": "그린 마일",
+        "overview": "미국 루이지애나의 콜드 마운틴 교도소. 폴은 사형수 감방의 간수장으로 일하고 있다. 그의 일은 사형수들을 감독하고, 그린 마일이라 불리는 초록색 복도를 거쳐 그들을 사형 집행장까지 안내하는 것. 폴은 그들이 죽음을 맞이하는 순간까지 평화롭게 지낼 수 있도록 최선을 다한다. 어느 날 존 커피라는 사형수가 이송되어 온다. 그는 쌍둥이 여자아이를 살해한 흉악범. 하지만 순진한 눈망울에 겁을 잔뜩 집어먹은 그의 모습에 폴은 당혹감을 느낀다. 게다가 그는 초자연적 능력으로 폴의 지병을 깨끗하게 치료해주기까지 한다. 존을 전기 의자로 데려가야 할 날이 다가오면서 폴은 그가 무죄라는 확신을 갖게 되는데...",
+        "release_date": "1999-12-10",
+        "poster_path": "/yuSpRhrTIJa5JN8oESrfD2bndp1.jpg",
+        "genre_id": 14,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 353,
+    "fields": {
+        "tmdb_id": 680,
+        "original_title": "Pulp Fiction",
+        "title": "펄프 픽션",
+        "overview": "펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 섥히면서 예상치 못한 인과관계가 만들어지는데...",
+        "release_date": "1994-09-10",
+        "poster_path": "/6lXRHGoEbnnBUKsuqpL9JxD4DzT.jpg",
+        "genre_id": 53,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 354,
+    "fields": {
+        "tmdb_id": 429,
+        "original_title": "The Good the Bad and the Ugly",
+        "title": "석양의 무법자",
+        "overview": "미국의 남북전쟁이 한창인 때, 블론디는 멕시코인 총잡이 투코와 함께 동업 중이다. 블론디는 현상범 투코를 잡아 현상금을 받고, 투코가 교수형을 당하는 순간 구해주는 역할. 한편 세텐자라 불리우는 범죄자는 엄청나 돈이 묻힌 비밀장소를 추적 중이다. 그런데, 투코와 실랑이를 벌이던 블론디는 돈이 묻힌 장소를 죽어가는 사람에게 듣게 되고, 결국 둘은 돈을 찾아 나서는데...",
+        "release_date": "1966-12-23",
+        "poster_path": "/s7qPuoj4liolAtmx9vcL6AyaZzR.jpg",
+        "genre_id": 37,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 355,
+    "fields": {
+        "tmdb_id": 13,
+        "original_title": "Forrest Gump",
+        "title": "포레스트 검프",
+        "overview": "불편한 다리, 남들보다 조금 떨어지는 지능을 가진 포레스트 검프는 헌신적인 어머니의 보살핌과 첫사랑 제니와의 만남으로 편견과 괴롭힘 속에서도 따뜻한 마음을 지니고 성장한다. 또래들의 괴롭힘을 피해 도망치던 포레스트는 누구보다 빠르게 달릴 수 있는 자신의 재능을 깨닫는다. 그의 재능을 알아 본 대학에서 그를 미식축구 선수로 발탁하고, 졸업 후에도 뛰어난 신체능력으로 군에 들어가 무공훈장을 수여받는 등 탄탄한 인생 가도에 오르게 된 포레스트. 하지만 어머니가 병에 걸려 죽음을 맞이하고, 첫사랑 제니 역시 그의 곁을 떠나가며 다시 한 번 인생의 전환점을 맞이하게 되는데...",
+        "release_date": "1994-06-23",
+        "poster_path": "/xdJxoq0dtkchOkUz5UVKuxn7a2V.jpg",
+        "genre_id": 35,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 356,
+    "fields": {
+        "tmdb_id": 122,
+        "original_title": "The Lord of the Rings: The Return of the King",
+        "title": "반지의 제왕: 왕의 귀환",
+        "overview": "사우론이 인간들의 마지막 요새인 곤도르를 향해 야욕을 드러내고 있는 한편, 아라곤은 쇠락해가고 있는 곤도르의 재건을 위해 왕위 계승을 신중하게 결정지어야만 하는 상황. 이제 중간대륙의 미래는 그의 어깨에 달려있는 것. 사우론이 이끄는 어둠의 군대와의 마지막 전투를 위해 간달프는 곤도르에 흩어져 있던 병사들을 모으고, 로한의 왕 세오덴에게 도움을 받기도 하지만 사우론의 군대에 비하면 열세를 면치 못한다. 그러나 그들은 중간대륙을 사우론의 야욕으로부터 지키려는 사명감과, 마지막 반지 운반자에게 임무를 끝낼 기회를 주기 위해 어둠의 군대를 향해 돌진하게 되는데...",
+        "release_date": "2003-12-01",
+        "poster_path": "/tAXXuEAKLk2mOEIJzwajJQEnVZu.jpg",
+        "genre_id": 12,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 357,
+    "fields": {
+        "tmdb_id": 372754,
+        "original_title": "classmate",
+        "title": "동급생",
+        "overview": "밴드 활동을 하며 여자에게도 인기가 많은 쿠사카베 히카루.  고교 입시에서 만점을 받은 인재 사죠 리히토. 도무지 접점이 없어 보이는 두 남학생은 합창 대회 연습을 계기로 친해진다. 음을 느끼고 목소리에 귀를 기울이고 화음을 만들어가며 둘의 마음은 공명하기 시작하는데… 느긋하게 고조되다 뜻밖의 순간에 터져버리는 사랑의 감정. 순수하고 솔직한 쿠사카베 히카루와 그를 밀어내면서도 조금씩 마음을 열어가는 사죠 리히토.  청춘의 풋풋함 속에서 고민하고, 망설이며 앞으로 나아가고자 하는 그들이 깨달은 마음이란…",
+        "release_date": "2016-02-20",
+        "poster_path": "/jNJ9shLhjRavjrCGRnoTmYB18d2.jpg",
+        "genre_id": 10749,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 358,
+    "fields": {
+        "tmdb_id": 769,
+        "original_title": "GoodFellas",
+        "title": "좋은 친구들",
+        "overview": "아일랜드계 이탈리아인 헨리 힐와 토미는 13살에 마피아에 입문해 지미와 함께 트럭이나 공항 화물을 훔치는 일을 한다. 결혼 후에도 마피아 생활을 계속하는 헨리는 이제 조직에서도 안정된 위치와 경제적 여유를 갖는다.  어느 날 헨리와 지미는 공항터미널 사건을 모의해 현금 6백만 달러라는 엄청한 돈을 훔친다. 이 사건을 은폐하기 위해 혈안이 된 지미는 모의에 참여했던 사람들을 죽이고, 토미는 마피아 조직에 가담했다가 살해당한다. 엎친데 덮친격으로 헨리마저 마약거래로 경찰서에 잡혀 들어가는데...",
+        "release_date": "1990-09-12",
+        "poster_path": "/zF9hSBS1t7PVFLo01GrJ3OjGi67.jpg",
+        "genre_id": 18,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 359,
+    "fields": {
+        "tmdb_id": 704264,
+        "original_title": "Primal: Tales of Savagery",
+        "title": "Primal: Tales of Savagery",
+        "overview": "",
+        "release_date": "2019-11-21",
+        "poster_path": "/9NBBkdxH0TjQEBSN2AzeE1sgsF9.jpg",
+        "genre_id": 28,
+        "api_category": "top_rated"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 360,
+    "fields": {
+        "tmdb_id": 995133,
+        "original_title": "The Boy, the Mole, the Fox and the Horse",
+        "title": "소년과 두더지와 여우와 말",
+        "overview": "논모어와 배드 로봇 프로덕션을 만나 아름다운 애니메이션으로 재탄생한 찰리 맥커시의 베스트셀러. 친절과 용기, 희망의 의미를 찾아가는 네 친구들의 낯설지만 깊은 유대를 만나보세요.",
+        "release_date": "2022-12-25",
+        "poster_path": "/oQRgyQCzcyZvE6w5heM9ktVY0LT.jpg",
+        "genre_id": 16,
+        "api_category": "top_rated"
+    }
+}
+]
