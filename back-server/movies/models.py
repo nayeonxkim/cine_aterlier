@@ -1,13 +1,15 @@
 from django.db import models
+
 class Movie(models.Model):
-    tmdb_id = models.IntegerField()
+    tmdb_id = models.IntegerField(primary_key=True)
     original_title = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     overview = models.TextField()
     release_date = models.DateField()
     poster_path = models.TextField()
     genre_id = models.IntegerField()
-    api_category = models.CharField(max_length=20)
+    adult = models.BooleanField(default=False)
+    popularity = models.DecimalField(default=None, max_digits=20, decimal_places=2)
 
 class Keyword(models.Model):
     keyword_id = models.IntegerField(primary_key=True)
@@ -16,7 +18,6 @@ class Keyword(models.Model):
   
 # Create your models here.
 class MovieKeyword(models.Model):
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    tmdb_id = models.IntegerField()
+    tmdb_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
     keyword_id = models.ForeignKey(Keyword, on_delete=models.CASCADE)
 
