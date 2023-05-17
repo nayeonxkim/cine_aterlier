@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'movies',
     'rest_framework',
     'requests',
+    'mypackage',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
