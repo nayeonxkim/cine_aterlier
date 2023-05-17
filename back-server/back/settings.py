@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'articles',
     'rest_framework',
     'requests',
+    'mypackage',
     'corsheaders',
     'rest_framework.authtoken',
     'dj_rest_auth',
