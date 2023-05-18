@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 import createPersistedState from 'vuex-persistedstate'
+import router from '@/router'
 
 const API_URL = 'http://127.0.0.1:8000'
 
@@ -31,6 +32,7 @@ export default new Vuex.Store({
     },
     SAVE_TOKEN(state, token) {
       state.token = token
+      router.push({ name: 'article-list' })
     },
     GET_MOVIE_LIST(state, payload){
       state.movieList = payload
