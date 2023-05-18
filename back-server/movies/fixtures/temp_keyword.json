@@ -1,0 +1,51 @@
+[
+{
+    "model": "movies.keyword",
+    "pk": 100,
+    "fields": {
+        "keyword_name": "낭영"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 300,
+    "fields": {
+        "keyword_name": "곤충"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 310,
+    "fields": {
+        "keyword_name": "나비"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 800,
+    "fields": {
+        "keyword_name": "사냥"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 810,
+    "fields": {
+        "keyword_name": "뿌꾸"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 820,
+    "fields": {
+        "keyword_name": "sf"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 830,
+    "fields": {
+        "keyword_name": "네네"
+    }
+}
+]
