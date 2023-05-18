@@ -1,0 +1,44 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 3,
+    "fields": {
+        "original_title": "ant",
+        "title": "개미",
+        "overview": "개미개믹매ㅣ",
+        "release_date": "2023-05-18",
+        "poster_path": "/asdjahkdhaksd.jpg",
+        "genre_id": 4,
+        "adult": true,
+        "popularity": "-0.04"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 8,
+    "fields": {
+        "original_title": "BBU",
+        "title": "뿌",
+        "overview": "뿌어ㅏㅂ너ㅓ와와벚ㅇㅂㅈㅇㅈ",
+        "release_date": "2023-05-09",
+        "poster_path": "/asdjahkdhaksd.jpg",
+        "genre_id": 7,
+        "adult": false,
+        "popularity": "0.05"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 11,
+    "fields": {
+        "original_title": "eleven",
+        "title": "일레븐",
+        "overview": "일레븐일레븐일레븐",
+        "release_date": "2023-05-03",
+        "poster_path": "asdasdas.jpg",
+        "genre_id": 54,
+        "adult": true,
+        "popularity": "234525.80"
+    }
+}
+]
