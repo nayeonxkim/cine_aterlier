@@ -1,0 +1,72 @@
+[
+{
+    "model": "movies.keyword",
+    "pk": 110,
+    "fields": {
+        "keyword_name": "곤충"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 120,
+    "fields": {
+        "keyword_name": "나비"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 200,
+    "fields": {
+        "keyword_name": "파란색"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 210,
+    "fields": {
+        "keyword_name": "사냥"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 220,
+    "fields": {
+        "keyword_name": "sf"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 300,
+    "fields": {
+        "keyword_name": "뿌꾸"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 310,
+    "fields": {
+        "keyword_name": "강아지"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 320,
+    "fields": {
+        "keyword_name": "갈색"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 330,
+    "fields": {
+        "keyword_name": "귀염둥이"
+    }
+},
+{
+    "model": "movies.keyword",
+    "pk": 350,
+    "fields": {
+        "keyword_name": "산책"
+    }
+}
+]

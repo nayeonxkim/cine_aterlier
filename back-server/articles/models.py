@@ -1,8 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-
-# class User(AbstractUser):
-#     pass
+from accounts.models import User
 
 class Article(models.Model):
     img = models.ImageField(blank=False) 
@@ -12,7 +9,7 @@ class Article(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-# class Comment(models.Model):
-#     article = models.ForeignKey(Article, on_delete=models.CASCADE)
-#     content = models.TextField()
-#     created_at = models.DateTimeField(auto_now_add=True)
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
