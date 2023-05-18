@@ -1,0 +1,90 @@
+[
+{
+    "model": "movies.rating",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "movie": 3,
+        "score": "5.0",
+        "created_at": "2023-05-18T02:44:41.282Z",
+        "updated_at": "2023-05-18T02:44:41.282Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "movie": 8,
+        "score": "2.0",
+        "created_at": "2023-05-18T02:44:46.399Z",
+        "updated_at": "2023-05-18T02:44:46.399Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "movie": 3,
+        "score": "1.0",
+        "created_at": "2023-05-18T02:53:28.200Z",
+        "updated_at": "2023-05-18T02:53:28.200Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 4,
+    "fields": {
+        "user": 1,
+        "movie": 8,
+        "score": "2.0",
+        "created_at": "2023-05-18T02:53:34.264Z",
+        "updated_at": "2023-05-18T02:53:34.264Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "movie": 11,
+        "score": "4.0",
+        "created_at": "2023-05-18T02:53:38.712Z",
+        "updated_at": "2023-05-18T02:53:38.712Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 6,
+    "fields": {
+        "user": 2,
+        "movie": 8,
+        "score": "5.0",
+        "created_at": "2023-05-18T02:53:43.319Z",
+        "updated_at": "2023-05-18T02:53:43.319Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 7,
+    "fields": {
+        "user": 3,
+        "movie": 3,
+        "score": "3.0",
+        "created_at": "2023-05-18T02:53:48.118Z",
+        "updated_at": "2023-05-18T02:53:48.118Z"
+    }
+},
+{
+    "model": "movies.rating",
+    "pk": 8,
+    "fields": {
+        "user": 3,
+        "movie": 8,
+        "score": "2.5",
+        "created_at": "2023-05-18T02:53:54.919Z",
+        "updated_at": "2023-05-18T02:53:54.919Z"
+    }
+}
+]
