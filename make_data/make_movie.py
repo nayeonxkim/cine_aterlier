@@ -71,12 +71,12 @@ def save_to_csv(csv_file, api_name, api_response):
 # TMDB API 키
 api_key = '42a52760a5d3f83a9c59c93e3265ddd7'
 
-# # Popular API
-# url = f'https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=ko-KR'
-# response = requests.get(url)
-# data = response.json()
-# popular = data['results']
-# save_to_csv('popular.csv', 'popular', popular)
+# Popular API
+url = f'https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=ko-KR'
+response = requests.get(url)
+data = response.json()
+popular = data['results']
+save_to_csv('popular.csv', 'popular', popular)
 
 # # NowPlaying API
 # url = f'https://api.themoviedb.org/3/movie/now_playing?api_key={api_key}&language=ko-KR'
