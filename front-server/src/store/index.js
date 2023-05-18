@@ -18,7 +18,9 @@ export default new Vuex.Store({
     articles: [
     ],
     token: null,
+    // Movie
     movieList:null,
+    movieItem:null
 
   },
   getters: {
@@ -34,8 +36,13 @@ export default new Vuex.Store({
       state.token = token
       router.push({ name: 'article-list' })
     },
+
+    // Movie의 mutations
     GET_MOVIE_LIST(state, payload){
       state.movieList = payload
+    },
+    GET_MOVIE_ITEM(state, payload){
+      state.movieItem = state.movieList.find(item => item.tmdb_id === payload)
     }
   },
   actions: {
@@ -93,6 +100,8 @@ export default new Vuex.Store({
       })
       .catch((err) => console.log(err))
     },
+
+    // Movie의 액션
     get_movie_list(context){
       axios
       .get('http://127.0.0.1:8000/movies/index/')
@@ -104,6 +113,11 @@ export default new Vuex.Store({
         console.error(err)
       })
     },
+
+    get_movie_item(context, movieId){
+      const payload = movieId
+      context.commit('GET_MOVIE_ITEM', payload)
+    }
   },
   modules: {
   },
