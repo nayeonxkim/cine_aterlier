@@ -2,10 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import MovieView from '../views/MovieView.vue'
-import LoginView from '../views/LoginView.vue'
 import CommunityView from '../views/CommunityView.vue'
+import PersonalView from '../views/PersonalView.vue'
+import PersonLogin from '../components/PersonLogin.vue'
+import PersonSignup from '../components/PersonSignup.vue'
 
 Vue.use(VueRouter)
+
 
 const routes = [
   {
@@ -19,14 +22,24 @@ const routes = [
     component: MovieView
   },
   {
-    path: '/login',
-    name: 'login',
-    component: LoginView
-  },
-  {
     path: '/community',
     name: 'community',
     component: CommunityView
+  },
+  {
+    path: '/personal',
+    name: 'personal',
+    component: PersonalView,
+    children: [
+      {
+        path: '/personlogin',
+        component: PersonLogin,
+      },
+      {
+        path: '/personsignup',
+        component: PersonSignup,
+      },
+    ]
   },
   // {
   //   path: '/about',
