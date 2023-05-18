@@ -7,6 +7,8 @@ import CommunityView from '../views/CommunityView.vue'
 import PersonalView from '../views/PersonalView.vue'
 import PersonLogin from '../components/PersonLogin.vue'
 import PersonSignup from '../components/PersonSignup.vue'
+import ArticleList from '../components/ArticleList.vue'
+import ArticleDetail from '../components/ArticleDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -32,7 +34,18 @@ const routes = [
   {
     path: '/community',
     name: 'community',
-    component: CommunityView
+    component: CommunityView,
+    children: [
+      {
+        path: '/articles/index',
+        name: 'article-list',
+        component: ArticleList,
+      },
+      {
+        path: '/articles/:articleId',
+        component: ArticleDetail,
+      },
+    ]
   },
   {
     path: '/personal',
@@ -41,10 +54,12 @@ const routes = [
     children: [
       {
         path: '/personlogin',
+        name: 'personlogin',
         component: PersonLogin,
       },
       {
         path: '/personsignup',
+        name: 'personsingup',
         component: PersonSignup,
       },
     ]
