@@ -53,6 +53,7 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
+
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
@@ -73,6 +74,7 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
+
     login(context, payload) {
       const username = payload.username
       const password = payload.password
@@ -88,9 +90,7 @@ export default new Vuex.Store({
         context.commit('SAVE_TOKEN', res.data.key)
       })
       .catch((err) => console.log(err))
-  
-  },
-  actions: {
+    },
     get_movie_list(context){
       axios
       .get('http://127.0.0.1:8000/movies/index/')
@@ -101,9 +101,8 @@ export default new Vuex.Store({
       .catch((err) => {
         console.error(err)
       })
-    }
+    },
   },
   modules: {
   },
-}
 })
