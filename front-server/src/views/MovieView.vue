@@ -1,6 +1,7 @@
 <template>
   <div class="Movie">
     <MovieList/>
+
   </div>
 </template>
 
@@ -11,7 +12,7 @@ export default {
   name: 'MovieView',
   components: {
     MovieList,
-  }
+  },
 }
 </script>
 

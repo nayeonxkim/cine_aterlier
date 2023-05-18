@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>movie Item</h2>
-    <p @click='goToDetail'>{{movieItem.title}}</p>
+    <img @click='goToDetail' :src="`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`" :alt="`${movieItem.title}`">
   </div>
 </template>
 
