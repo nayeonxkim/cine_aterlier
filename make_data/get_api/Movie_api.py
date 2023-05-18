@@ -16,7 +16,7 @@ api_key = '42a52760a5d3f83a9c59c93e3265ddd7'
 # API 결과를 JSON형식으로 담을 리스트
 movie_res = []
 
-for pageNum in range(1, 501):
+for pageNum in range(1, 251):
     url = f'https://api.themoviedb.org/3/movie/popular?api_key={api_key}&language=ko-KR&page={pageNum}'
     response = requests.get(url)
     data = response.json()
