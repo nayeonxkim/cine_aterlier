@@ -1,16 +1,39 @@
 <template>
-<<<<<<< HEAD:front-server/src/components/PersonLogin.vue
   <div>
-    <h1>Login</h1>
+    <h1>LogIn Page</h1>
+    <form @submit.prevent="login">
+      <label for="username">username : </label>
+      <input type="text" id="username" v-model="username"><br>
+
+      <label for="password"> password : </label>
+      <input type="password" id="password" v-model="password"><br>
+
+      <input type="submit" value="logIn">
+    </form>
   </div>
-=======
-  <div></div>
->>>>>>> origin:front-server/src/views/LoginView.vue
 </template>
 
 <script>
 export default {
+  name: 'PersonLogin',
+  data() {
+    return {
+      username: null,
+      password: null,
+    }
+  },
+  methods: {
+    login() {
+      const username = this.username
+      const password = this.password
 
+      const payload = {
+        username, password
+      }
+
+      this.$store.dispatch('login', payload)
+    }
+  }
 }
 </script>
 
