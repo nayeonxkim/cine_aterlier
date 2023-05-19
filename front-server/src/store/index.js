@@ -124,11 +124,16 @@ export default new Vuex.Store({
       })
     },
     // Movie의 액션
-    get_movie_list(context){
+    get_movie_list(context, currentPage){
+      
+      const start = 50 * (currentPage - 1)
+      const end = (50 * currentPage) - 1
+
       axios
       .get('http://127.0.0.1:8000/movies/index/')
       .then((res) => {
-        const payload = res.data
+        const payload = res.data.slice(start,end)
+        console.log(payload)
         context.commit('GET_MOVIE_LIST', payload)
       })
       .catch((err) => {

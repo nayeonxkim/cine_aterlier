@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MovieDetail from '../components/MovieDetail.vue'
-import HomeView from '../views/HomeView.vue'
+// 영화정보
 import MovieView from '../views/MovieView.vue'
+
+import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
 // import PersonalView from '../views/PersonalView.vue'
 // import PersonLogin from '../components/PersonLogin.vue'
@@ -20,18 +21,17 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
+  // 영화정보
   {
     path: '/movie',
     name: 'movie',
-    component: MovieView
+    component: MovieView,
 
   },
-  {
-    path: '/movie-detail/:movieId',
-    name: 'movie-detail',
-    component: MovieDetail
 
-  },
+
+
   {
     path: '/community',
     name: 'community',

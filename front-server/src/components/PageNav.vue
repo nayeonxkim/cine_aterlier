@@ -1,0 +1,67 @@
+<template>
+  <div style='background-color:skyblue'>
+    <h2>PageNavbar입니다</h2>
+    
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <li class="page-item" v-for="(pageNum, id) in pageRange" :key="id" @click="onPageNum">
+          <a class="page-link" href="#">{{pageNum}}</a>
+        </li>
+
+        <li class="page-item" @click="onNext">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<script>
+import _ from 'lodash'
+export default {
+  name:'PageNav',
+  data(){
+    return {
+      currentPage : 1,
+    }
+  },
+  methods:{
+    // li태그 클릭시
+    // currentPage값을 li태그의 문자열로 바꿈.
+    // get_movie_list액션을 실행하면서 currentPage 전달
+    onPageNum(event){
+      this.currentPage = event.target.innerText
+      this.$store.dispatch('get_movie_list', this.currentPage)
+    },
+
+    onNext(){
+      if(this.currentPage < 91) {
+        this.currentPage = parseInt(this.currentPage/10) * 10 + 11
+      }
+      
+    }
+  },
+
+  computed:{
+    pageRange(){
+      const startIndex = parseInt(this.currentPage/10) * 10 + 1
+      const endIndex =  parseInt(this.currentPage/10)  * 10 + 11
+
+      
+      return _.range(startIndex, endIndex)
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
