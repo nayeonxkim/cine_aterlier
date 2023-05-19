@@ -1,18 +1,19 @@
 <template>
   <div>
-    <h1>MovieView입니다</h1>
-
-    <router-view />
+    <h1>MovieView</h1>
+    <MovieList />
     <PageNav />
   </div>
 </template>
 
 <script>
+import MovieList from '../components/MovieList.vue'
 import PageNav from '@/components/PageNav.vue'
 
 export default {
   name: 'MovieView',
   components: {
+    MovieList,
     PageNav
   },
   computed: {
@@ -21,12 +22,12 @@ export default {
     }
   },
   created() {
-    this.getArticles()
+    this.getMovies()
   },
   methods: {
-    getArticles() {
+    getMovies() {
       if (this.isLogin) {
-        this.$store.dispatch('getArticles')
+        this.$store.dispatch('get_movie_list', 1)
       } else {
         alert('로그인이 필요한 페이지입니다.')
         this.$router.push({ name: 'login' })
@@ -37,5 +38,4 @@ export default {
 </script>
 
 <style>
-
 </style>
