@@ -36,7 +36,9 @@ export default new Vuex.Store({
       state.token = token
       router.push({ name: 'article-list' })
     },
-
+    LOGOUT(state) {
+      state.token = null
+    },
     // Movie의 mutations
     GET_MOVIE_LIST(state, payload){
       state.movieList = payload
@@ -83,7 +85,6 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
-
     login(context, payload) {
       const username = payload.username
       const password = payload.password
@@ -100,7 +101,22 @@ export default new Vuex.Store({
       })
       .catch((err) => console.log(err))
     },
-
+    logout(context) {
+      axios({
+        method: 'post',
+        url: `${API_URL}/accounts/logout/`,
+        headers: {
+          Authorization: `Token ${context.state.token}`
+        }
+      })
+      .then(() => {
+        context.commit('LOGOUT')
+        router.push({ name: 'personlogin' })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    },
     // Movie의 액션
     get_movie_list(context){
       axios
