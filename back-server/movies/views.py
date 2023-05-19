@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework import status
 
 from .models import Movie
-from .serializers import MovieSerializer, MovieDetailSerialzer, RatingSerializer
+from .serializers import MovieSerializer, MovieDetailSerialzer, RatingSerializer, MovieImgSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -32,3 +32,9 @@ def rating(request, movie_pk):
         serializer.save(movie=movie, user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def img(request, movie_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    serializer = MovieImgSerializer(movie)
+    return Response(serializer.data)
