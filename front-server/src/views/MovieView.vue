@@ -1,17 +1,19 @@
 <template>
-  <div class="Movie">
-    <MovieList/>
+  <div>
+    <h1>MovieView입니다</h1>
 
+    <router-view />
+    <PageNav />
   </div>
 </template>
 
 <script>
-import MovieList from '@/components/MovieList.vue'
+import PageNav from '@/components/PageNav.vue'
 
 export default {
   name: 'MovieView',
   components: {
-    MovieList,
+    PageNav
   },
   computed: {
     isLogin() {
