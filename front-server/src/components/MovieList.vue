@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <h1>MovieList</h1>
-    <ul>
-      <li v-for="movie in movieList" :key="movie.id"></li>
-    </ul>
-    <MovieItem />
+<div>
+  <div class="row">
+    <MovieItem 
+    v-for="(movie, idx) in movieList" 
+    :key="idx"
+    :movie-item= movie 
+    class="col-6 col-md-1 col-lg-1 mb-4"/>
   </div>
+
+</div>
 </template>
 
 <script>
