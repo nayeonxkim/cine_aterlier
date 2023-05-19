@@ -1,0 +1,89 @@
+<template>
+  <div style="background-color: skyblue">
+    <h2>ArticlePageNavbar</h2>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" @click="onPrevious">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <li class="page-item" v-for="(pageNum, id) in pageRange" :key="id" :class="{ active: pageNum === currentPage }" @click="onPageNum">
+          <a v-if="pageNum <= pageCount" class="page-link" href="#">{{ pageNum }}</a>
+        </li>
+
+        <li class="page-item" @click="onNext">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<script>
+import _ from 'lodash'
+export default {
+  name: 'ArticlePageNav',
+  data() {
+    return {
+      currentPage: 1,
+      currentIndex: 1,
+      pageCount: 0,
+    }
+  },
+  methods: {
+    onPageNum(event) {
+      const pageNum = event.target.innerText // innerText 없으니까 수정하자
+      this.currentPage = parseInt(pageNum, 10)
+      this.$store.dispatch('get_article_list', this.currentPage)
+    },
+    onNext() {
+      if (this.currentIndex < this.pageCount) {
+        this.currentIndex = parseInt(this.currentIndex / 10) * 10 + 11
+        this.currentPage = this.currentIndex
+      } else {
+        alert('마지막 페이지입니다.')
+      }
+    },
+    onPrevious() {
+      if (this.currentIndex > 10) {
+        this.currentIndex = parseInt(this.currentIndex / 10) * 10 - 1
+        this.currentPage = this.currentIndex + 1
+      } else {
+        alert('첫 페이지입니다.')
+      }
+    },
+  },
+
+  computed: {
+    pageRange() {
+      const startIndex = parseInt(this.currentIndex / 10) * 10 + 1
+      const endIndex = parseInt(this.currentIndex / 10) * 10 + 11
+
+      return _.range(startIndex, endIndex)
+    },
+  },
+
+  watch: {
+    '$store.state.articles'(newValue) {
+      this.pageCount = Math.ceil(newValue.length / 10)
+    },
+  },
+}
+</script>
+
+<style>
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.page-item.active {
+  background-color: #007bff;
+}
+</style>
