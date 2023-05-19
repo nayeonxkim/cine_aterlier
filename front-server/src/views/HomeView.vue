@@ -35,7 +35,7 @@ export default {
         this.$store.dispatch('getArticles')
       } else {
         alert('로그인이 필요한 페이지입니다.')
-        this.$router.push({ name: 'personlogin' })
+        this.$router.push({ name: 'login' })
       }
     }
   }
