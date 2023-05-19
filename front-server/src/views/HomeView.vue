@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <MyMovieImage/>,
-    <ChoiceList/>,
-    <MyMovieList/>
+    <div>
+      <MyMovieImage/>,
+      <ChoiceList/>,
+      <MyMovieList/>
+    </div>
   </div>
 </template>
 
@@ -41,3 +43,9 @@ export default {
   }
 }
 </script>
+
+<style>
+
+
+
+</style>
