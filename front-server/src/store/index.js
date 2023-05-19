@@ -20,7 +20,8 @@ export default new Vuex.Store({
     token: null,
     // Movie
     movieList:null,
-    movieItem:null
+    movieItem:null,
+    movieDetail:null
 
   },
   getters: {
@@ -45,9 +46,10 @@ export default new Vuex.Store({
     GET_MOVIE_LIST(state, payload){
       state.movieList = payload
     },
-    GET_MOVIE_ITEM(state, payload){
-      state.movieItem = state.movieList.find(item => item.tmdb_id === payload)
+    GET_MOVIE_DETAIL(state,payload){
+      state.movieDetail = payload
     }
+
   },
   actions: {
     getArticles(context) {
@@ -123,17 +125,18 @@ export default new Vuex.Store({
           })
       })
     },
+
+
     // Movie의 액션
     get_movie_list(context, currentPage){
       
       const start = 50 * (currentPage - 1)
-      const end = (50 * currentPage) - 1
+      const end = (50 * currentPage)
 
       axios
       .get('http://127.0.0.1:8000/movies/index/')
       .then((res) => {
         const payload = res.data.slice(start,end)
-        console.log(payload)
         context.commit('GET_MOVIE_LIST', payload)
       })
       .catch((err) => {
@@ -141,9 +144,23 @@ export default new Vuex.Store({
       })
     },
 
-    get_movie_item(context, movieId){
-      const payload = movieId
-      context.commit('GET_MOVIE_ITEM', payload)
+    get_movie_detail(context, movieId){
+
+      axios
+      .get(`https://api.themoviedb.org/3/movie/${movieId}`,{
+        params:{
+          api_key:'42a52760a5d3f83a9c59c93e3265ddd7',
+          language:'ko-KR'
+      }})
+      .then((res)=>{
+        const payload = res.data
+        context.commit('GET_MOVIE_DETAIL', payload)
+      })
+      .catch((err) => {
+        
+        console.error(err)
+      })
+
     }
   },
   modules: {
