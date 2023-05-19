@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'requests',
     'corsheaders',
-    # 'django_seed',
+    'django_seed',
 
 
     'rest_framework.authtoken',
