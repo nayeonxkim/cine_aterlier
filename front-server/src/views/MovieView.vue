@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>MovieView</h1>
+    <h1>영화목록입니다</h1>
     <MovieList />
     <PageNav />
   </div>
