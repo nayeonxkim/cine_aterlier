@@ -4,9 +4,10 @@ import MovieDetail from '../components/MovieDetail.vue'
 import HomeView from '../views/HomeView.vue'
 import MovieView from '../views/MovieView.vue'
 import CommunityView from '../views/CommunityView.vue'
-import PersonalView from '../views/PersonalView.vue'
-import PersonLogin from '../components/PersonLogin.vue'
-import PersonSignup from '../components/PersonSignup.vue'
+// import PersonalView from '../views/PersonalView.vue'
+// import PersonLogin from '../components/PersonLogin.vue'
+// import PersonSignup from '../components/PersonSignup.vue'
+import LoginView from '../views/LoginView.vue'
 import ArticleList from '../components/ArticleList.vue'
 import ArticleDetail from '../components/ArticleDetail.vue'
 
@@ -15,7 +16,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -48,21 +49,21 @@ const routes = [
     ]
   },
   {
-    path: '/personal',
-    name: 'personal',
-    component: PersonalView,
-    children: [
-      {
-        path: '/personlogin',
-        name: 'personlogin',
-        component: PersonLogin,
-      },
-      {
-        path: '/personsignup',
-        name: 'personsingup',
-        component: PersonSignup,
-      },
-    ]
+    path: '/login',
+    name: 'login',
+    component: LoginView,
+    // children: [
+    //   {
+    //     path: '/personlogin',
+    //     name: 'personlogin',
+    //     component: PersonLogin,
+    //   },
+    //   {
+    //     path: '/personsignup',
+    //     name: 'personsingup',
+    //     component: PersonSignup,
+    //   },
+    // ]
   },
 ]
 

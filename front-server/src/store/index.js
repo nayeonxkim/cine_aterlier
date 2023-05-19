@@ -37,7 +37,9 @@ export default new Vuex.Store({
       router.push({ name: 'article-list' })
     },
     LOGOUT(state) {
-      state.token = null
+      state.token = null;
+      state.username = null;
+      state.password = null;
     },
     // Movie의 mutations
     GET_MOVIE_LIST(state, payload){
@@ -64,7 +66,6 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
-
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
@@ -80,6 +81,7 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         context.commit('SAVE_TOKEN', res.data.key)
+        router.push({ name: 'home' })
       })
       .catch((err) => {
         console.log(err)
@@ -91,30 +93,34 @@ export default new Vuex.Store({
 
       axios({
         method: 'post',
-        url: `${API_URL}/accounts/login/`,
+        url:`${API_URL}/accounts/login/`,
         data: {
           username, password
         }
       })
       .then((res) => {
         context.commit('SAVE_TOKEN', res.data.key)
+        router.push({ name: 'home' })
       })
       .catch((err) => console.log(err))
     },
     logout(context) {
-      axios({
-        method: 'post',
-        url: `${API_URL}/accounts/logout/`,
-        headers: {
-          Authorization: `Token ${context.state.token}`
-        }
-      })
-      .then(() => {
-        context.commit('LOGOUT')
-        router.push({ name: 'personlogin' })
-      })
-      .catch((err) => {
-        console.log(err)
+      return new Promise((resolve, reject) => {
+        axios({
+          method: 'post',
+          url: `${API_URL}/accounts/logout/`,
+          headers: {
+            Authorization: `Token ${context.state.token}`
+          }
+        })
+          .then(() => {
+            context.commit('LOGOUT')
+            resolve()
+          })
+          .catch((err) => {
+            console.log(err)
+            reject(err)
+          })
       })
     },
     // Movie의 액션
