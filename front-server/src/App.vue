@@ -1,12 +1,18 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/movie">Movie</router-link> |
-      <router-link to="/community">Community</router-link> |
-      <router-link to="/personal">Personal</router-link>
+  <div id="app" class="mt-0">
+    <nav id="navbar-main" class="navbar fixed-top">
+      <div id="left-nav" class="d-flex justify-content-start">
+        <router-link to="/home" class="custom-cat p-2">Home</router-link> 
+        <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
+        <router-link to="/community" class="custom-cat p-2">Community</router-link> 
+      </div>
+
+      <div id="right-nav" class="d-flex justify-content-end">
+        <router-link to="/login" class="custom-cat p-2">Login</router-link> 
+      </div>
     </nav>
-    <router-view/>
+    <div class="box">blank</div>
+    <router-view class="mt-5"/>
   </div>
 </template>
 
@@ -21,24 +27,42 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; */
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 
-nav {
-  padding: 30px;
+#navbar-main {
+  font-family: 'Blinker', sans-serif;
+  background-color: #ffffff;
+  font-size: 25px;
+  border-bottom: 2px solid black;
+  
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.custom-cat{
+  text-decoration: none;
+  color:black
 }
+
+/* 왼쪽 세 카테고리 */
+#left-nav{
+  margin-left: 8px;
+  text-decoration-line: none;
+  
+}
+
+/* 오른쪽 카테고리 */
+#right-nav{
+  margin-right:8px;
+}
+
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  font-weight: bold;
+  color: #ff4429;
 }
 </style>

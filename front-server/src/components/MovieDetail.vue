@@ -1,29 +1,36 @@
 <template>
   <div>
-    <h1>Movie Detail, {{movieId}}</h1>
+    <h1>{{movieId}}번 영화 디테일입니다</h1>
+    <h2>{{movieDetail.title}}</h2>
   </div>
 </template>
 
 <script>
 export default {
-  // Django로 axios 요청 보내기
+  name:'MovieDetail',
   data(){
-    return {
+    return{
       movieId : this.$route.params.movieId
     }
   },
-  methods:{
-    get_movie_item(movieId){
-      this.$store.dispatch('get_movie_item', movieId)
-    }
-  },
   computed:{
-    movieItem(){
-      return this.$store.state.movieItem
+    movieDetail(){
+      return this.$store.state.movieDetail
     }
   },
+
+  methods:{
+    get_movie_detail(){
+      return this.$store.dispatch('get_movie_detail', this.movieId)
+    }
+  },
+
   created(){
-    this.get_movie_item()
+    this.get_movie_detail()
+  },
+
+  destroyed(){
+    // this.$store.state.movieDetail를 null로 바꾸기.
   }
 }
 </script>
