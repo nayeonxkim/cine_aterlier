@@ -1,12 +1,22 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/movie">Movie</router-link> |
-      <router-link to="/community">Community</router-link> |
+  <div id="app" class="mt-0">
+    <nav id="navbar-main" class="navbar px-3 mb-3 custom-background fixed-top">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <router-link to="/home">Home</router-link> |
+        </li>
+        <li class="nav-item">
+          <router-link to="/movie">Movie</router-link> |
+        </li>
+        <li class="nav-item">
+          <router-link to="/community">Community</router-link> |
+        </li>
+        <li class="nav-item">
+          <router-link to="/login">Login</router-link> 
+        </li>
+      </ul>
     </nav>
-    <router-view/>
+    <router-view class="mt-5"/>
   </div>
 </template>
 
@@ -29,11 +39,12 @@ export default {
   margin-top: 60px;
 }
 
-nav {
-  padding: 30px;
+#navbar-main {
+  background-color: #7e2727;
 }
 
 nav a {
+
   font-weight: bold;
   color: #2c3e50;
 }
