@@ -2,12 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 영화정보
 import MovieView from '../views/MovieView.vue'
+import MovieList from '../components/MovieList.vue'
 
 import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
-// import PersonalView from '../views/PersonalView.vue'
-// import PersonLogin from '../components/PersonLogin.vue'
-// import PersonSignup from '../components/PersonSignup.vue'
+
 import LoginView from '../views/LoginView.vue'
 import ArticleList from '../components/ArticleList.vue'
 import ArticleDetail from '../components/ArticleDetail.vue'
@@ -27,9 +26,14 @@ const routes = [
     path: '/movie',
     name: 'movie',
     component: MovieView,
-
+    children: [
+      {
+        path: '/movielist/:currentPage',
+        name: 'movie-list',
+        component: MovieList
+      },
+    ]
   },
-
 
 
   {
