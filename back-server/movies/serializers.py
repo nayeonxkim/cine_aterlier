@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, Rating
+from .models import Movie, Rating, User
 
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,3 +17,14 @@ class MovieDetailSerialzer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+class MovieImgSerializer(serializers.ModelSerializer):
+    ratings = RatingSerializer(many=True, read_only=True)
+    class Meta:
+        model = Movie
+        fields = ('tmdb_id', 'original_title', 'poster_path', 'popularity','ratings',)

@@ -11,21 +11,19 @@
 
     </div>
 
-     <MovieDetail />
-
 
   </div>
 </template>
 
 <script>
 import MovieItem from './MovieItem.vue'
-import MovieDetail from './MovieDetail.vue'
+// import MovieDetail from './MovieDetail.vue'
 
 export default {
   name: 'MovieList',
   components: {
     MovieItem,
-    MovieDetail
+    // MovieDetail
   },
   // store에서 모든 영화 정보 가져오기
   methods:{
