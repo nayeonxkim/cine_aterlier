@@ -30,17 +30,16 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    GET_ARTICLES(state, articles) {
+    GET_ARTICLES_LIST(state, articles) {
       state.articles = articles
     },
     SAVE_TOKEN(state, token) {
       state.token = token
-      router.push({ name: 'article-list' })
+      axios.defaults.headers.common['Authorization'] = `Token ${token}` // 헤더에 토큰 설정
     },
     LOGOUT(state) {
-      state.token = null;
-      state.username = null;
-      state.password = null;
+      state.token = null
+      delete axios.defaults.headers.common['Authorization'] // 로그아웃 시 헤더에서 토큰 제거
     },
     // Movie의 mutations
     GET_MOVIE_LIST(state, payload){
@@ -52,27 +51,12 @@ export default new Vuex.Store({
 
   },
   actions: {
-    getArticles(context) {
-      axios({
-        method: 'get',
-        url: `${API_URL}/articles/`,
-        headers: {
-          Authorization: `Token ${ context.state.token }`
-        }
-      })
-        .then((res) => {
-        // console.log(res, context)
-          context.commit('GET_ARTICLES', res.data)
-        })
-        .catch((err) => {
-        console.log(err)
-      })
-    },
+    // Login의 액션
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
       const password2 = payload.password2
-
+      
       axios({
         method: 'post',
         url:`${API_URL}/accounts/signup/`,
@@ -92,19 +76,22 @@ export default new Vuex.Store({
     login(context, payload) {
       const username = payload.username
       const password = payload.password
-
+      
       axios({
         method: 'post',
-        url:`${API_URL}/accounts/login/`,
+        url: `${API_URL}/accounts/login/`,
         data: {
-          username, password
+          username,
+          password
         }
       })
       .then((res) => {
         context.commit('SAVE_TOKEN', res.data.key)
         router.push({ name: 'home' })
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err)
+      })
     },
     logout(context) {
       return new Promise((resolve, reject) => {
@@ -115,14 +102,14 @@ export default new Vuex.Store({
             Authorization: `Token ${context.state.token}`
           }
         })
-          .then(() => {
-            context.commit('LOGOUT')
-            resolve()
-          })
-          .catch((err) => {
-            console.log(err)
-            reject(err)
-          })
+        .then(() => {
+          context.commit('LOGOUT')
+          resolve()
+        })
+        .catch((err) => {
+          console.log(err)
+          reject(err)
+        })
       })
     },
 
@@ -161,7 +148,31 @@ export default new Vuex.Store({
         console.error(err)
       })
 
-    }
+    },
+
+    // community의 액션
+    get_article_list(context, currentPage) {
+      // const start = 10 * (currentPage - 1)
+      // const end = 10 * currentPage - 1
+  
+      axios
+        .get(`${API_URL}/articles/index/`, {
+          headers: {
+            Authorization: `Token ${context.state.token}`
+          }
+        })
+        .then((res) => {
+          console.log(res)
+          console.log(context)
+          // const payload = res.data.slice(start, end)
+          // console.log(payload)
+          // context.commit('GET_ARTICLES_LIST', payload)
+        })
+        .catch((err) => {
+          console.log(currentPage)
+          console.log(err)
+        })
+    },
   },
   modules: {
   },
