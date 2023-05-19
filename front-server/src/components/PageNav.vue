@@ -1,7 +1,5 @@
 <template>
-  <div style='background-color: skyblue'>
-    <h2>PageNavbar입니다</h2>
-    
+  <div>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item" @click="onPrevious">
