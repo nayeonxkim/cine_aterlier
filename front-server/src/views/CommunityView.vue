@@ -1,12 +1,18 @@
 <template>
   <div>
     <h1>Community</h1>
+    <div class="row">
+      <ArticleList />
+    </div>
+    <CreateArticleModal />
     <ArticlePageNav />
   </div>
 </template>
 
 <script>
+import ArticleList from '../components/ArticleList.vue'
 import ArticlePageNav from '@/components/ArticlePageNav.vue'
+import CreateArticleModal from '../components/CreateArticleModal.vue'
 
 export default {
   name: 'CommunityView',
@@ -14,21 +20,24 @@ export default {
     isLogin() {
       return this.$store.getters.isLogin
     },
+    articleList() {
+      return this.$store.state.articlesList;
+    },
   },
   components: {
+    ArticleList,
     ArticlePageNav,
+    CreateArticleModal,
   },
   created() {
-    this.getArticles()
+    this.getArticleList()
   },
   methods: {
-    getArticles() {
-      if (this.isLogin) {
-        this.$store.dispatch('get_article_list', 1)
-      } else {
-        alert('로그인이 필요한 페이지입니다.')
-        this.$router.push({ name: 'login' })
-      }
+    getArticleList() {
+      this.$store.dispatch('get_article_list', 1)
+    },
+    closeModal() {
+      this.$store.commit('CLOSE_MODAL')
     },
   },
 }
