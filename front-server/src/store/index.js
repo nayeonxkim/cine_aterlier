@@ -47,9 +47,7 @@ export default new Vuex.Store({
     GET_MOVIE_DETAIL(state,payload){
       state.movieDetail = payload
     },
-    MOVIEDETAIL_RESET(state){
-      state.movieDetail = null
-    },
+
 
     // Article mutations
     GET_ARTICLE_LIST(state, article) {
