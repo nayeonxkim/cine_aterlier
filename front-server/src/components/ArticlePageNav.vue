@@ -10,9 +10,17 @@
           </a>
         </li>
 
-        <li class="page-item" v-for="(pageNum, id) in pageRange" :key="id" :class="{ active: pageNum === currentPage }" @click="onPageNum">
-          <a v-if="pageNum <= pageCount" class="page-link" href="#">{{ pageNum }}</a>
-        </li>
+        <template v-if="pageCount > 0">
+          <li v-for="(pageNum, id) in pageRange" :key="id" :class="{ 'page-item': true, active: pageNum === currentPage }">
+            <a class="page-link" href="#" @click="onPageNum(pageNum)">{{ pageNum }}</a>
+          </li>
+        </template>
+
+        <template v-else>
+          <li v-bind:class="{ 'page-item': true, active: currentPage === 1 }">
+            <a class="page-link" href="#" @click="onPageNum(1)">1</a>
+          </li>
+        </template>
 
         <li class="page-item" @click="onNext">
           <a class="page-link" href="#" aria-label="Next">
@@ -23,6 +31,7 @@
     </nav>
   </div>
 </template>
+
 
 <script>
 import _ from 'lodash'
@@ -37,7 +46,7 @@ export default {
   },
   methods: {
     onPageNum(event) {
-      const pageNum = event.target.innerText // innerText 없으니까 수정하자
+      const pageNum = event.currentTarget.innerText
       this.currentPage = parseInt(pageNum, 10)
       this.$store.dispatch('get_article_list', this.currentPage)
     },
@@ -62,9 +71,11 @@ export default {
   computed: {
     pageRange() {
       const startIndex = parseInt(this.currentIndex / 10) * 10 + 1
-      const endIndex = parseInt(this.currentIndex / 10) * 10 + 11
+      const endIndex = startIndex + 10
 
-      return _.range(startIndex, endIndex)
+      const lastPage = Math.max(this.pageCount, 1) // 최소 페이지를 1로 설정
+
+      return _.range(startIndex, Math.min(endIndex, lastPage + 1))
     },
   },
 

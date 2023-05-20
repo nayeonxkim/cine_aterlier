@@ -155,8 +155,8 @@ export default new Vuex.Store({
 
     // community의 액션
     get_article_list(context, currentPage) {
-      // const start = 10 * (currentPage - 1)
-      // const end = 10 * currentPage - 1
+      const start = 10 * (currentPage - 1)
+      const end = 10 * currentPage - 1
   
       axios
         .get(`${API_URL}/articles/index/`, {
@@ -165,11 +165,9 @@ export default new Vuex.Store({
           }
         })
         .then((res) => {
-          console.log(res)
-          console.log(context)
-          // const payload = res.data.slice(start, end)
-          // console.log(payload)
-          // context.commit('GET_ARTICLES_LIST', payload)
+          const payload = res.data.slice(start, end)
+          console.log(payload)
+          context.commit('GET_ARTICLES_LIST', payload)
         })
         .catch((err) => {
           console.log(currentPage)
