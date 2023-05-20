@@ -14,7 +14,7 @@ export default {
   name: 'MovieView',
   components: {
     MovieList,
-    PageNav
+    PageNav,
   },
   computed: {
     isLogin() {
