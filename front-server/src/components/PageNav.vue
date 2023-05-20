@@ -55,6 +55,7 @@ export default {
       if (this.currentIndex > 10) {
         this.currentIndex = parseInt(this.currentIndex/10) * 10 - 1
         this.currentPage = this.currentIndex + 1
+        this.onPageNum(currentPage)
       } else {
         alert('이전 페이지 목록이 없습니다.')
       }
