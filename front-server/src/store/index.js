@@ -48,15 +48,7 @@ export default new Vuex.Store({
     GET_MOVIE_DETAIL(state,payload){
       state.movieDetail = payload
     },
-    MOVIEDETAIL_RESET(state){
-      state.movieDetail = null
-    },
-    MOVIELIST_RESET(state){
-      state.movieList = null
-    },
-    MOVIEITEM_RESET(state){
-      state.movieItem = null
-    }
+
 
   },
   actions: {
