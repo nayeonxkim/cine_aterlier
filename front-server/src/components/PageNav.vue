@@ -69,6 +69,11 @@ export default {
       
       return _.range(startIndex, endIndex)
     }
+  },
+  watch:{
+    currentPage(){
+      this.$store.dispatch('get_movie_list', this.currentPage)
+    }
   }
 }
 </script>

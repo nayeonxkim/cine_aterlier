@@ -8,7 +8,7 @@
       </div>
 
       <div id="right-nav" class="d-flex justify-content-end">
-        <router-link to="/login" class="custom-cat p-2">Login</router-link> 
+        <router-link to="/" class="custom-cat p-2">Login</router-link> 
       </div>
     </nav>
     <div class="box">blank</div>
@@ -34,6 +34,7 @@ export default {
   text-align: center;
   margin-top: 60px;
 }
+
 
 #navbar-main {
   font-family: 'Blinker', sans-serif;
