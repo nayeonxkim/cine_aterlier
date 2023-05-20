@@ -50,6 +50,12 @@ export default new Vuex.Store({
     },
     MOVIEDETAIL_RESET(state){
       state.movieDetail = null
+    },
+    MOVIELIST_RESET(state){
+      state.movieList = null
+    },
+    MOVIEITEM_RESET(state){
+      state.movieItem = null
     }
 
   },
