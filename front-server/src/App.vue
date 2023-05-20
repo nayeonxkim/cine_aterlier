@@ -35,6 +35,7 @@ export default {
   margin-top: 60px;
 }
 
+
 #navbar-main {
   font-family: 'Blinker', sans-serif;
   background-color: #ffffff;
