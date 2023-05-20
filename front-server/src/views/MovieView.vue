@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>ALL MOVIES</h1>
+
     <MovieList />
     <PageNav />
   </div>
@@ -39,9 +40,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap');
-body{
-  background-color: #fff4f4 !important;
-}
+
 h1{
   font-family: 'Blinker', sans-serif;
   margin: 30px !important;
