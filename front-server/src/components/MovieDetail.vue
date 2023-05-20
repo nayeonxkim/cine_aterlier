@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="modal fade"  tabindex="-1" :class="{ 'show': showModal }" > 
+    <div class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" :class="{ 'show': showModal }" > 
       <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style>
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1050;
@@ -68,7 +68,7 @@ export default {
   height: 10%;
   overflow: hidden;
   outline: 0;
-}
+} */
 
 .modal.show {
   display: block;
