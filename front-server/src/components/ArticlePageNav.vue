@@ -5,26 +5,26 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item" @click="onPrevious">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
+          <a class="page-link" aria-label="Previous">
+            <span aria-hidden="true" style="color: #000000">&laquo;</span>
           </a>
         </li>
 
         <template v-if="pageCount > 0">
           <li v-for="(pageNum, id) in pageRange" :key="id" :class="{ 'page-item': true, active: pageNum === currentPage }">
-            <a class="page-link" href="#" @click="onPageNum(pageNum)">{{ pageNum }}</a>
+            <a class="page-link" @click="onPageNum(pageNum)">{{ pageNum }}</a>
           </li>
         </template>
 
         <template v-else>
           <li v-bind:class="{ 'page-item': true, active: currentPage === 1 }">
-            <a class="page-link" href="#" @click="onPageNum(1)">1</a>
+            <a class="page-link" @click="onPageNum(1)">1</a>
           </li>
         </template>
 
         <li class="page-item" @click="onNext">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
+          <a class="page-link" aria-label="Next">
+            <span aria-hidden="true" style="color: #000000">&raquo;</span>
           </a>
         </li>
       </ul>
@@ -88,13 +88,24 @@ export default {
 </script>
 
 <style>
-.page-item.active .page-link {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: #fff;
+.page-link {
+  color: #000000;
+  border-color: #fff !important;
 }
 
-.page-item.active {
-  background-color: #007bff;
+.page-item.active .page-link, .page-item:focus, .left:active, .left:focus, .right:active, .right:focus, .first:active, .last:active {
+  z-index: 1;
+  color: #ff4429 !important;
+  font-weight:bold;
+  background-color: #fff !important;
+  border-color: #fff;
 }
+
+.page-link:focus, .page-link:hover, .page-link:active, .left:hover, .left:focus, .right:hover, .right:focus, .first:hover, .first:focus, .last:focus, .last:hover {
+  color: #ff4429 !important;
+  background-color: #fff !important; 
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
 </style>

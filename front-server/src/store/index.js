@@ -15,7 +15,10 @@ export default new Vuex.Store({
     createPersistedState(),
   ],
   state: {
+    API_URL : 'http://127.0.0.1:8000',
     token: null,
+    User: null,
+    UserId : null,
 
     // Article
     articleList: null,
@@ -35,6 +38,10 @@ export default new Vuex.Store({
     SAVE_TOKEN(state, token) {
       state.token = token
       axios.defaults.headers.common['Authorization'] = `Token ${token}` // 헤더에 토큰 설정
+    },
+    SET_USER(state, user) {
+      state.User = user
+      state.userId = user.pk
     },
     LOGOUT(state) {
       state.token = null
@@ -75,6 +82,7 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         context.commit('SAVE_TOKEN', res.data.key)
+        context.commit('SET_USER', res.data)
         router.push({ name: 'home' })
       })
       .catch((err) => {
@@ -95,6 +103,7 @@ export default new Vuex.Store({
       })
       .then((res) => {
         context.commit('SAVE_TOKEN', res.data.key)
+        context.commit('SET_USER', res.data)
         router.push({ name: 'home' })
       })
       .catch((err) => {
@@ -120,7 +129,6 @@ export default new Vuex.Store({
         })
       })
     },
-
 
     // Movie의 액션
     get_movie_list(context, currentPage){
