@@ -15,9 +15,11 @@ export default new Vuex.Store({
     createPersistedState(),
   ],
   state: {
-    articles: [
-    ],
     token: null,
+
+    // Article
+    articleList: null,
+    
     // Movie
     movieList:null,
     movieItem:null,
@@ -30,9 +32,6 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    GET_ARTICLES_LIST(state, articles) {
-      state.articles = articles
-    },
     SAVE_TOKEN(state, token) {
       state.token = token
       axios.defaults.headers.common['Authorization'] = `Token ${token}` // 헤더에 토큰 설정
@@ -58,6 +57,14 @@ export default new Vuex.Store({
       state.movieItem = null
     }
 
+    // Article mutations
+    GET_ARTICLE_LIST(state, article) {
+      state.articleList = article
+    },
+    ARTICLELIST_RESET(state){
+      state.articleList = null
+    }
+    
   },
   actions: {
     // Login의 액션
@@ -141,7 +148,6 @@ export default new Vuex.Store({
     },
 
     get_movie_detail(context, movieId){
-
       axios
       .get(`https://api.themoviedb.org/3/movie/${movieId}`,{
         params:{
@@ -163,7 +169,7 @@ export default new Vuex.Store({
     get_article_list(context, currentPage) {
       const start = 10 * (currentPage - 1)
       const end = 10 * currentPage - 1
-  
+
       axios
         .get(`${API_URL}/articles/index/`, {
           headers: {
@@ -173,12 +179,40 @@ export default new Vuex.Store({
         .then((res) => {
           const payload = res.data.slice(start, end)
           console.log(payload)
-          context.commit('GET_ARTICLES_LIST', payload)
+          context.commit('GET_ARTICLE_LIST', payload)
         })
         .catch((err) => {
           console.log(currentPage)
           console.log(err)
         })
+    },
+    get_article_detail(context, articleId){
+      axios
+      .get(`${API_URL}/articles/${articleId}`)
+      .then((res)=>{
+        const payload = res.data
+        context.commit('GET_ARTICLE_DETAIL', payload)
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+    },
+    create_article(context, formData) {
+      return new Promise((resolve, reject) => {
+        axios.post(`${API_URL}/articles/create/`, formData, {
+          headers: {
+            Authorization: `Token ${context.state.token}`,
+            'Content-Type': 'multipart/form-data',
+          }
+        })
+        .then(() => {
+          context.dispatch('get_article_list', 1)
+          resolve()
+        })
+        .catch(error => {
+          reject(error)
+        })
+      })
     },
   },
   modules: {
