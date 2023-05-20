@@ -54,9 +54,6 @@ export default {
     this.get_movie_detail()
     this.showModal = true; // 모달을 표시할 때 showModal 값을 true로 설정
   },
-  // destroyed(){
-  //   this.movieDetail_reset()
-  // }
 }
 </script>
 
