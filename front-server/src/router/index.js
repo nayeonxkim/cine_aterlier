@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 // 영화정보
 import MovieView from '../views/MovieView.vue'
 import MovieList from '../components/MovieList.vue'
-import MovieDetail from '../components/MovieDetail.vue'
+
 
 import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
@@ -36,11 +36,6 @@ const routes = [
     ]
   },
 
-  {
-    path: '/movie-detail/:movieId',
-    name:'movie-detail',
-    component:MovieDetail
-  },
 
 
   {
