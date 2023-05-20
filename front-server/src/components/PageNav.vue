@@ -2,9 +2,15 @@
   <div class="first">
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
+        <li class="page-item" @click="goToFirstPage">
+          <a class="page-link" aria-label="First">
+            <span class="first" aria-hidden="true" style="color: #000000">&lt;&lt;</span>
+          </a>
+        </li>
+
         <li class="page-item" @click="onPrevious">
           <a class="page-link" aria-label="Previous">
-            <span class="left" aria-hidden="true" style="color: #000000">&laquo;</span>
+            <span class="left" aria-hidden="true" style="color: #000000">&lt;</span>
           </a>
         </li>
 
@@ -17,6 +23,12 @@
             <span class="right" aria-hidden="true" style="color: black;">&raquo;</span>
           </a>
         </li>
+
+        <li class="page-item" @click="goToLastPage">
+          <a class="page-link" aria-label="Last">
+        <span class="last" aria-hidden="true" style="color: #000000">&raquo;&raquo;</span>
+      </a>
+    </li>
       </ul>
     </nav>
   </div>
@@ -41,11 +53,25 @@ export default {
       this.currentPage = parseInt(pageNum, 10)
       this.$store.dispatch('get_movie_list', this.currentPage)
     },
+    goToFirstPage() {
+      this.currentPage = 1
+      this.$store.dispatch('get_movie_list', this.currentPage)
+      this.$store.dispatch()
+      this.currentPage = this.currentIndex
+      this.onPageNum({ target: { innerText: this.currentPage.toString() } })
+    },
+    goToLastPage() {
+      const lastPage = 100
+      this.currentPage = lastPage
+      this.$store.dispatch('get_movie_list', this.currentPage)
+      this.currentPage = this.currentIndex - 9
+        this.onPageNum({ target: { innerText: this.currentPage.toString() } })
+    },
     onNext(){
       if (this.currentIndex < 91) {
         this.currentIndex = parseInt(this.currentIndex/10) * 10 + 11
         this.currentPage = this.currentIndex
-        this.onPageNum(currentPage)
+        this.onPageNum({ target: { innerText: this.currentPage.toString() } })
       }
       else {
         alert('다음 페이지 목록이 없습니다.')
@@ -55,7 +81,7 @@ export default {
       if (this.currentIndex > 10) {
         this.currentIndex = parseInt(this.currentIndex/10) * 10 - 1
         this.currentPage = this.currentIndex + 1
-        this.onPageNum(currentPage)
+        this.onPageNum({ target: { innerText: this.currentPage.toString() } })
       } else {
         alert('이전 페이지 목록이 없습니다.')
       }
