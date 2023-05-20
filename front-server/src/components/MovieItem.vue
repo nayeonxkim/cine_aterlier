@@ -2,7 +2,6 @@
   <div>
     <div class="card" @click="toDetail">
       <img :src="`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`" class="card-img-top" alt="Movie Poster">
-
     </div>
   </div>
 </template>
