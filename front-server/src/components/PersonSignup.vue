@@ -35,7 +35,8 @@ export default {
       const payload = {
         username, password1, password2
       }
-
+      
+      this.$store.commit('SET_USER', res.data)
       this.$store.dispatch('signUp', payload)
     }
   }

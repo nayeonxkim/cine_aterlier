@@ -31,6 +31,7 @@ export default {
         username, password
       }
 
+      this.$store.commit('SET_USER', res.data)
       this.$store.dispatch('login', payload)
     }
   }
