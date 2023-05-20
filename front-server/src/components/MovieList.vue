@@ -5,7 +5,7 @@
       v-for="(movie, idx) in movieList" 
       :key="idx"
       :movie-item= movie 
-      class="col-6 col-md-1 col-lg-1 mb-4" />
+      class="col-6 col-md-3 col-lg-3 mb-4" />
   </div>
 
 
@@ -25,14 +25,6 @@ export default {
       return this.$store.state.movieList;
     }
   },
-  methods:{
-    movieList_reset(){
-      return this.$store.commit('MOVIELIST_RESET')
-    }
-  },
-  destroyed(){
-    this.movieList_reset()
-  }
 }
 </script>
 
