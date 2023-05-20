@@ -1,36 +1,34 @@
 <template>
   <div>
     <h1>Article List</h1>
+    <div class="row">
+      <ArticleItem
+        v-for="(article, idx) in articleList"
+        :key="idx"
+        :article-item="article"
+        class="col-6 col-md-1 col-lg-1 mb-4"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-
+import ArticleItem from './ArticleItem.vue'
 
 export default {
   name: 'ArticleList',
   components: {
-    // ArticleItem,
+    ArticleItem,
   },
   computed: {
-    isLogin() {
-      return this.$store.getters.isLogin
-    }
+    articleList() {
+      return this.$store.state.articleList
+    },
   },
-  created() {
-    this.getArticles()
+  beforeDestroy() {
+    this.$store.commit('ARTICLELIST_RESET')
   },
-  methods: {
-    getArticles() {
-      if (this.isLogin) {
-        this.$store.dispatch('getArticles')
-      } else {
-        alert('로그인이 필요한 페이지입니다.')
-        this.$router.push({ name: 'personlogin' })
-      }
-    }
-  }
-}
+};
 </script>
 
 <style>
