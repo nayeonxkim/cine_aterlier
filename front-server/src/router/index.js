@@ -50,6 +50,7 @@ const routes = [
       },
       {
         path: '/articles/:articleId',
+        name: 'article-detail',
         component: ArticleDetail,
       },
     ]
@@ -58,18 +59,6 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LoginView,
-    // children: [
-    //   {
-    //     path: '/personlogin',
-    //     name: 'personlogin',
-    //     component: PersonLogin,
-    //   },
-    //   {
-    //     path: '/personsignup',
-    //     name: 'personsingup',
-    //     component: PersonSignup,
-    //   },
-    // ]
   },
 ]
 
