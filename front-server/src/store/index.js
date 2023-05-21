@@ -21,16 +21,15 @@ export default new Vuex.Store({
 
     // Article
     articleList: null,
-    selectedArticle: null,
-    
+
     // Movie
-    movieList:null,
-    movieItem:null,
-    movieDetail:null,
+    movieList: null,
+    movieItem: null,
+    movieDetail: null,
 
     // Home
-    searchedList:null,
-    selectedMovie:null
+    searchedList: null,
+    selectedMovie: null
 
   },
   getters: {
@@ -53,6 +52,7 @@ export default new Vuex.Store({
     },
     LOGOUT(state) {
       state.token = null
+      state.User = null
       delete axios.defaults.headers.common['Authorization'] // 로그아웃 시 헤더에서 토큰 제거
     },
     // Movie의 mutations
@@ -66,16 +66,7 @@ export default new Vuex.Store({
 
     // Article mutations
     GET_ARTICLE_LIST(state, payload) {
-      state.articleList = payload.results
-    },
-    ARTICLELIST_RESET(state){
-      state.articleList = null
-    },
-    SET_SELECTED_ARTICLE(state, article) {
-      state.selectedArticle = article
-    },
-    SET_ARTICLE_LIST(state, articleList) {
-      state.articleList = articleList
+      state.articleList = payload
     },
 
     // HOME의 mutations
@@ -135,6 +126,7 @@ export default new Vuex.Store({
         router.push({ name: 'home' })
       })
       .catch((err) => {
+        alert('username 혹은 password를 다시 확인해주세요.')
         console.log(err)
       })
     },
@@ -167,7 +159,7 @@ export default new Vuex.Store({
       axios
       .get('http://127.0.0.1:8000/movies/index/')
       .then((res) => {
-        const payload = res.data.slice(start,end)
+        const payload = res.data.slice(start, end)
         context.commit('GET_MOVIE_LIST', payload)
       })
       .catch((err) => {
@@ -205,16 +197,15 @@ export default new Vuex.Store({
           }
         })
         .then((res) => {
-          const payload = Array.isArray(res.data) ? res.data.slice(start, end) : []
-          console.log(payload)
+          // console.log(res)
+          const payload = res.data.articles.slice(start, end)
+          // console.log(payload)
           context.commit('GET_ARTICLE_LIST', payload)
         })
         .catch((err) => {
-          console.log(currentPage)
           console.log(err)
         })
     },
-    
     
     get_article_detail(context, articleId){
       axios
@@ -227,6 +218,7 @@ export default new Vuex.Store({
         console.error(err)
       })
     },
+
     create_article(context, formData) {
       formData.append('user', context.state.User)  // 사용자 정보 추가
       formData.append('userId', context.state.UserId)  // 사용자 ID 추가
@@ -247,27 +239,6 @@ export default new Vuex.Store({
             reject(error)
           })
       })
-    },
-    setSelectedArticle({ commit }, article) {
-      commit('SET_SELECTED_ARTICLE', article)
-    },
-    async fetchArticleList({ commit, state }, page) {
-      try {
-        const response = await axios.get(`${state.API_URL}/articles/index`, {
-          headers: {
-            Authorization: `Token ${state.token}`
-          }
-        })
-        const allArticles = response.data.articles;
-    
-        const articlesPerPage = 8
-        const startIndex = (page - 1) * articlesPerPage
-        const articleList = allArticles.slice(startIndex, startIndex + articlesPerPage)
-    
-        commit('SET_ARTICLE_LIST', articleList)
-      } catch (err) {
-        console.error(err);
-      }
     },
     
     // HOME의 액션

@@ -10,7 +10,7 @@
 
 <script>
 import axios from 'axios'
-const API_URL = 'http://127.0.0.1:8000/'
+const API_URL = 'http://127.0.0.1:8000'
 
 export default {
   name: 'ArticleDetail',
@@ -24,14 +24,16 @@ export default {
   },
   methods: {
     getArticleDetail() {
-      const articleId = this.$route.params.articleId;
+      const articleId = this.$route.params.articleId
       axios
-        .get(`${API_URL}/articles/${articleId}/`) // Django API 엔드포인트 호출
+        .get(`${API_URL}/articles/${articleId}/`)
         .then(response => {
-          this.article = response.data;
+          console.log(response.data)
+          this.article = response.data
+          console.log('성공!')
         })
         .catch(error => {
-          console.log(error);
+          console.log(error)
         });
     },
   },
@@ -39,5 +41,5 @@ export default {
 </script>
 
 <style>
-
+/* 필요한 스타일을 추가하세요 */
 </style>

@@ -2,9 +2,9 @@
   <div class="article-list">
     <div class="row">
       <ArticleItem
-        v-for="(articleItem, idx) in articleList"
+        v-for="(article, idx) in articleList"
         :key="idx"
-        :article-item="articleItem"
+        :article-item="article"
         class="col-6 col-md-4 col-lg-3 mb-4"
       />
     </div>
@@ -13,7 +13,7 @@
 
 
 <script>
-import ArticleItem from './ArticleItem.vue'
+import ArticleItem from '@/components/ArticleItem.vue'
 
 export default {
   name: 'ArticleList',
@@ -25,10 +25,7 @@ export default {
       return this.$store.state.articleList
     },
   },
-  beforeDestroy() {
-    this.$store.commit('ARTICLELIST_RESET')
-  },
-};
+}
 </script>
 
 <style>
@@ -55,7 +52,6 @@ export default {
 .col-1, .col-3 {
   flex-basis: calc((100% - 2rem) / 12);
 }
-
 
 .col-1, .col-3 {
   flex-basis: calc((100% - 2rem) / 12);

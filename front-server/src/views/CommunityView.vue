@@ -29,12 +29,12 @@ export default {
     CreateArticleModal,
   },
   created() {
-    this.getArticleList()
+    this.getArticles()
   },
   methods: {
-    getArticleList() {
+    getArticles() {
       if (this.isLogin) {
-        this.$store.dispatch('fetchArticleList', 1)
+        this.$store.dispatch('get_article_list', 1)
       } else {
         alert('로그인이 필요한 페이지입니다.')
         this.$router.push({ name: 'login' })
@@ -42,11 +42,8 @@ export default {
     },
     closeModal() {
       this.$store.commit('CLOSE_MODAL')
+      this.getArticles()
     },
-    toDetail(article) {
-      const API_URL = 'http://127.0.0.1:8000'
-      this.$router.push(`${API_URL}/articles/${article.id}`)
-    }
   },
 }
 </script>
