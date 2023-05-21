@@ -8,7 +8,8 @@
       </div>
 
       <div id="right-nav" class="d-flex justify-content-end">
-        <router-link to="/" class="custom-cat p-2">Login</router-link> 
+        <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
+        <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </nav>
     <div class="box">blank</div>
@@ -20,6 +21,11 @@
 
 export default {
   name: 'App',
+  computed: {
+    isLoggedIn() {
+      return this.$store.getters.isLogin
+    }
+  },
   components: {
 
   }
@@ -49,11 +55,19 @@ export default {
   color:black
 }
 
+.custom-cat:focus, .custom-cat:hover {
+  color: #ff4429 !important;
+}
+
+.custom-cat:active {
+  font-weight: bold !important;
+  color: #ff4429 !important;
+}
+
 /* 왼쪽 세 카테고리 */
 #left-nav{
   margin-left: 8px;
   text-decoration-line: none;
-  
 }
 
 /* 오른쪽 카테고리 */
@@ -61,9 +75,10 @@ export default {
   margin-right:8px;
 }
 
-
-nav a.router-link-exact-active {
+/* nav a.router-link-exact-active {
   font-weight: bold;
   color: #ff4429;
-}
+  outline: none;
+} */
+
 </style>
