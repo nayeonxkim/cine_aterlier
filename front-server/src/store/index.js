@@ -26,7 +26,11 @@ export default new Vuex.Store({
     // Movie
     movieList:null,
     movieItem:null,
-    movieDetail:null
+    movieDetail:null,
+
+    // Home
+    searchedList:null,
+    selectedMovie:null
 
   },
   getters: {
@@ -62,8 +66,23 @@ export default new Vuex.Store({
     },
     ARTICLELIST_RESET(state){
       state.articleList = null
+    },
+
+
+    // HOME의 mutations
+    GET_SEARCHEDLIST(state, payload){
+      state.searchedList = payload
+    },
+    SEARCHEDLIST_RESET(state){
+      state.searchedList = null
+    },
+    SELECT_MOVIE(state, payload){
+      state.selectedMovie = payload
+    },
+    SELECT_PAINTER(state, payload){
+      state.selectedPainter = payload
     }
-    
+
   },
   actions: {
     // Login의 액션
@@ -214,6 +233,34 @@ export default new Vuex.Store({
         })
       })
     },
+
+    // HOME의 액션
+    get_searchedList(context, movieTitle){
+      axios
+      .get(`http://127.0.0.1:8000/movies/index/`)
+      .then((res) => {
+        const searchedData = res.data.filter(obj => obj.title.includes(movieTitle));
+        const payload = searchedData
+        context.commit('GET_SEARCHEDLIST', payload)
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+    },
+
+    to_karlo(context){
+      console.log(context.state.selectedMovie)
+      console.log(context.state.selectedPainter)
+      axios
+      .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie}/${context.state.selectedPainter}/`)
+      .then((res) => {
+        console.log(res)
+        console.log(context)
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+    }
   },
   modules: {
   },
