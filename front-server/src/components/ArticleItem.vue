@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="card" @click="toDetail">
-      <img :src="articleItem.img" class="card-img-top" alt="Article Image">
+    <div class="card" @click="toDetail(articleItem)">
+      <h1>{{ articleItem.title }}</h1>
+      <h2>{{ articleItem.content }}</h2>
+      <img :src="getImagePath(articleItem.img)" alt="Article Image">
     </div>
   </div>
 </template>
@@ -12,16 +14,17 @@ export default {
   props: {
     articleItem: Object
   },
-  computed: {
-    articleList() {
-      return this.$store.state.articles
-    }
-  },
   methods: {
-    toDetail() {
-      const articleId = this.articleItem.id
-      this.$router.push({ name: 'article-detail', params: { articleId: articleId } })
+    toDetail(article) {
+      this.$emit('to-detail', article)
+    },
+    getImagePath(imageUrl) {
+      return this.$root.MEDIA_URL + imageUrl
     }
   }
 }
 </script>
+
+<style>
+
+</style>
