@@ -192,8 +192,8 @@ export default new Vuex.Store({
 
     // community의 액션
     get_article_list(context, currentPage) {
-      const start = 10 * (currentPage - 1)
-      const end = 10 * currentPage - 1
+      const start = 8 * (currentPage - 1)
+      const end = 8 * currentPage
 
       axios
         .get(`${API_URL}/articles/index/`, {
