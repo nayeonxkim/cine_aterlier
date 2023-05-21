@@ -26,7 +26,7 @@ def index(request):
 def create(request):
     serializer = ArticleSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save()
+        serializer.save(author=request.user)
         return Response(serializer.data)
     
 # 게시글 상세 조회
