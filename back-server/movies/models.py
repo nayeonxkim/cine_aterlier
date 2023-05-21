@@ -27,4 +27,3 @@ class Rating(models.Model):
     score = models.DecimalField(max_digits=2, decimal_places=1, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
