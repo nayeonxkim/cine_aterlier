@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Community</h1>
     <div class="row">
       <ArticleList />
     </div>
@@ -50,5 +49,7 @@ export default {
 </script>
 
 <style>
-
+.row {
+  margin-top: 10px;
+}
 </style>
