@@ -65,14 +65,17 @@ export default new Vuex.Store({
 
 
     // Article mutations
-    GET_ARTICLE_LIST(state, article) {
-      state.articleList = article
+    GET_ARTICLE_LIST(state, payload) {
+      state.articleList = payload.results
     },
     ARTICLELIST_RESET(state){
       state.articleList = null
     },
     SET_SELECTED_ARTICLE(state, article) {
       state.selectedArticle = article
+    },
+    SET_ARTICLE_LIST(state, articleList) {
+      state.articleList = articleList
     },
 
     // HOME의 mutations
@@ -194,7 +197,7 @@ export default new Vuex.Store({
     get_article_list(context, currentPage) {
       const start = 8 * (currentPage - 1)
       const end = 8 * currentPage
-
+    
       axios
         .get(`${API_URL}/articles/index/`, {
           headers: {
@@ -202,7 +205,7 @@ export default new Vuex.Store({
           }
         })
         .then((res) => {
-          const payload = res.data.slice(start, end)
+          const payload = Array.isArray(res.data) ? res.data.slice(start, end) : []
           console.log(payload)
           context.commit('GET_ARTICLE_LIST', payload)
         })
@@ -211,6 +214,7 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    
     
     get_article_detail(context, articleId){
       axios
@@ -247,7 +251,25 @@ export default new Vuex.Store({
     setSelectedArticle({ commit }, article) {
       commit('SET_SELECTED_ARTICLE', article)
     },
-
+    async fetchArticleList({ commit, state }, page) {
+      try {
+        const response = await axios.get(`${state.API_URL}/articles/index`, {
+          headers: {
+            Authorization: `Token ${state.token}`
+          }
+        })
+        const allArticles = response.data.articles;
+    
+        const articlesPerPage = 8
+        const startIndex = (page - 1) * articlesPerPage
+        const articleList = allArticles.slice(startIndex, startIndex + articlesPerPage)
+    
+        commit('SET_ARTICLE_LIST', articleList)
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    
     // HOME의 액션
     get_searchedList(context, movieTitle){
       axios

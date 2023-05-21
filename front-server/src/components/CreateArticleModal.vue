@@ -50,9 +50,9 @@ export default {
   },
   methods: {
     openModal() {
-      console.log('열림!')
+      // console.log('열림!')
       this.isModalOpen = true
-      console.log(this.isModalOpen)
+      // console.log(this.isModalOpen)
     },
     closeModal() {
       this.isModalOpen = false
