@@ -55,18 +55,21 @@ export default new Vuex.Store({
       state.User = null
       delete axios.defaults.headers.common['Authorization'] // 로그아웃 시 헤더에서 토큰 제거
     },
+
     // Movie의 mutations
     GET_MOVIE_LIST(state, payload){
       state.movieList = payload
     },
-    GET_MOVIE_DETAIL(state,payload){
+    GET_MOVIE_DETAIL(state, payload){
       state.movieDetail = payload
     },
-
 
     // Article mutations
     GET_ARTICLE_LIST(state, payload) {
       state.articleList = payload
+    },
+    GET_ARTICLE_DETAIL(state, payload) {
+      state.articleDetail = payload
     },
 
     // HOME의 mutations
@@ -152,10 +155,8 @@ export default new Vuex.Store({
 
     // Movie의 액션
     get_movie_list(context, currentPage){
-      
       const start = 50 * (currentPage - 1)
       const end = (50 * currentPage)
-
       axios
       .get('http://127.0.0.1:8000/movies/index/')
       .then((res) => {
@@ -166,7 +167,6 @@ export default new Vuex.Store({
         console.error(err)
       })
     },
-
     get_movie_detail(context, movieId){
       axios
       .get(`https://api.themoviedb.org/3/movie/${movieId}`,{
@@ -206,19 +206,6 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
-    
-    get_article_detail(context, articleId){
-      axios
-      .get(`${API_URL}/articles/${articleId}`)
-      .then((res)=>{
-        const payload = res.data
-        context.commit('GET_ARTICLE_DETAIL', payload)
-      })
-      .catch((err) => {
-        console.error(err)
-      })
-    },
-
     create_article(context, formData) {
       formData.append('user', context.state.User)  // 사용자 정보 추가
       formData.append('userId', context.state.UserId)  // 사용자 ID 추가
@@ -240,6 +227,18 @@ export default new Vuex.Store({
           })
       })
     },
+    // get_article_detail(context, articleId){
+    //   axios
+    //   .get(`${API_URL}/articles/${articleId}`)
+    //   .then((res)=>{
+    //     console.log(res)
+    //     const payload = res.data.article
+    //     context.commit('GET_ARTICLE_DETAIL', payload)
+    //   })
+    //   .catch((err) => {
+    //     console.error(err)
+    //   })
+    // },
     
     // HOME의 액션
     get_searchedList(context, movieTitle){
