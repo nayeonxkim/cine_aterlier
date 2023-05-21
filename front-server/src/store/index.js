@@ -18,10 +18,10 @@ export default new Vuex.Store({
     API_URL : 'http://127.0.0.1:8000',
     token: null,
     User: null,
-    UserId : null,
 
     // Article
     articleList: null,
+    selectedArticle: null,
     
     // Movie
     movieList:null,
@@ -36,7 +36,12 @@ export default new Vuex.Store({
   getters: {
     isLogin(state) {
       return state.token ? true : false
-    }
+    },
+
+    // Article getters
+    selectedArticle(state) {
+      return state.selectedArticle
+    },
   },
   mutations: {
     SAVE_TOKEN(state, token) {
@@ -45,7 +50,6 @@ export default new Vuex.Store({
     },
     SET_USER(state, user) {
       state.User = user
-      state.userId = user.pk
     },
     LOGOUT(state) {
       state.token = null
@@ -67,7 +71,9 @@ export default new Vuex.Store({
     ARTICLELIST_RESET(state){
       state.articleList = null
     },
-
+    SET_SELECTED_ARTICLE(state, article) {
+      state.selectedArticle = article
+    },
 
     // HOME의 mutations
     GET_SEARCHEDLIST(state, payload){
@@ -81,9 +87,9 @@ export default new Vuex.Store({
     },
     SELECT_PAINTER(state, payload){
       state.selectedPainter = payload
-    }
-
+    },
   },
+
   actions: {
     // Login의 액션
     signUp(context, payload) {
@@ -205,6 +211,7 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    
     get_article_detail(context, articleId){
       axios
       .get(`${API_URL}/articles/${articleId}`)
@@ -217,21 +224,28 @@ export default new Vuex.Store({
       })
     },
     create_article(context, formData) {
+      formData.append('user', context.state.User)  // 사용자 정보 추가
+      formData.append('userId', context.state.UserId)  // 사용자 ID 추가
+  
       return new Promise((resolve, reject) => {
-        axios.post(`${API_URL}/articles/create/`, formData, {
-          headers: {
-            Authorization: `Token ${context.state.token}`,
-            'Content-Type': 'multipart/form-data',
-          }
-        })
-        .then(() => {
-          context.dispatch('get_article_list', 1)
-          resolve()
-        })
-        .catch(error => {
-          reject(error)
-        })
+        axios
+          .post(`${API_URL}/articles/create/`, formData, {
+            headers: {
+              Authorization: `Token ${context.state.token}`,
+              'Content-Type': 'multipart/form-data',
+            },
+          })
+          .then(() => {
+            context.dispatch('get_article_list', 1)
+            resolve()
+          })
+          .catch((error) => {
+            reject(error)
+          })
       })
+    },
+    setSelectedArticle({ commit }, article) {
+      commit('SET_SELECTED_ARTICLE', article)
     },
 
     // HOME의 액션
@@ -260,8 +274,8 @@ export default new Vuex.Store({
       .catch((err) => {
         console.error(err)
       })
-    }
   },
+},
   modules: {
   },
 })
