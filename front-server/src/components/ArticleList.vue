@@ -2,9 +2,9 @@
   <div class="article-list">
     <div class="row">
       <ArticleItem
-        v-for="(article, idx) in articleList"
+        v-for="(articleItem, idx) in articleList"
         :key="idx"
-        :article-item="article"
+        :article-item="articleItem"
         class="col-6 col-md-4 col-lg-3 mb-4"
       />
     </div>
@@ -51,6 +51,11 @@ export default {
     flex-basis: 50%;
   }
 }
+
+.col-1, .col-3 {
+  flex-basis: calc((100% - 2rem) / 12);
+}
+
 
 .col-1, .col-3 {
   flex-basis: calc((100% - 2rem) / 12);
