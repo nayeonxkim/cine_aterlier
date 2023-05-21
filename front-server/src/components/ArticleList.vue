@@ -12,6 +12,7 @@
   </div>
 </template>
 
+
 <script>
 import ArticleItem from './ArticleItem.vue'
 
