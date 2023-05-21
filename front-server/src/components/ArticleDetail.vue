@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>Article Detail</h1>
     <div v-if="article">
+      <img
+      :src="getFullImagePath(article.img)"
+      style="width:50%; height:50%;"
+      alt="Article Image">
       <h2>{{ article.title }}</h2>
       <p>{{ article.content }}</p>
     </div>
@@ -10,36 +13,43 @@
 
 <script>
 import axios from 'axios'
+import store from '@/store'
 const API_URL = 'http://127.0.0.1:8000'
 
 export default {
   name: 'ArticleDetail',
   data() {
     return {
-      article: null, // 아티클 정보를 저장할 변수
+      article: null,
     }
   },
   created() {
-    this.getArticleDetail();
+    this.getArticleDetail()
   },
   methods: {
     getArticleDetail() {
       const articleId = this.$route.params.articleId
       axios
-        .get(`${API_URL}/articles/${articleId}/`)
-        .then(response => {
-          console.log(response.data)
-          this.article = response.data
-          console.log('성공!')
+        .get(`${API_URL}/articles/${articleId}`, {
+          headers: {
+            Authorization: `Token ${store.state.token}`
+          }
         })
-        .catch(error => {
-          console.log(error)
-        });
+        .then(res => {
+          this.article = res.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
     },
+    getFullImagePath(imageUrl) {
+      const API_URL = 'http://127.0.0.1:8000'
+      return `${API_URL}${imageUrl}`
+    }
   },
 }
 </script>
 
 <style>
-/* 필요한 스타일을 추가하세요 */
+
 </style>

@@ -9,7 +9,7 @@ import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
 
 import LoginView from '../views/LoginView.vue'
-import ArticleList from '../components/ArticleList.vue'
+// import ArticleList from '../components/ArticleList.vue'
 import ArticleDetail from '../components/ArticleDetail.vue'
 
 Vue.use(VueRouter)
@@ -36,25 +36,22 @@ const routes = [
     ]
   },
 
-
-
   {
     path: '/community',
     name: 'community',
     component: CommunityView,
-    children: [
-      {
-        path: '/articles/index',
-        name: 'article-list',
-        component: ArticleList,
-      },
-      {
-        path: '/articles/:articleId',
-        name: 'article-detail',
-        component: ArticleDetail,
-      },
-    ]
+      // {
+      //   path: '/articles/index',
+      //   name: 'article-list',
+      //   component: ArticleList,
+      // },
   },
+  {
+    path: '/articles/:articleId',
+    name: 'article-detail',
+    component: ArticleDetail,
+  },
+
   {
     path: '/',
     name: 'login',
