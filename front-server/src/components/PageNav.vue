@@ -14,9 +14,10 @@
           </a>
         </li>
 
-        <li class="page-item" v-for="(pageNum, id) in pageRange" :key="id" :class="{ active: pageNum === currentPage }" @click="onPageNum">
-          <a class="page-link" style="color: #000000">{{ pageNum }}</a>
+        <li v-for="pageNum in pageRange" :key="pageNum" :class="{ 'page-item': true, active: pageNum === currentPage }">
+          <a class="page-link" @click="onPageNum(pageNum)">{{ pageNum }}</a>
         </li>
+
 
         <li class="page-item" @click="onNext">
           <a class="page-link" aria-label="Next">

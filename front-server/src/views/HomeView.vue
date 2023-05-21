@@ -9,6 +9,7 @@
       <h2>영화검색하기</h2>
     </div>
     <hr>
+    <ExampleImages/>
     <SearchModal />
   </div>
 </template>
