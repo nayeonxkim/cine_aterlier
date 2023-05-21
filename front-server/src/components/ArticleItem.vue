@@ -3,9 +3,9 @@
     <div class="card" @click="toDetail(articleItem)">
       <img :src="getFullImagePath(articleItem.img)" alt="Article Image" class="card-img-top">
       <div class="card-body">
-        <h6 class="card-title">영화 제목</h6>
+        <h5 class="card-title">영화 제목</h5>
         <hr>
-        <h7 class="card-subtitle mb-2 text-muted">화가 이름</h7>
+        <h6 class="card-subtitle mb-2 text-muted">화가 이름</h6>
       </div>
     </div>
   </div>
@@ -29,6 +29,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.card {
+  width: 100%;
+}
 </style>
