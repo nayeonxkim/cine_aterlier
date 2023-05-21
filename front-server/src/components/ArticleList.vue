@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="article-list">
     <div class="row">
       <ArticleItem
         v-for="(article, idx) in articleList"
         :key="idx"
         :article-item="article"
-        class="col-6 col-md-3 col-lg-3 mb-4"
+        class="col-6 col-md-4 col-lg-3 mb-4"
       />
     </div>
   </div>
@@ -32,5 +32,27 @@ export default {
 </script>
 
 <style>
+.article-list {
+  padding: 20px;
+}
 
+.row {
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-lg-3 {
+    flex-basis: 50%;
+  }
+}
+
+.col-1, .col-3 {
+  flex-basis: calc((100% - 2rem) / 12);
+}
 </style>

@@ -10,17 +10,9 @@
           </a>
         </li>
 
-        <template v-if="pageCount > 0">
-          <li v-for="(pageNum, id) in pageRange" :key="id" :class="{ 'page-item': true, active: pageNum === currentPage }">
-            <a class="page-link" @click="onPageNum(pageNum)">{{ pageNum }}</a>
-          </li>
-        </template>
-
-        <template v-else>
-          <li v-bind:class="{ 'page-item': true, active: currentPage === 1 }">
-            <a class="page-link" @click="onPageNum(1)">1</a>
-          </li>
-        </template>
+        <li v-for="pageNum in pageRange" :key="pageNum" :class="{ 'page-item': true, active: pageNum === currentPage }">
+          <a class="page-link" @click="onPageNum(pageNum)">{{ pageNum }}</a>
+        </li>
 
         <li class="page-item" @click="onNext">
           <a class="page-link" aria-label="Next">
@@ -35,23 +27,25 @@
 
 <script>
 import _ from 'lodash'
+import axios from 'axios'
+
 export default {
   name: 'ArticlePageNav',
   data() {
     return {
       currentPage: 1,
       currentIndex: 1,
-      pageCount: 0,
+      articleCount: 0,
+      articlesPerPage: 8,
     }
   },
   methods: {
-    onPageNum(event) {
-      const pageNum = event.currentTarget.innerText
-      this.currentPage = parseInt(pageNum, 10)
+    onPageNum(pageNum) {
+      this.currentPage = pageNum
       this.$store.dispatch('get_article_list', this.currentPage)
     },
     onNext() {
-      if (this.currentIndex < this.pageCount) {
+      if (this.currentIndex < this.pageCountWithNavigation) {
         this.currentIndex = parseInt(this.currentIndex / 10) * 10 + 11
         this.currentPage = this.currentIndex
       } else {
@@ -66,46 +60,97 @@ export default {
         alert('첫 페이지입니다.')
       }
     },
-  },
+    getArticleCount() {
+      const API_URL = 'http://127.0.0.1:8000'
+      const endpoint = `${API_URL}/articles/index/`
 
+      axios
+        .get(endpoint, {
+          headers: {
+            Authorization: `Token ${this.$store.state.token}`
+          }
+        })
+        .then((response) => {
+          const articles = response.data.articles
+          this.articleCount = articles.length
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
+  },
   computed: {
+    pageCount() {
+      return Math.ceil(this.articleCount / this.articlesPerPage)
+    },
+    pageCountWithNavigation() {
+      if (this.pageCount <= 10) {
+        return this.pageCount
+      } else {
+        return Math.ceil(this.pageCount / 10) * 10
+      }
+    },
     pageRange() {
-      const startIndex = parseInt(this.currentIndex / 10) * 10 + 1
-      const endIndex = startIndex + 10
+      const startIndex = (Math.ceil(this.currentIndex / 10) - 1) * 10 + 1
+      const endIndex = Math.min(startIndex + 9, this.pageCount)
 
-      const lastPage = Math.max(this.pageCount, 1) // 최소 페이지를 1로 설정
-
-      return _.range(startIndex, Math.min(endIndex, lastPage + 1))
+      return _.range(startIndex, endIndex + 1)
     },
   },
-
   watch: {
-    '$store.state.articles'(newValue) {
-      this.pageCount = Math.ceil(newValue.length / 10)
+    currentPage(newValue) {
+      if (newValue === 1) {
+        this.currentIndex = 1
+      } else if (newValue % 10 === 1) {
+        this.currentIndex = newValue
+      }
     },
+    articleCount() {
+      this.getArticleCount()
+    },
+  },
+  mounted() {
+    this.getArticleCount()
   },
 }
 </script>
 
 <style>
 .page-link {
-  color: #000000;
+  color: #000000 !important;
   border-color: #fff !important;
 }
 
-.page-item.active .page-link, .page-item:focus, .left:active, .left:focus, .right:active, .right:focus, .first:active, .last:active {
+.page-item.active .page-link,
+.page-item:focus,
+.page-item:hover,
+.left:active,
+.left:focus,
+.right:active,
+.right:focus,
+.first:active,
+.last:active {
   z-index: 1;
   color: #ff4429 !important;
-  font-weight:bold;
+  font-weight: bold;
   background-color: #fff !important;
   border-color: #fff;
 }
 
-.page-link:focus, .page-link:hover, .page-link:active, .left:hover, .left:focus, .right:hover, .right:focus, .first:hover, .first:focus, .last:focus, .last:hover {
+.page-link:focus,
+.page-link:hover,
+.page-link:active,
+.left:hover,
+.left:focus,
+.right:hover,
+.right:focus,
+.first:hover,
+.first:focus,
+.last:focus,
+.last:hover {
   color: #ff4429 !important;
-  background-color: #fff !important; 
+  background-color: #fff !important;
   border-color: #fff !important;
   box-shadow: none !important;
 }
-
 </style>
