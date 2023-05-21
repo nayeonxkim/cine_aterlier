@@ -34,11 +34,17 @@ export default {
   },
   methods: {
     getArticleList() {
+      // 누른 페이지의 정보를 1자리에 넣어서 보내기
       this.$store.dispatch('get_article_list', 1)
     },
     closeModal() {
       this.$store.commit('CLOSE_MODAL')
     },
+    toDetail(article) {
+      const API_URL = 'http://127.0.0.1:8000'
+      // ArticleDetail 페이지로 이동하는 메서드
+      this.$router.push(`${API_URL}/articles/${article.id}`)
+    }
   },
 }
 </script>
