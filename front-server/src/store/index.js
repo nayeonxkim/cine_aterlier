@@ -72,13 +72,7 @@ export default new Vuex.Store({
       state.articleList = payload
     },
     GET_ARTICLE_DETAIL(state, payload) {
-      // console.log('이거')
-      // console.log(payload)
-      // console.log(payload.title)
       state.articleDetail = payload
-      // console.log('state.articleDetail')
-      console.log(state.articleDetail)
-      // console.log(state.articleDetail.title)
     },
 
     // HOME의 mutations
@@ -250,10 +244,8 @@ export default new Vuex.Store({
           },
         })
         .then((res) => {
-          console.log('성공!')                                  // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          console.log(res)                                      // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          console.log(res.data.title)                           // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          context.commit('GET_ARTICLE_DETAIL', res.data)
+          const payload = res.data
+          context.commit('GET_ARTICLE_DETAIL', payload)
         })
         .catch((err) => {
           console.log(err)

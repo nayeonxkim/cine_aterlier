@@ -1,26 +1,29 @@
 <template>
   <div>
-    <div v-if="article">
-      <h5>{{ articleDetail.title }}번 게시글</h5>
-      <p>{{ articleDetail.img }}</p>
-
+    <div>
+      <h1>{{articleDetail.title}}</h1>
       <img
-        :src="getFullImagePath(article.img)"
-        style="width:50%; height:50%;"
+        :src="getFullImagePath(articleDetail.img)"
+        style="width:20%; height:20%;"
         alt="Article Image"
       >
-      <!-- <h2>{{ articleTitle }}</h2> -->
-      <!-- <p>{{ articleContent }}</p> -->
-      <!-- <button class="btn btn-primary" @click="openModal">UPDATE</button>
+      <h5>{{ articleDetail.id }}번 게시글</h5>
+      <p>{{ articleDetail.content }}</p>
+
+      <button class="btn btn-primary" @click="$router.push(`/articles/${articleDetail.id}/update`)">UPDATE</button>
       <button class="btn btn-secondary" @click="deleteArticle">DELETE</button>
-      <hr> -->
-      <!-- <input @keyup.enter="commentCreate" type="text" v-model="newComment.content"> -->
-      <!-- <button class="btn btn-danger" @click="commentCreate">댓글 작성</button> -->
-    <!-- <ArticleComment 
-    v-for="(comment, idx) in article.comment_set"
-    :key="idx"
-    :comment-item="comment"
-    :article-id="article.id" /> -->
+      <hr>
+
+      <div class="comment-block">
+        <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" style="">
+        <button class="btn btn-danger" @click="commentCreate">댓글 작성</button>
+      </div>
+
+      <ArticleComment 
+      v-for="(comment, idx) in articleDetail.comment_set"
+      :key="idx"
+      :comment-item="comment"
+      :article-id="articleDetail.id" />
     </div>
   </div>
 </template>
@@ -28,7 +31,7 @@
 <script>
 import axios from 'axios'
 import store from '@/store'
-// import ArticleComment from '@/components/ArticleComment.vue'
+import ArticleComment from '@/components/ArticleComment.vue'
 
 const API_URL = 'http://127.0.0.1:8000'
 
@@ -36,7 +39,7 @@ export default {
   name: 'ArticleDetail',
   computed: {
     articleDetail() {
-      return this.$store.state.articleDetail;
+      return this.$store.state.articleDetail
     },
   },
   data() {
@@ -48,9 +51,9 @@ export default {
       },
     }
   },
-  // components:{
-  //   ArticleComment
-  // },
+  components:{
+    ArticleComment
+  },
   created() {
     this.getArticleDetail()
   },
@@ -58,22 +61,13 @@ export default {
     getArticleDetail() {
       const articleId = this.$route.params.articleId
       this.$store.dispatch('getArticleDetail', articleId)
-        .then(response => {
-          this.article = response.data
-        })
-        .catch(error => {
-          console.log(error)
-        })
     },
     getFullImagePath(imageUrl) {
       return `${API_URL}${imageUrl}`
     },
-    openModal() {
-      this.showModal = true
-    },
     deleteArticle() {
       axios
-        .delete(`${API_URL}/articles/delete/${this.article.id}`, {
+        .delete(`${API_URL}/articles/delete/${this.articleDetail.id}`, {
           headers: {
             Authorization: `Token ${store.state.token}`,
           },
@@ -87,7 +81,7 @@ export default {
     },
     commentCreate() {
       axios
-        .post(`${API_URL}/articles/${this.article.id}/comment_create/`,{ 
+        .post(`${API_URL}/articles/${this.articleDetail.id}/comment_create/`,{ 
           content : this.newComment.content,
           },
         {
@@ -108,6 +102,11 @@ export default {
 </script>
 
 <style scoped>
+
+.comment-block{
+  margin: 30px;
+}
+
 .card {
   border: 1px solid #ccc;
   border-radius: 4px;
