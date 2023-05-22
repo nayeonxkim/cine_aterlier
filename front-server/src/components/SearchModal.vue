@@ -62,5 +62,7 @@ export default {
 </script>
 
 <style>
-
+.modal-body{
+  padding: 20px;
+}
 </style>

@@ -65,12 +65,14 @@ export default {
   background-color: #ffffff;
   padding: 20px 0;
   transition: font-size 0.5s;
+  z-index: 990;
 }
 
 #navbar-main {
   font-family: 'Blinker', sans-serif;
   background-color: #ffffff;
   font-size: 25px;
+  z-index: 999;
 }
 
 .custom-cat {
