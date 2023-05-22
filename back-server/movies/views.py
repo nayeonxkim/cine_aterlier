@@ -103,7 +103,9 @@ def getKarloImg(request, movieId, painter):
     result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
     result.show()
     # 저장할 폴더 경로
-    image_path = f'/static/karloResults/{movieId}.png'
+    image_filename = f'{movieId}.png'  # 파일 이름 설정 (여기서는 movieId를 사용하였습니다.)
+    image_path = os.path.join(settings.MEDIA_ROOT, image_filename)
+
     result.save(image_path, 'PNG')
     # 이미지 저장
     karlo_img = KarloImg.objects.create(
