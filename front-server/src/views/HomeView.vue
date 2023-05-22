@@ -3,6 +3,7 @@
     <h1>이미지 생성 영화 커뮤니티</h1>
     <div >
       <div id="createdImg">생성된 이미지보여줄곳</div>
+      <img :src="getImageUrl(movieId)" alt="">
     </div>
 
     <div class="searchMovie">
@@ -14,7 +15,6 @@
 </template>
 
 <script>
-import ExampleImages from '@/components/ExampleImages.vue'
 import SearchModal from '@/components/SearchModal.vue'
 // @ is an alias to /src
 
@@ -22,7 +22,6 @@ import SearchModal from '@/components/SearchModal.vue'
 export default {
   name: 'HomeView',
   components: {
-    ExampleImages,
     SearchModal
   },
   computed: {
@@ -47,6 +46,9 @@ export default {
     },
     searchBar_reset(){
       return this.$store.commit('SEARCHBAR_RESET')
+    },
+      getImageUrl(movieId) {
+        return `http://127.0.0.1:8000/movies/getKarloImg/${movieId}/vangogh`;  // Django 서버의 도메인 주소로 대체해야 합니다.
     },
   },
 
