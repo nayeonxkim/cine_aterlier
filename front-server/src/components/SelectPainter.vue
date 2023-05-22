@@ -14,7 +14,7 @@
       </div>
 
       <div @click="select_painter">
-      <p>뭉크</p>
+      <p>Edvard Munch</p>
       </div>
     </div>
   </div>

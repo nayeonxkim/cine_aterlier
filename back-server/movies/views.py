@@ -58,7 +58,7 @@ def img(request, movie_pk):
 REST_API_KEY = '9a5517b855fcd53e94751f63e3795c75'
 
 # 이미지 생성하기 요청
-def t2i(text, batch_size=1):
+def t2i(text, batch_size=2):
     r = requests.post(
         'https://api.kakaobrain.com/v1/inference/karlo/t2i',
         json = {
@@ -121,7 +121,7 @@ def getKarloImg(request, movieId, painter):
         
         karlo_img.save()
 
-    result_images = KarloImg.objects.filter(movie_id=movieId)
+    result_images = KarloImg.objects.filter(movie_id=movieId, painter=painter)
     serializer = KarloSerializer(result_images, many=True)
     # print(prompt)
     return Response(serializer.data)
