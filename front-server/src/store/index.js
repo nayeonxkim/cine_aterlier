@@ -232,18 +232,6 @@ export default new Vuex.Store({
           })
       })
     },
-    // get_article_detail(context, articleId){
-    //   axios
-    //   .get(`${API_URL}/articles/${articleId}`)
-    //   .then((res)=>{
-    //     console.log(res)
-    //     const payload = res.data.article
-    //     context.commit('GET_ARTICLE_DETAIL', payload)
-    //   })
-    //   .catch((err) => {
-    //     console.error(err)
-    //   })
-    // },
     
     // HOME의 액션
     get_searchedList(context, movieTitle){
