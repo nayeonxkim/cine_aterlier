@@ -1,6 +1,7 @@
 <template>
   <div>
     <div v-if="article">
+      <h5>{{article.id}}번 게시글</h5>
       <img
         :src="getFullImagePath(article.img)"
         style="width:50%; height:50%;"
@@ -11,11 +12,13 @@
       <button class="btn btn-primary" @click="openModal">UPDATE</button>
       <button class="btn btn-secondary" @click="deleteArticle">DELETE</button>
       <hr>
-      <input type="text" v-model="newComment.content">
+      <input @keyup.enter="commentCreate" type="text" v-model="newComment.content">
       <button class="btn btn-danger" @click="commentCreate">댓글 작성</button>
-    <div v-for="(comment, idx) in article.comment_set"
+    <ArticleComment 
+    v-for="(comment, idx) in article.comment_set"
     :key="idx"
-    > {{comment.content}}</div>
+    :comment-item="comment"
+    :article-id="article.id" />
     </div>
   </div>
 </template>
@@ -23,6 +26,7 @@
 <script>
 import axios from 'axios'
 import store from '@/store'
+import ArticleComment from '@/components/ArticleComment.vue'
 
 const API_URL = 'http://127.0.0.1:8000'
 
@@ -37,6 +41,9 @@ export default {
       },
     }
   },
+  components:{
+    ArticleComment
+  },
   created() {
     this.getArticleDetail()
   },
@@ -50,7 +57,6 @@ export default {
           },
         })
         .then(res => {
-          console.log(res.data)
           this.article = res.data
         })
         .catch(err => {
@@ -78,18 +84,18 @@ export default {
         })
     },
     commentCreate() {
-      const userId = this.$store.state.User.id
       axios
-        .post(`${API_URL}/articles/${this.article.id}/comment_create/`,{ content : this.newComment.content,
-          author : userId },
+        .post(`${API_URL}/articles/${this.article.id}/comment_create/`,{ 
+          content : this.newComment.content,
+          },
         {
           headers: {
             Authorization: `Token ${store.state.token}`,
           },
         })
-        .then((res) => {
-          console.log(res)
+        .then(() => {
           this.newComment.content = ''
+          this.getArticleDetail()
         })
         .catch(err => {
           console.log(err)
