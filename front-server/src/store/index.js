@@ -50,6 +50,7 @@ export default new Vuex.Store({
     },
     SET_USER(state, user) {
       state.User = user
+      console.log(state.User)
     },
     LOGOUT(state) {
       state.token = null
@@ -106,7 +107,6 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
-        console.log(res)
         context.commit('SAVE_TOKEN', res.data.key)
         context.commit('SET_USER', res.data)
         router.push({ name: 'home' })
@@ -115,6 +115,7 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
+    
     login(context, payload) {
       const username = payload.username
       const password = payload.password

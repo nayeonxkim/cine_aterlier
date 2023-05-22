@@ -1,6 +1,7 @@
 <template>
   <div class="article-list">
     <div class="row">
+      <p>{{userId}}</p>
       <ArticleItem
         v-for="(article, idx) in articleList"
         :key="idx"
@@ -24,6 +25,9 @@ export default {
     articleList() {
       return this.$store.state.articleList
     },
+    userId(){
+      return this.$store.state.User.id
+    }
   },
 }
 </script>

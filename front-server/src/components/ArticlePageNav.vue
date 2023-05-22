@@ -1,6 +1,5 @@
 <template>
-  <div style="background-color: skyblue">
-    <h2>ArticlePageNavbar</h2>
+  <div>
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
