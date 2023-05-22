@@ -12,3 +12,4 @@ class Comment(models.Model):
     author = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.TextField()
+    token = models.CharField(max_length=255, blank=True)
