@@ -1,15 +1,8 @@
 <template>
   <div class="home">
     <h1>이미지 생성</h1>
-    
-    <div id="karloImg">
-      <KarloImgs 
-       v-for="karloImg in karloImgs"
-      :key="karloImg.id"
-      :karlo-img="karloImg"/>
-
-    </div>
-
+    <KarloImgsCarousel />
+    <hr>
     <div class="searchMovie">
       <h2>영화검색하기</h2>
     </div>
@@ -21,7 +14,7 @@
 
 <script>
 import SearchModal from '@/components/SearchModal.vue'
-import KarloImgs from '@/components/KarloImgs.vue'
+import KarloImgsCarousel from '@/components/KarloImgsCarousel.vue'
 // @ is an alias to /src
 
 
@@ -29,7 +22,7 @@ export default {
   name: 'HomeView',
   components: {
     SearchModal,
-    KarloImgs
+    KarloImgsCarousel
   },
   computed: {
     isLogin() {
