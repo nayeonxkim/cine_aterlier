@@ -64,7 +64,7 @@ export default {
   border-bottom: 2px solid black;
   background-color: #ffffff;
   padding: 20px 0;
-  transition: font-size 0.2s;
+  transition: font-size 0.5s;
 }
 
 #navbar-main {
