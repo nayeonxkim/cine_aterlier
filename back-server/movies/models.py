@@ -33,3 +33,4 @@ class KarloImg(models.Model):
     original_title = models.CharField(max_length=255)
     painter = models.CharField(max_length=255)
     img_url = models.ImageField(upload_to='karloResults/')
+

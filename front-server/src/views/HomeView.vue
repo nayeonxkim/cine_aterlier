@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <KarloImgsCarousel />
-    <SearchModal />
+    <SearchModal 
+    class="mt-5"/>
+    <div class="box"></div>
   </div>
 </template>
 
@@ -57,6 +59,11 @@ export default {
   height: 500px;
   border: solid 1px black;
   background-color: brown;
+}
+
+.box{
+  height: 500px;
+  width: 500px;
 }
 
 </style>

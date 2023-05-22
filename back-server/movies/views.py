@@ -93,12 +93,12 @@ def getKarloImg(request, movieId, painter):
     # 입력단어 prompt 만들기
     prompt = title +', '
     if painter != 'null':
-        prompt += painter + ', '
+        prompt += 'by' + painter + ', '
     for keyword in keyword_names:
         prompt += keyword + ', '
     
     
-    response = t2i(prompt, 1)
+    response = t2i(prompt, 5)
     # return JsonResponse(response)
     for image_data in response["images"]:
         image_id = image_data["id"]
