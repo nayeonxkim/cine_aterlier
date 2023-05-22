@@ -4,30 +4,47 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel">영화 선택하기</h5>
+          <h5 class="modal-title" id="exampleModalToggleLabel">첫 번째 영화 선택하기</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <SelectMovie />
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">다음으로</button>
+          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">다음으로</button>
         </div>
       </div>
     </div>
   </div>
   <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">``
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">두 번째 영화 선택하기</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <SelectMovie />
+        </div>
+        <div class="modal-footer">
+          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">영화 다시 고르기</button>
+          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">다음으로</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel2">화풍 선택하기</h5>
+          <h5 class="modal-title" id="exampleModalToggleLabel3">화풍 선택하기</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <SelectPainter />
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">영화 다시 고르기</button>
+          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">영화 다시 고르기</button>
           <button @click="to_karlo" type="button" class="btn btn-secondary" data-bs-dismiss="modal">이미지 생성하기</button>
         </div>
       </div>
@@ -52,10 +69,16 @@ export default {
     },
     to_karlo(){
       return this.$store.dispatch('to_karlo')
-    }
+    },
+    make_alert(){
+      if (this.$store.state.axiosFail){
+        alert('부적절한 영화입니다. 영화를 다시 선택해주세요!')
+      }
+    },
   },
   destroyed(){
-    this.searchedList_reset()
+    this.searchedList_reset(),
+    this.make_alert()
   }
 
 }

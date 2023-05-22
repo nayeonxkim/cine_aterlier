@@ -29,8 +29,10 @@ class Rating(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class KarloImg(models.Model):
-    movie_id = models.IntegerField()
-    original_title = models.CharField(max_length=255)
+    movie_id1 = models.IntegerField()
+    movie_id2 = models.IntegerField()
+    original_title1 = models.CharField(max_length=255)
+    original_title2 = models.CharField(max_length=255)
     painter = models.CharField(max_length=255)
     img_url = models.ImageField(upload_to='karloResults/')
 

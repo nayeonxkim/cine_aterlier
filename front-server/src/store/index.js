@@ -30,8 +30,11 @@ export default new Vuex.Store({
 
     // Home
     searchedList: null,
-    selectedMovie: null,
-    karloImgs: null
+    selectedPainter: 'null',
+    selectedMovie1: null,
+    selectedMovie2: null,
+    karloImgs: null,
+    axiosFail:false
 
   },
   getters: {
@@ -83,7 +86,11 @@ export default new Vuex.Store({
       state.searchedList = null
     },
     SELECT_MOVIE(state, payload){
-      state.selectedMovie = payload
+      if(state.selectedMovie1 === null){
+        state.selectedMovie1 = payload
+      } else{
+        state.selectedMovie2 = payload
+      }
     },
     SELECT_PAINTER(state, payload){
       state.selectedPainter = payload
@@ -93,6 +100,13 @@ export default new Vuex.Store({
     },
     KARLOIMGS_RESET(state){
       state.karloImgs = null
+    },
+    AXIOS_FAIL(state, payload){
+      state.axiosFail = payload
+    },
+    SELECTEDMOVIE_RESET(state){
+      state.selectedMovie1 = null
+      state.selectedMovie2 = null
     }
   },
 
@@ -267,17 +281,19 @@ export default new Vuex.Store({
     },
 
     to_karlo(context){
-      console.log(context.state.selectedMovie)
-      console.log(context.state.selectedPainter)
       axios
-      .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie}/${context.state.selectedPainter}/`)
+      .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie1}/${context.state.selectedMovie2}/${context.state.selectedPainter}/`)
       .then((res) => {
-        console.log(res)
-        console.log(context)
         const payload = res.data
+        context.commit('AXIOS_FAIL', true)
         context.commit('TO_KARLO', payload)
+        context.commit('SELECTEDMOVIE_RESET')
       })
       .catch((err) => {
+        console.log(context.state.selectedMovie1)
+        console.log(context.state.selectedMovie2)
+        // context.commit('AXIOS_FAIL', true)
+        context.commit('SELECTEDMOVIE_RESET')
         console.error(err)
       })
   },
