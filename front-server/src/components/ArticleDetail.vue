@@ -2,6 +2,7 @@
   <div>
     <div v-if="article">
       <h5>{{article.id}}번 게시글</h5>
+      <p>{{article.img}}</p>
       <img
         :src="getFullImagePath(article.img)"
         style="width:50%; height:50%;"
