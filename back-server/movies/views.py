@@ -97,25 +97,31 @@ def getKarloImg(request, movieId, painter):
     for keyword in keyword_names:
         prompt += keyword + ', '
     
+    
     response = t2i(prompt, 1)
+    # return JsonResponse(response)
+    for image_data in response["images"]:
+        image_id = image_data["id"]
+        image_url = image_data["image"]
+        nsfw = image_data["nsfw"]
+        nsfw_score = image_data["nsfw_score"]
+        
+        # KarloImg 인스턴스 생성 및 저장
+        karlo_img = KarloImg.objects.create(
+            movie_id=movieId,
+            original_title=title,
+            painter=painter,
+            img_url=f'/media/{movieId}_{image_id}.png'
+        )
+        
+        # 이미지 저장
+        image_path = os.path.join(settings.MEDIA_ROOT, f'{movieId}_{image_id}.png')
+        result = stringToImage(image_url, mode='RGB')
+        result.save(image_path, 'PNG')
+        
+        karlo_img.save()
 
-    # 응답의 첫 번째 이미지 생성 결과 출력하기
-    result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
-    result.show()
-    # 저장할 폴더 경로
-    image_filename = f'{movieId}.png'  # 파일 이름 설정 (여기서는 movieId를 사용하였습니다.)
-    image_path = os.path.join(settings.MEDIA_ROOT, image_filename)
-
-    result.save(image_path, 'PNG')
-    # 이미지 저장
-    karlo_img = KarloImg.objects.create(
-    movie_id=movieId,
-    original_title=title,
-    painter=painter,
-    img_url=image_path
-    )
-    karlo_img.save()
-
-    serializer = KarloSerializer(karlo_img)
+    result_images = KarloImg.objects.filter(movie_id=movieId)
+    serializer = KarloSerializer(result_images, many=True)
     # print(prompt)
     return Response(serializer.data)
