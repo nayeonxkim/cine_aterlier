@@ -1,13 +1,6 @@
 <template>
   <div class="home">
-    <h1>이미지 생성</h1>
     <KarloImgsCarousel />
-    <hr>
-    <div class="searchMovie">
-      <h2>영화검색하기</h2>
-    </div>
-    <hr>
-
     <SearchModal />
   </div>
 </template>
