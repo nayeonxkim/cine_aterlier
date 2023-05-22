@@ -43,21 +43,19 @@ export default {
   },
   methods: {
     getArticles() {
-      if (this.isLogin) {
-        this.$store.dispatch('getArticles')
-      } else {
+      if (!this.isLogin) {
         alert('로그인이 필요한 페이지입니다.')
         this.$router.push({ name: 'login' })
       }
     },
-    searchBar_reset(){
-      return this.$store.commit('SEARCHBAR_RESET')
-    },
+    // searchBar_reset(){
+    //   return this.$store.commit('SEARCHBAR_RESET')
+    // },
   },
 
-  destroyed(){
-    this.searchBar_reset()
-  }
+  // destroyed(){
+  //   this.searchBar_reset()
+  // }
 
 }
 </script>
