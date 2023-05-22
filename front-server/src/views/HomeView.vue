@@ -1,36 +1,21 @@
 <template>
   <div class="home">
-    <h1>이미지 생성 영화 커뮤니티</h1>
-    <div >
-      <!-- <img
-      :src="getMyImagePath(임시!!!!!!)"
-      class="card-img-top"
-      style="width:200%; height:200%;"
-      alt="My Image"> -->
-      <!-- <div id="createdImg">생성된 이미지보여줄곳</div> -->
-      <!-- <img src="/static/karloResults/5.png" alt=""> -->
-    </div>
-
-    <div class="searchMovie">
-      <h2>영화검색하기</h2>
-    </div>
-    <hr>
-    <ExampleImages/>
+    <KarloImgsCarousel />
     <SearchModal />
   </div>
 </template>
 
 <script>
-import ExampleImages from '@/components/ExampleImages.vue'
 import SearchModal from '@/components/SearchModal.vue'
+import KarloImgsCarousel from '@/components/KarloImgsCarousel.vue'
 // @ is an alias to /src
 
 
 export default {
   name: 'HomeView',
   components: {
-    ExampleImages,
-    SearchModal
+    SearchModal,
+    KarloImgsCarousel
   },
   computed: {
     isLogin() {
@@ -39,8 +24,8 @@ export default {
     movieId(){
       return this.$store.state.selectedMovie
     },
-    karloImg(){
-      return this.$store.state.karloImg
+    karloImgs(){
+      return this.$store.state.karloImgs
     }
   },
   created() {

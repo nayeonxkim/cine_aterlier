@@ -42,6 +42,7 @@ export default {
 }
 
 
+
 #navbar-main {
   font-family: 'Blinker', sans-serif;
   background-color: #ffffff;
