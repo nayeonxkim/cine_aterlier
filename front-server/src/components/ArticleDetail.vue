@@ -1,24 +1,26 @@
 <template>
   <div>
     <div v-if="article">
-      <h5>{{ article.id }}번 게시글</h5>
+      <h5>{{ articleDetail.title }}번 게시글</h5>
+      <p>{{ articleDetail.img }}</p>
+
       <img
         :src="getFullImagePath(article.img)"
         style="width:50%; height:50%;"
         alt="Article Image"
       >
-      <h2>{{ article.title }}</h2>
-      <p>{{ article.content }}</p>
-      <button class="btn btn-primary" @click="openModal">UPDATE</button>
+      <!-- <h2>{{ articleTitle }}</h2> -->
+      <!-- <p>{{ articleContent }}</p> -->
+      <!-- <button class="btn btn-primary" @click="openModal">UPDATE</button>
       <button class="btn btn-secondary" @click="deleteArticle">DELETE</button>
-      <hr>
-      <input @keyup.enter="commentCreate" type="text" v-model="newComment.content">
-      <button class="btn btn-danger" @click="commentCreate">댓글 작성</button>
-    <ArticleComment 
+      <hr> -->
+      <!-- <input @keyup.enter="commentCreate" type="text" v-model="newComment.content"> -->
+      <!-- <button class="btn btn-danger" @click="commentCreate">댓글 작성</button> -->
+    <!-- <ArticleComment 
     v-for="(comment, idx) in article.comment_set"
     :key="idx"
     :comment-item="comment"
-    :article-id="article.id" />
+    :article-id="article.id" /> -->
     </div>
   </div>
 </template>
@@ -26,25 +28,16 @@
 <script>
 import axios from 'axios'
 import store from '@/store'
-import ArticleComment from '@/components/ArticleComment.vue'
+// import ArticleComment from '@/components/ArticleComment.vue'
 
 const API_URL = 'http://127.0.0.1:8000'
 
 export default {
   name: 'ArticleDetail',
   computed: {
-    articleTitle() {
-      return this.$store.state.articleDetail.data.title
+    articleDetail() {
+      return this.$store.state.articleDetail;
     },
-    articleContent() {
-      return this.$store.state.articleDetail.data.content
-    },
-    articleImg() {
-      return this.$store.state.articleDetail.data.content
-    },
-    articleCommentSet() {
-      return this.$store.state.articleDetail.data.content
-    }
   },
   data() {
     return {
@@ -55,9 +48,9 @@ export default {
       },
     }
   },
-  components:{
-    ArticleComment
-  },
+  // components:{
+  //   ArticleComment
+  // },
   created() {
     this.getArticleDetail()
   },
@@ -65,6 +58,12 @@ export default {
     getArticleDetail() {
       const articleId = this.$route.params.articleId
       this.$store.dispatch('getArticleDetail', articleId)
+        .then(response => {
+          this.article = response.data
+        })
+        .catch(error => {
+          console.log(error)
+        })
     },
     getFullImagePath(imageUrl) {
       return `${API_URL}${imageUrl}`

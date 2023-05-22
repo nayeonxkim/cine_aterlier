@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" @click="$router.push(`articles/${articleItem.id}`)">
+    <div class="card" @click="$router.push(`/articles/${articleItem.id}`)">
       <img
       :src="getFullImagePath(articleItem.img)"
       class="card-img-top"

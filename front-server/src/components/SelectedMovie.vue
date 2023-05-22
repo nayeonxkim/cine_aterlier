@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="movie" @click="select_movie">
-      <img :src="`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`" alt="">
+      <img :src="`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`" style="width: 100px; height: 150px;" alt="">
       <p>{{selectedMovie.title}}</p>
     </div>
 

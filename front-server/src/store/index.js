@@ -31,7 +31,7 @@ export default new Vuex.Store({
     // Home
     searchedList: null,
     selectedMovie: null,
-    karloImg: null
+    karloImgs: null
 
   },
   getters: {
@@ -72,8 +72,13 @@ export default new Vuex.Store({
       state.articleList = payload
     },
     GET_ARTICLE_DETAIL(state, payload) {
-      console.log(payload)
+      // console.log('이거')
+      // console.log(payload)
+      // console.log(payload.title)
       state.articleDetail = payload
+      // console.log('state.articleDetail')
+      console.log(state.articleDetail)
+      // console.log(state.articleDetail.title)
     },
 
     // HOME의 mutations
@@ -90,7 +95,10 @@ export default new Vuex.Store({
       state.selectedPainter = payload
     },
     TO_KARLO(state, payload){
-      state.karloImg = payload
+      state.karloImgs = payload
+    },
+    KARLOIMGS_RESET(state){
+      state.karloImgs = null
     }
   },
 
@@ -242,9 +250,9 @@ export default new Vuex.Store({
           },
         })
         .then((res) => {
-          console.log('성공!')
-          console.log(res)
-          console.log(res.data.title)
+          console.log('성공!')                                  // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          console.log(res)                                      // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          console.log(res.data.title)                           // 여기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           context.commit('GET_ARTICLE_DETAIL', res.data)
         })
         .catch((err) => {
@@ -274,8 +282,8 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         console.log(context)
-        // const payload = res.data.img
-        // context.commit('TO_KARLO', payload)
+        const payload = res.data
+        context.commit('TO_KARLO', payload)
       })
       .catch((err) => {
         console.error(err)
