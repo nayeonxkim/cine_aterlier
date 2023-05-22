@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div v-if="isLoading" class="loading-container">
+      <div class="loading">
+        <Fade-loader />
+      </div>
+    </div>
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -63,6 +68,11 @@ export default {
     SelectMovie,
     SelectPainter
   },
+  computed:{
+       isLoading(){
+      return this.$store.state.isLoading
+      }
+    },
   methods:{
     searchedList_reset(){
       return this.$store.commit('SEARCHEDLIST_RESET')
@@ -87,5 +97,14 @@ export default {
 <style>
 .modal-body{
   padding: 20px;
+}
+
+.loading {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 9999px;
 }
 </style>

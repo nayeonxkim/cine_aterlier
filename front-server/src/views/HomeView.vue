@@ -1,5 +1,10 @@
 <template>
   <div class="home">
+    <div v-if="isLoading" class="loading-container">
+      <div class="loading">
+        <Fade-loader />
+      </div>
+    </div>
     <KarloImgsCarousel />
     <SearchModal 
     class="mt-5"/>
@@ -20,6 +25,9 @@ export default {
     KarloImgsCarousel
   },
   computed: {
+    isLoading(){
+      return this.$store.state.isLoading
+    },
     isLogin() {
       return this.$store.getters.isLogin
     },
@@ -65,5 +73,12 @@ export default {
   height: 500px;
   width: 500px;
 }
-
+.loading {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 9999px;
+}
 </style>
