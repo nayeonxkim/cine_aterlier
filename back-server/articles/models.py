@@ -9,5 +9,6 @@ class Article(models.Model):
     content = models.TextField()
 
 class Comment(models.Model):
+    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.TextField()

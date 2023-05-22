@@ -66,7 +66,7 @@ def comment_create(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
     serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(article=article)
+        serializer.save(article=article, author=request.user)
         return Response(serializer.data)
     
 # 댓글 삭제
