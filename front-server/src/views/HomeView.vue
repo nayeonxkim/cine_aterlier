@@ -2,16 +2,13 @@
   <div class="home">
     <h1>이미지 생성</h1>
     
-    <div id="karloImg" v-if="karloImgs">
+    <div id="karloImg">
       <KarloImgs 
-   
-      :karlo-imga="karloImgs"/>
-      <!-- v-for="karloImg in karloImgs"
-      :key="karloImg.id" -->
+       v-for="karloImg in karloImgs"
+      :key="karloImg.id"
+      :karlo-img="karloImg"/>
 
     </div>
-      <!-- <div id="createdImg">생성된 이미지보여줄곳</div> -->
-      <!-- <img src="/static/karloResults/5.png" alt=""> -->
 
     <div class="searchMovie">
       <h2>영화검색하기</h2>
