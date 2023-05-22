@@ -30,7 +30,9 @@ export default new Vuex.Store({
     // Home
     searchedList: null,
     selectedMovie: null,
-    karloImg: null
+    karloImgs: [{
+      img_url:'/media/예시_이미지.png'
+    }]
 
   },
   getters: {
@@ -88,7 +90,7 @@ export default new Vuex.Store({
       state.selectedPainter = payload
     },
     TO_KARLO(state, payload){
-      state.karloImg = payload
+      state.karloImgs.push(payload)
     }
   },
 
@@ -255,8 +257,8 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         console.log(context)
-        // const payload = res.data.img
-        // context.commit('TO_KARLO', payload)
+        const payload = res.data
+        context.commit('TO_KARLO', payload)
       })
       .catch((err) => {
         console.error(err)
