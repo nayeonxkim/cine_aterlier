@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel">영화 선택하기</h5>
+          <h5 class="modal-title text-center" id="exampleModalToggleLabel">영화 선택하기</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -62,5 +62,12 @@ export default {
 </script>
 
 <style>
+.btn {
+  margin-top: 2%;
+  width: 35.5%;
+}
 
+.text-center {
+  text-align: center !important;
+}
 </style>
