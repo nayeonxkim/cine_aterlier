@@ -21,6 +21,7 @@ export default new Vuex.Store({
 
     // Article
     articleList: null,
+    articleDetail: null,
 
     // Movie
     movieList: null,
@@ -71,6 +72,7 @@ export default new Vuex.Store({
       state.articleList = payload
     },
     GET_ARTICLE_DETAIL(state, payload) {
+      console.log(payload)
       state.articleDetail = payload
     },
 
@@ -196,7 +198,7 @@ export default new Vuex.Store({
       const end = 8 * currentPage
     
       axios
-        .get(`${API_URL}/articles/index/`, {
+        .get(`${API_URL}/articles/index`, {
           headers: {
             Authorization: `Token ${context.state.token}`
           }
@@ -231,6 +233,23 @@ export default new Vuex.Store({
             reject(error)
           })
       })
+    },
+    getArticleDetail(context, articleId) {
+      axios
+        .get(`${API_URL}/articles/${articleId}/`, {
+          headers: {
+            Authorization: `Token ${context.state.token}`,
+          },
+        })
+        .then((res) => {
+          console.log('성공!')
+          console.log(res)
+          console.log(res.data.title)
+          context.commit('GET_ARTICLE_DETAIL', res.data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
     
     // HOME의 액션

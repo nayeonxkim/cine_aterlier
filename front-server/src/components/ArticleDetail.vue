@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="article">
-      <h5>{{article.id}}번 게시글</h5>
+      <h5>{{ article.id }}번 게시글</h5>
       <img
         :src="getFullImagePath(article.img)"
         style="width:50%; height:50%;"
@@ -32,6 +32,20 @@ const API_URL = 'http://127.0.0.1:8000'
 
 export default {
   name: 'ArticleDetail',
+  computed: {
+    articleTitle() {
+      return this.$store.state.articleDetail.data.title
+    },
+    articleContent() {
+      return this.$store.state.articleDetail.data.content
+    },
+    articleImg() {
+      return this.$store.state.articleDetail.data.content
+    },
+    articleCommentSet() {
+      return this.$store.state.articleDetail.data.content
+    }
+  },
   data() {
     return {
       article: null,
@@ -50,18 +64,7 @@ export default {
   methods: {
     getArticleDetail() {
       const articleId = this.$route.params.articleId
-      axios
-        .get(`${API_URL}/articles/${articleId}`, {
-          headers: {
-            Authorization: `Token ${store.state.token}`,
-          },
-        })
-        .then(res => {
-          this.article = res.data
-        })
-        .catch(err => {
-          console.log(err)
-        })
+      this.$store.dispatch('getArticleDetail', articleId)
     },
     getFullImagePath(imageUrl) {
       return `${API_URL}${imageUrl}`

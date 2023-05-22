@@ -6,6 +6,7 @@ from rest_framework.decorators import permission_classes
 
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.authtoken.models import Token
 
 from rest_framework import status
 
@@ -46,16 +47,22 @@ def detail(request, article_pk):
 @permission_classes([IsAuthenticated])
 def update(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
+    if article.author != request.user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
+    
     serializer = ArticleSerializer(article, data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save()
         return Response(serializer.data)
+    
 
 # 게시글 삭제
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
+    if article.author != request.user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     article.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
@@ -66,7 +73,8 @@ def comment_create(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
     serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(article=article, author=request.user)
+        token = Token.objects.get(user=request.user)
+        serializer.save(article=article, author=request.user, token=token.key)
         return Response(serializer.data)
     
 # 댓글 삭제
@@ -75,5 +83,8 @@ def comment_create(request, article_pk):
 def comment_delete(request, article_pk, comment_pk):
     article = get_object_or_404(Article, pk=article_pk)
     comment = get_object_or_404(Comment, pk=comment_pk)
+    if comment.token != request.auth.key:
+        return Response(status=status.HTTP_403_FORBIDDEN)
+    
     comment.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
