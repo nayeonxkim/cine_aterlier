@@ -9,8 +9,8 @@ import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
 
 import LoginView from '../views/LoginView.vue'
-// import ArticleList from '../components/ArticleList.vue'
 import ArticleDetail from '../components/ArticleDetail.vue'
+import ArticleUpdate from '../components/ArticleUpdate.vue'
 
 Vue.use(VueRouter)
 
@@ -40,16 +40,16 @@ const routes = [
     path: '/community',
     name: 'community',
     component: CommunityView,
-      // {
-      //   path: '/articles/index',
-      //   name: 'article-list',
-      //   component: ArticleList,
-      // },
   },
   {
     path: '/articles/:articleId',
     name: 'article-detail',
     component: ArticleDetail,
+  },
+  {
+    path:'/articles/:articleId/update',
+    name:'article-update',
+    component:ArticleUpdate
   },
 
   {

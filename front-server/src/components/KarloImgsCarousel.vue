@@ -3,12 +3,12 @@
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="http://127.0.0.1:8000/media/example.png" style="width: 35%; height: 35%;" alt="..1.">
+          <img src="http://127.0.0.1:8000/media/example.png" style="width: 40%; height: 40%;" alt="..1.">
         </div>
         <div class="carousel-item"
         v-for="karloImg in karloImgs"
         :key="karloImg.id">
-           <img :src="`http://127.0.0.1:8000${karloImg.img_url}`" style="width: 35%; height: 35%;" alt="">
+           <img :src="`http://127.0.0.1:8000${karloImg.img_url}`" style="width: 40%; height: 40%;" alt="">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
