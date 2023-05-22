@@ -29,7 +29,8 @@ export default new Vuex.Store({
 
     // Home
     searchedList: null,
-    selectedMovie: null
+    selectedMovie: null,
+    karloImg: null
 
   },
   getters: {
@@ -85,6 +86,9 @@ export default new Vuex.Store({
     SELECT_PAINTER(state, payload){
       state.selectedPainter = payload
     },
+    TO_KARLO(state, payload){
+      state.karloImg = payload
+    }
   },
 
   actions: {
@@ -262,6 +266,8 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         console.log(context)
+        // const payload = res.data.img
+        // context.commit('TO_KARLO', payload)
       })
       .catch((err) => {
         console.error(err)

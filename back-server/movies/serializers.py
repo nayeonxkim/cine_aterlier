@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, Rating, User, MovieKeyword, Keyword
+from .models import Movie, Rating, User, MovieKeyword, Keyword, KarloImg
 
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,3 +31,8 @@ class MovieImgSerializer(serializers.ModelSerializer):
         fields = ('tmdb_id', 'original_title', 'poster_path', 'popularity','ratings',)
 
 
+class KarloSerializer(serializers.ModelSerializer):
+    img_url = serializers.ImageField(use_url=False)
+    class Meta:
+        model = KarloImg
+        fields = '__all__'

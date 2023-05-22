@@ -3,6 +3,7 @@
     <h1>이미지 생성 영화 커뮤니티</h1>
     <div >
       <div id="createdImg">생성된 이미지보여줄곳</div>
+      <!-- <img src="/static/karloResults/5.png" alt=""> -->
     </div>
 
     <div class="searchMovie">
@@ -32,6 +33,9 @@ export default {
     },
     movieId(){
       return this.$store.state.selectedMovie
+    },
+    karloImg(){
+      return this.$store.state.karloImg
     }
   },
   created() {

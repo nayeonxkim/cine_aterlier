@@ -10,14 +10,12 @@
       <p>{{ article.content }}</p>
       <button class="btn btn-primary" @click="openModal">UPDATE</button>
       <button class="btn btn-secondary" @click="deleteArticle">DELETE</button>
-      <div class="mt-5">
-        <div class="card mt-3" v-for="comment in article.community_set" :key="comment.id">
-          <div class="card-body">
-            <p class="card-text">{{ comment.content }}</p>
-            <p class="card-subtitle text-muted">작성자: {{ comment.author }}</p>
-          </div>
-        </div>
-      </div>
+      <hr>
+      <input type="text" v-model="newComment.content">
+      <button class="btn btn-danger" @click="commentCreate">댓글 작성</button>
+    <div v-for="(comment, idx) in article.comment_set"
+    :key="idx"
+    > {{comment.content}}</div>
     </div>
   </div>
 </template>
@@ -35,8 +33,7 @@ export default {
       article: null,
       showModal: false,
       newComment: {
-        content: '',
-        author: '',
+        content: ''
       },
     }
   },
@@ -53,29 +50,11 @@ export default {
           },
         })
         .then(res => {
+          console.log(res.data)
           this.article = res.data
-          this.getArticleComments() // 댓글 가져오기
         })
         .catch(err => {
           console.log(err)
-        })
-    },
-    getArticleComments() {
-      const articleId = this.$route.params.articleId;
-      axios
-        .get(`${API_URL}/articles/${articleId}`, {
-          headers: {
-            Authorization: `Token ${store.state.token}`,
-          },
-        })
-        .then(res => {
-          this.article.community_set = res.data.comment_set.map(comment => ({
-            content: comment.content,
-            author: comment.author,
-          }));
-        })
-        .catch(err => {
-          console.log(err);
         })
     },
     getFullImagePath(imageUrl) {
@@ -85,9 +64,8 @@ export default {
       this.showModal = true
     },
     deleteArticle() {
-      const articleId = this.$route.params.articleId
       axios
-        .delete(`${API_URL}/articles/delete/${articleId}`, {
+        .delete(`${API_URL}/articles/delete/${this.article.id}`, {
           headers: {
             Authorization: `Token ${store.state.token}`,
           },
@@ -100,17 +78,18 @@ export default {
         })
     },
     commentCreate() {
-      const articleId = this.$route.params.articleId
+      const userId = this.$store.state.User.id
       axios
-        .post(`${API_URL}/articles/${articleId}/comment_create/`, this.newComment, {
+        .post(`${API_URL}/articles/${this.article.id}/comment_create/`,{ content : this.newComment.content,
+          author : userId },
+        {
           headers: {
             Authorization: `Token ${store.state.token}`,
           },
         })
-        .then(() => {
-          this.getArticleComments() // 댓글 업데이트
+        .then((res) => {
+          console.log(res)
           this.newComment.content = ''
-          this.newComment.author = ''
         })
         .catch(err => {
           console.log(err)
