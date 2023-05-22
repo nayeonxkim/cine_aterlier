@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ALL MOVIES</h1>
+    <h1>TOP 100 Popular</h1>
 
     <MovieList />
     <PageNav />
