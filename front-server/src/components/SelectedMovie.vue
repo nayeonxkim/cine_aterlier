@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div id="movie" @click="select_movie"  :class="{ 'selected-movie': selected }">
       <img :src="`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`" style="width: 70%; height: 50%px;" alt="">
       <p>{{selectedMovie.title}}</p>

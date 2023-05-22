@@ -84,18 +84,17 @@ def stringToImage(base64_string, mode='RGBA'):
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def getKarloImg(request, movieId, painter):
-    movie = Movie.objects.get(pk=movieId)
-    title = movie.original_title
-    keywords = movie.keywords.all()
-    keyword_names = [keyword.keyword_name for keyword in keywords]
+def getKarloImg(request, movieId1, movieId2, painter):
+    movie1 = Movie.objects.get(pk=movieId1)
+    title1 = movie1.original_title
+    movie2 = Movie.objects.get(pk=movieId2)
+    title2 = movie2.original_title
+
 
     # 입력단어 prompt 만들기
-    prompt = title +', '
+    prompt = title1 +', ' + title2 + ', '
     if painter != 'null':
         prompt += 'by' + painter + ', '
-    for keyword in keyword_names:
-        prompt += keyword + ', '
     
     
     response = t2i(prompt, 5)
@@ -103,25 +102,25 @@ def getKarloImg(request, movieId, painter):
     for image_data in response["images"]:
         image_id = image_data["id"]
         image_url = image_data["image"]
-        nsfw = image_data["nsfw"]
-        nsfw_score = image_data["nsfw_score"]
         
         # KarloImg 인스턴스 생성 및 저장
         karlo_img = KarloImg.objects.create(
-            movie_id=movieId,
-            original_title=title,
+            movie_id1=movieId1,
+            original_title1=title1,
+            movie_id2=movieId2,
+            original_title2=title2,
             painter=painter,
-            img_url=f'/media/{movieId}_{image_id}.png'
+            img_url=f'/media/{movieId1}_{movieId2}_{image_id}.png'
         )
         
         # 이미지 저장
-        image_path = os.path.join(settings.MEDIA_ROOT, f'{movieId}_{image_id}.png')
+        image_path = os.path.join(settings.MEDIA_ROOT, f'{movieId1}_{movieId2}_{image_id}.png')
         result = stringToImage(image_url, mode='RGB')
         result.save(image_path, 'PNG')
         
         karlo_img.save()
 
-    result_images = KarloImg.objects.filter(movie_id=movieId, painter=painter)
+    result_images = KarloImg.objects.filter(movie_id1=movieId1, movie_id2=movieId2, painter=painter)
     serializer = KarloSerializer(result_images, many=True)
     # print(prompt)
     return Response(serializer.data)

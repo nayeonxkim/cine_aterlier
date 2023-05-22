@@ -52,6 +52,7 @@ export default {
   name:'SelectPainter',
   methods:{
     select_painter(event){
+      console.log(event.target)
       return this.$store.commit('SELECT_PAINTER', event.target.innerText)
     }
   }
