@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework import status
-from django.http import JsonResponse
+from django.http import JsonResponse, FileResponse
 import requests
 import json
 import io
@@ -103,17 +103,14 @@ def getKarloImg(request, movieId, painter):
     result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
     result.show()
     # 저장할 폴더 경로
-    output_folder_path = '../karloImg'
+    output_folder_path = './movies/static'
 
     # 폴더가 없을 경우 생성
     if not os.path.exists(output_folder_path):
         os.makedirs(output_folder_path)
 
     # 이미지 저장
-    output_image_path = os.path.join(output_folder_path, 'example.png')
+    output_image_path = os.path.join(output_folder_path, f'{movieId}.png')
     result.save(output_image_path)
-    context = {
-        'prompt':prompt,
-        # 'img' : settings.STATIC_URL + f'{title}.png'
-    }
-    return JsonResponse(context)
+  
+    return FileResponse(open(output_image_path, 'rb'), content_type='image/png')

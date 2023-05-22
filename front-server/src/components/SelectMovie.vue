@@ -24,6 +24,7 @@ export default {
   },
   methods:{
     get_searchedList(event){
+      console.log(event.target.value)
       this.$store.dispatch('get_searchedList', event.target.value)
       event.target.value = null
     }
