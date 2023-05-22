@@ -12,8 +12,8 @@ import os
 import base64
 from PIL import Image
 from django.conf import settings
-from .models import Movie, MovieKeyword, Keyword
-from .serializers import MovieSerializer, MovieDetailSerialzer, RatingSerializer, MovieImgSerializer
+from .models import Movie, KarloImg
+from .serializers import MovieSerializer, MovieDetailSerialzer, RatingSerializer, MovieImgSerializer, KarloSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -103,17 +103,17 @@ def getKarloImg(request, movieId, painter):
     result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
     result.show()
     # 저장할 폴더 경로
-    output_folder_path = '../karloImg'
-
-    # 폴더가 없을 경우 생성
-    if not os.path.exists(output_folder_path):
-        os.makedirs(output_folder_path)
-
+    image_path = f'/static/karloResults/{movieId}.png'
+    result.save(image_path, 'PNG')
     # 이미지 저장
-    output_image_path = os.path.join(output_folder_path, 'example.png')
-    result.save(output_image_path)
-    context = {
-        'prompt':prompt,
-        # 'img' : settings.STATIC_URL + f'{title}.png'
-    }
-    return JsonResponse(context)
+    karlo_img = KarloImg.objects.create(
+    movie_id=movieId,
+    original_title=title,
+    painter=painter,
+    img_url=image_path
+    )
+    karlo_img.save()
+
+    serializer = KarloSerializer(karlo_img)
+    # print(prompt)
+    return Response(serializer.data)
