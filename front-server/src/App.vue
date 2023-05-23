@@ -1,6 +1,5 @@
 <template>
-  <div id="app" class="mt-0">
-    <div class="backcolor"></div>
+  <div id="app" class="mt-0" style="background-color: #ffffff;">
     <div id="navbar-main" class="navbar">
       <div id="left-nav" class="d-flex justify-content-start">
         <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
@@ -12,7 +11,7 @@
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">OUR LOGOS</div>
+    <div class="logo" :style="logoStyle">KEBOB TO CAMEL TEAM</div>
     <router-view class="mt-5"/>
   </div>
 </template>
@@ -57,15 +56,15 @@ export default {
 </script>
 
 <style>
-  /* .mt-0 {
-    text-align: center;
-    margin-top: 60px;
-    position: relative;
-    display: block;
-    max-height: 100vh;
-    overflow-y: auto;
-    top: 0;
-  } */
+/* #app {
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  display: block;
+  max-height: 100vh;
+  overflow-y: auto;
+  top: 0;
+} */
 
 .logo {
   position: sticky;
@@ -79,11 +78,6 @@ export default {
   z-index: 990;
   font-size: 80px;
   margin: 0;
-}
-
-.backcolor {
-  width: 100%;
-  background-color: #ffffff;
 }
 
 .navbar {
