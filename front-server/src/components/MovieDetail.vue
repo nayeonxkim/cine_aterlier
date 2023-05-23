@@ -72,7 +72,7 @@ export default {
 .image-container {
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* 이미지 비율에 따라 조정 */
+  padding-bottom: 56.25%; 
   position: relative;
   overflow: hidden;
 }
@@ -84,7 +84,6 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(70%);
 }
 
 .image-container::before {
