@@ -17,7 +17,7 @@
             <input type="password" id="password" v-model="password" class="form-control">
           </div>
 
-          <button type="button" @click="login" class="btn btn-primary">Log In</button>
+          <button type="button" @click="login" class="custom-btn">Log In</button>
         </form>
 
         <form v-else @submit.prevent="signUp">
@@ -37,10 +37,10 @@
             <input type="password" id="signup-password2" v-model="signupPassword2" class="form-control">
           </div>
 
-          <button type="button" @click="signUp" class="btn btn-success">Sign Up</button>
+          <button type="button" @click="signUp" class="custom-btn">Sign Up</button>
         </form>
 
-        <button @click="togglePopup" class="btn btn-secondary" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
+        <button @click="togglePopup" class="btn custom-btn" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .container {
   margin-top: 50px;
 }
@@ -113,12 +113,23 @@ export default {
   background-color: white;
   padding: 20px;
 }
-.btn {
+/* .btn {
   margin-top: 15px;
   width: 221px;
-}
+} */
 .title {
   margin-bottom: 15px;
 } 
 
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
 </style>

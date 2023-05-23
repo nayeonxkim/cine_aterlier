@@ -143,4 +143,16 @@ export default {
   margin-right: 8px;
   display: block;
 }
+
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
 </style>

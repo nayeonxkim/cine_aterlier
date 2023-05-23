@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="mt-0">
     <div class="row">
       <ArticleList :articles="articleList" />
-    </div>
     <CreateArticleModal />
+    </div>
     <ArticlePageNav />
   </div>
 </template>
@@ -47,3 +47,19 @@ export default {
   },
 }
 </script>
+
+
+<style>
+/* .custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  float: right;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+} */
+</style>
