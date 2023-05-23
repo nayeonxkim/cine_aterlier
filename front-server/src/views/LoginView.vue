@@ -2,7 +2,7 @@
   <div class="container d-flex justify-content-center">
     <div class="login-container">
       <div v-if="isLogin">
-        <button @click="logout" class="btn btn-danger">Log Out</button>
+        <button @click="logout" class="custom-btn">Log Out</button>
       </div>
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
@@ -40,7 +40,7 @@
           <button @click="signUp" class="custom-btn">Sign Up</button>
         </form>
 
-        <button @click="togglePopup" class="btn custom-btn" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
+        <button @click="togglePopup" class="custom-btn" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
       </div>
     </div>
   </div>
@@ -126,6 +126,7 @@ export default {
   border-radius: 0;
   background-color: transparent;
   margin: 0.5% 0.5% 0.5% 0.5%;
+  padding: 2%;  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
 }
 
 .custom-btn:hover {

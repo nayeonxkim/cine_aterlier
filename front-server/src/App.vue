@@ -102,14 +102,12 @@ export default {
   /* background-color: #ffffff; */
 } */
 
-
 .navbar-content {
   display: flex;
   justify-content: space-between;
   padding: 8px;
   margin: 0;
 }
-
 
 #navbar-main {
   position: sticky;
