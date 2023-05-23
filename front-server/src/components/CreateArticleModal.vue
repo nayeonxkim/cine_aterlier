@@ -1,33 +1,33 @@
 <template>
   <div>
-    <button @click="openModal" class="btn btn-secondary">CREATE</button>
+    <button @click="openModal" class="btn custom-btn">CREATE</button>
     <div class="modal" tabindex="-1" role="dialog" :class="{ 'show': isModalOpen }">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Create New Article</h5>
-            <button type="button" class="close" @click="closeModal">
+            <button type="btn" class="close" @click="closeModal">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <form @submit.prevent="submitForm" enctype="multipart/form-data">
             <div class="modal-body">
               <div class="form-group">
-                <label for="fileInput">Image:</label>
+                <label for="fileInput">Image</label>
                 <input id="fileInput" type="file" ref="fileInput" accept="image/*" required>
               </div>
               <div class="form-group">
-                <label for="titleInput">Title:</label>
+                <label for="titleInput">Title</label>
                 <input id="titleInput" v-model="title" type="text" class="form-control" placeholder="Title" required>
               </div>
               <div class="form-group">
-                <label for="contentInput">Content:</label>
-                <textarea id="contentInput" v-model="content" class="form-control" placeholder="Content" required></textarea>
+                <label for="contentInput">Content</label>
+                <textarea id="contentInput" v-model="content" type="text" class="form-control" placeholder="Content" required></textarea>
               </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Create</button>
-              <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
+              <button type="submit" class="btn custom-btn">Create</button>
+              <button type="button" class="btn custom-btn" @click="closeModal">Close</button>
             </div>
           </form>
         </div>
@@ -90,3 +90,43 @@ export default {
   }
 }
 </script>
+
+<style>
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  float: right;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100% !important;
+  padding: 5px !important;
+  border: 2px solid #000 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+</style>

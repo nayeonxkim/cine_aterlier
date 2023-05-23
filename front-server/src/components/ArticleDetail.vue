@@ -1,30 +1,40 @@
 <template>
-  <div>
-    <div>
-      <h1>{{articleDetail.title}}</h1>
-      <img
-        :src="getFullImagePath(articleDetail.img)"
-        style="width:20%; height:20%;"
-        alt="Article Image"
-      >
-      <h5>{{ articleDetail.id }}번 게시글</h5>
-      <p>{{ articleDetail.content }}</p>
-
-      <button class="btn btn-primary" @click="$router.push(`/articles/${articleDetail.id}/update`)">UPDATE</button>
-      <button class="btn btn-secondary" @click="deleteArticle">DELETE</button>
-      <hr>
-
+  <div class="mt-0">
+    <div class="mt-0">
+      <div class="row">
+        <div class="col-6">
+          <img
+            :src="getFullImagePath(articleDetail.img)"
+            style="width: 100%; margin: 5%;"
+            alt="Article Image"
+          >
+        </div>
+        <div class="col-6 text-right">
+          <div class="page-btn">
+            <button class="btn" @click="$router.push(`/articles/${articleDetail.id}/update`)">UPDATE</button>
+            <button class="btn" @click="deleteArticle">DELETE</button>
+          </div>
+          <div class="temp" style="text-align: left; margin-top: 15%;" >
+            <h3>{{ articleDetail.title }}</h3>
+            <!-- <h5>{{ articleDetail.id }}번 게시글</h5> -->
+            <h5>{{ articleDetail.content }}</h5>
+          </div>
+        </div>
+        <div class="col-6">
+        </div>
+      </div>
+      <hr class="hori">
       <div class="comment-block">
         <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" style="">
-        <button class="btn btn-danger" @click="commentCreate">댓글 작성</button>
+        <button class="btn" @click="commentCreate">댓글 작성</button>
       </div>
-
-      <ArticleComment 
+    </div>
+    <ArticleComment
       v-for="(comment, idx) in articleDetail.comment_set"
       :key="idx"
       :comment-item="comment"
-      :article-id="articleDetail.id" />
-    </div>
+      :article-id="articleDetail.id"
+    />
   </div>
 </template>
 
@@ -102,9 +112,25 @@ export default {
 </script>
 
 <style scoped>
-
-.comment-block{
+.comment-block {
   margin: 30px;
+}
+
+.btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  float: right;
+}
+
+.page-btn {
+  margin-right: 1.5%;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .card {
@@ -120,4 +146,5 @@ export default {
 .form-group {
   margin-bottom: 10px;
 }
+
 </style>

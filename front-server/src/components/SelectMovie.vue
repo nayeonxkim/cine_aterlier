@@ -74,7 +74,7 @@ export default {
 }
 
 #search-btn {
-  color: blanchedalmond;
+  color: #fff;
   border: solid 0.5px black;
   background-color: black;
   border-radius: 13%;
@@ -82,20 +82,11 @@ export default {
   padding-left: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
+  margin-bottom: 5%;
 } 
 
 .row {
   margin-top: 50px;
-}
-
-#selMovie:hover {
-  cursor: pointer;
-  border: solid 5px rgb(221, 102, 102);
-}
-
-#selMovie:active {
-  cursor: pointer;
-  border: solid 5px rgb(221, 102, 102);
 }
 
 </style>
