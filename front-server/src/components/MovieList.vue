@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="movie-list">
   <div class="row">
       <MovieItem 
       v-for="(movie, idx) in movieList" 
@@ -29,5 +29,7 @@ export default {
 </script>
 
 <style>
-/* CSS styles for MovieList */
+.movie-list {
+  display: grid;
+}
 </style>

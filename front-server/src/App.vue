@@ -6,7 +6,6 @@
         <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
-
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
@@ -38,6 +37,8 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    // 스크롤 이벤트 핸들러를 바인딩합니다.
+    this.handleScroll();
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -54,6 +55,28 @@ export default {
 #app {
   text-align: center;
   margin-top: 60px;
+  position: sticky;
+  display: block;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+  background-color: none;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 0;
 }
 
 .logo {
@@ -69,15 +92,16 @@ export default {
 }
 
 #navbar-main {
+  position: sticky;
   font-family: 'Blinker', sans-serif;
-  background-color: #ffffff;
+  background-color: none;
   font-size: 25px;
   z-index: 999;
 }
 
 .custom-cat {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 .custom-cat:focus,
@@ -91,10 +115,12 @@ export default {
 }
 
 #left-nav {
+  display: block;
   margin-left: 8px;
 }
 
 #right-nav {
   margin-right: 8px;
+  display: block;
 }
 </style>
