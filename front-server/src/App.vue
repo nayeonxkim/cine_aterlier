@@ -6,7 +6,6 @@
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
 
-    <SpinnerView v-if="isLoading" />
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link to="/home" class="custom-cat p-2">Home</router-link> 
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
