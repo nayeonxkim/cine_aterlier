@@ -33,10 +33,6 @@ export default {
 </script>
 
 <style>
-.article-list {
-  padding: 20px;
-}
-
 .row {
   justify-content: space-between;
 }

@@ -1,14 +1,15 @@
 <template>
   <div>
-    <div>
+    <div class="row justify-content-center align-items-center">
       <div
         v-for="painter in painters"
         :key="painter.name"
         :id="painter.name"
         @click="selectPainter(painter.name, $event)"
         :class="{ selected: selectedPainter === painter.name }"
+        class="col-3"
       >
-        <img :src="require(`../assets/${painter.imageSrc}`)" alt="ah">
+        <img :src="require(`../assets/${painter.imageSrc}`)" alt="" >
         <p>{{ painter.name }}</p>
       </div>
     </div>
@@ -72,20 +73,18 @@ export default {
 </script>
 
 <style>
-#painter:hover {
+#painter:hover,
+.selected {
   cursor: pointer;
-  border: solid 5px rgb(221, 102, 102);
+  border: solid 3px #000;
 }
 
-.selected {
-  border: solid 5px rgb(221, 102, 102);
-}
 
 img:hover {
   opacity: 0.8;
 }
 
 img {
-  width: 20%;
+  width: 100%;
 }
 </style>
