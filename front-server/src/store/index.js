@@ -35,7 +35,10 @@ export default new Vuex.Store({
     selectedMovie2: null,
     karloImgs: null,
     axiosFail:false,
+
+    // 로딩
     isLoading : false
+
 
   },
   getters: {
@@ -101,6 +104,7 @@ export default new Vuex.Store({
     },
     KARLOIMGS_RESET(state){
       state.karloImgs = null
+      state.selectedPainter = null
     },
     AXIOS_FAIL(state, payload){
       state.axiosFail = payload
@@ -109,9 +113,12 @@ export default new Vuex.Store({
       state.selectedMovie1 = null
       state.selectedMovie2 = null
     },
+
+    // 로딩
     IS_LOADING(state, payload){
       state.isLoading = payload
     }
+
   },
 
   actions: {
@@ -285,10 +292,11 @@ export default new Vuex.Store({
     },
 
     to_karlo(context){
-      context.commit('IS_LOADING', true)
+      console.log(context.state.isLoading)
       axios
       .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie1}/${context.state.selectedMovie2}/${context.state.selectedPainter}/`)
       .then((res) => {
+        console.log(context.state.isLoading)
         const payload = res.data
         context.commit('AXIOS_FAIL', true)
         context.commit('TO_KARLO', payload)
@@ -301,7 +309,6 @@ export default new Vuex.Store({
         context.commit('SELECTEDMOVIE_RESET')
         console.error(err)
       })
-      context.commit('IS_LOADING', false)
   },
 },
   modules: {
