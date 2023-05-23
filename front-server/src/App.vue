@@ -12,7 +12,7 @@
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">KEBOB TO CAMEL TEAM</div>
+    <div class="logo" :style="logoStyle">GROUNDSEESAW</div>
     <router-view class="mt-5"/>
   
   </div>
@@ -32,12 +32,12 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '110px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '220px';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
         padding: logoPadding,
-        transition: 'font-size 0.5s'
+        transition: 'font-size 0.6s'
       };
     },
     isLoading() {
