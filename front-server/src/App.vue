@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import SpinnerView from '@/views/SpinnerView'
 
 export default {
   name: 'App',
@@ -27,9 +26,6 @@ export default {
     return {
       scrollPosition: 0
     };
-  },
-  components: {
-    SpinnerView,
   },
   computed: {
     isLoggedIn() {
