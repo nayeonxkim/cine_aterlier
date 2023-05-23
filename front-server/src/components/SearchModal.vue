@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div v-if="isLoading" class="loading-container">
-      <div class="loading">
-        <Fade-loader />
-      </div>
-    </div>
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -77,20 +72,22 @@ export default {
     searchedList_reset(){
       return this.$store.commit('SEARCHEDLIST_RESET')
     },
-    to_karlo(){
-      return this.$store.dispatch('to_karlo')
-    },
-    make_alert(){
-      if (this.$store.state.axiosFail){
-        alert('부적절한 영화입니다. 영화를 다시 선택해주세요!')
-      }
-    },
+    to_karlo() {
+      this.$store.commit('IS_LOADING', true)
+      this.$store.dispatch('to_karlo')
+      .then(() => {
+        this.$store.commit('IS_LOADING', false);
+      })
+      .catch((error) => {
+        // 요청이 실패한 경우에 대한 처리를 수행합니다.
+        console.error(error);
+        this.$store.commit('IS_LOADING', false); // 요청이 실패하더라도 로딩 상태를 false로 설정합니다.
+      });
+    }
   },
   destroyed(){
-    this.searchedList_reset(),
-    this.make_alert()
+    this.searchedList_reset()
   }
-
 }
 </script>
 
