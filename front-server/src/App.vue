@@ -66,6 +66,10 @@ export default {
   top: 0;
 } */
 
+#app {
+  text-align: center;
+}
+
 .logo {
   position: sticky;
   top: 0;
