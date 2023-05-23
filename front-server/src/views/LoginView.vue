@@ -17,7 +17,7 @@
             <input type="password" id="password" v-model="password" class="form-control">
           </div>
 
-          <button type="button" @click="login" class="custom-btn">Log In</button>
+          <button @click="login" class="custom-btn">Log In</button>
         </form>
 
         <form v-else @submit.prevent="signUp">
@@ -37,7 +37,7 @@
             <input type="password" id="signup-password2" v-model="signupPassword2" class="form-control">
           </div>
 
-          <button type="button" @click="signUp" class="custom-btn">Sign Up</button>
+          <button @click="signUp" class="custom-btn">Sign Up</button>
         </form>
 
         <button @click="togglePopup" class="btn custom-btn" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
