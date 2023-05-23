@@ -1,26 +1,25 @@
 <template>
   <div>
-    <!-- <h1>TOP 100 Popular</h1> -->
     <div class="genreBtn">
-
-    <router-link to="/movie/Top100">인기 Top100</router-link>|
-    <button v-for="genre in genres" :key="genre.id" @click="filterMoviesByGenre(genre.id)">
+    <!-- <router-link to="/movie/Top100">인기 Top100</router-link>| -->
+    <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
       {{ genre.name[0] }}/{{ genre.name[1] }}
     </button>
     </div>
-
-    <router-view />
-
-    <div v-for="movie in filteredMovies" :key="movie.id">
-      {{movie}}
-    </div>
+    <MovieItem
+    v-for="(movie, idx) in nowShowMovie" 
+    :key="idx"
+    :movie-item="movie"
+    />
   </div>
 </template>
 
 <script>
+import MovieItem from '@/components/MovieItem'
 export default {
   name: 'MovieView',
   components: {
+    MovieItem
   },
   data(){
     return{
@@ -58,34 +57,46 @@ export default {
           name:['음악', '다큐멘터리'],
         },
       ],
-      selectedGenre: null // 선택한 장르
+      nowShowMovie: null // 선택한 장르
     }
   },
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
     },
-    filteredMovies() {
-      if (this.selectedGenre) {
-        return this.$store.state.movieList.filter(movie => movie.genre_id === this.selectedGenre);
-      } else {
-        return this.$store.state.movieListTop100;
-      }
-    }
   },
   methods: {
-    get100List() {
+    get_movie_List() {
       if (this.isLogin) {
-        this.$store.dispatch('get100List')
+        this.$store.dispatch('get_movie_List')
       } else {
         alert('로그인이 필요한 페이지입니다.')
         this.$router.push({ name: 'login' })
       }
+    },
+    get_movieTop100(){
+      const movieTop100 = this.$store.state.movieList.slice(0,100);
+      this.nowShowMovie = movieTop100
+    },
+    filterMoviesByGenre(genreId) {
+      if (genreId.length === 2) {
+        const genreId1 = genreId[0];
+        const genreId2 = genreId[1];
+        this.nowShowMovie = this.$store.state.movieList.filter(movie => {
+          return movie.genre_id === genreId1 || movie.genre_id === genreId2;
+        });
+      } else {
+        const genreId1 = genreId[0];
+        this.nowShowMovie = this.$store.state.movieList.filter(movie => {
+          return movie.genre_id === genreId1;
+        });
+      }
     }
   },
   created(){
-    return this.get100List()
-  }
+    this.get_movie_List()
+    this.get_movieTop100()
+  },
 }
 </script>
 
