@@ -1,6 +1,12 @@
 import requests
 import googletrans
 import json
+import googletrans
+def to_english(title):
+    translator = googletrans.Translator()
+    translator.raise_Exception = True
+    eng_title = translator.translate(title, dest='en', src='auto')
+    return eng_title.text
 
 # original_title은 번역기 돌려서 전부 영어로
 # def to_english(title):
@@ -23,13 +29,18 @@ for pageNum in range(1, 501):
 
     for item in data['results']:
         try:
+            if item['original_language'] != 'en':
+                english_title = to_english(item['original_title'])
+            else:
+                english_title = item['original_title']
+                
             if item['release_date']:
                 i += 1
                 dict = {"model" : "movies.movie",
                         "pk" : item['id'],
                         'fields': {
                             "original_language": item['original_language'],
-                            "original_title": item['original_title'],
+                            "original_title": english_title,
                             "title": item['title'],
                             "overview": item['overview'],
                             "release_date": item['release_date'],
