@@ -6,6 +6,8 @@
         <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
+
+    <SpinnerView v-if="isLoading" />
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link to="/home" class="custom-cat p-2">Home</router-link> 
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
@@ -14,16 +16,22 @@
     </div>
     <div class="logo" :style="logoStyle">OUR LOGOS</div>
     <router-view class="mt-5"/>
+  
   </div>
 </template>
 
 <script>
+import SpinnerView from '@/views/SpinnerView'
+
 export default {
   name: 'App',
   data() {
     return {
       scrollPosition: 0
     };
+  },
+  components: {
+    SpinnerView,
   },
   computed: {
     isLoggedIn() {
@@ -37,7 +45,10 @@ export default {
         padding: logoPadding,
         transition: 'font-size 0.5s'
       };
-    }
+    },
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
   mounted() {
     this.scrollPosition = window.scrollY;
