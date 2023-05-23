@@ -80,11 +80,11 @@ export default {
     to_karlo(){
       return this.$store.dispatch('to_karlo')
     },
-    make_alert(){
-      if (this.$store.state.axiosFail){
-        alert('부적절한 영화입니다. 영화를 다시 선택해주세요!')
-      }
-    },
+    // make_alert(){
+    //   if (this.$store.state.axiosFail){
+    //     alert('부적절한 영화입니다. 영화를 다시 선택해주세요!')
+    //   }
+    // },
   },
   destroyed(){
     this.searchedList_reset(),

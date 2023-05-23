@@ -35,7 +35,7 @@ export default new Vuex.Store({
     selectedMovie2: null,
     karloImgs: null,
     axiosFail:false,
-    isLoading : false
+
 
   },
   getters: {
@@ -101,6 +101,7 @@ export default new Vuex.Store({
     },
     KARLOIMGS_RESET(state){
       state.karloImgs = null
+      state.selectedPainter = null
     },
     AXIOS_FAIL(state, payload){
       state.axiosFail = payload
@@ -109,9 +110,7 @@ export default new Vuex.Store({
       state.selectedMovie1 = null
       state.selectedMovie2 = null
     },
-    IS_LOADING(state, payload){
-      state.isLoading = payload
-    }
+
   },
 
   actions: {
