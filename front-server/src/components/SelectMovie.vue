@@ -92,4 +92,10 @@ export default {
   cursor: pointer;
   border: solid 5px rgb(221, 102, 102);
 }
+
+#selMovie:active {
+  cursor: pointer;
+  border: solid 5px rgb(221, 102, 102);
+}
+
 </style>
