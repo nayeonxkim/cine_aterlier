@@ -8,7 +8,7 @@
         @click="selectPainter(painter.name, $event)"
         :class="{ selected: selectedPainter === painter.name }"
       >
-        <img :src="painter.imageSrc" alt="">
+        <img :src="require(`../assets/${painter.imageSrc}`)" alt="ah">
         <p>{{ painter.name }}</p>
       </div>
     </div>
@@ -24,35 +24,35 @@ export default {
       painters: [
         {
           name: 'Vincent Van Gogh',
-          imageSrc: '../assets/Vincent Van Gogh.jpg',
+          imageSrc: 'Vincent Van Gogh.jpg',
         },
         {
           name: 'Edvard Munch',
-          imageSrc: '../assets/Edvard_Munch.jpg',
+          imageSrc: 'Edvard_Munch.jpg',
         },
         {
           name: 'Georges Seurat',
-          imageSrc: '../assets/Georges Seurat.webp',
+          imageSrc: 'Georges Seurat.webp',
         },
         {
           name: 'Renoir',
-          imageSrc: '../assets/Renoir.jpg',
+          imageSrc: 'Renoir.jpg',
         },
         {
           name: 'Katsushika Hokusai',
-          imageSrc: '../assets/Katsushika Hokusai.webp',
+          imageSrc: 'Katsushika Hokusai.webp',
         },
         {
           name: 'Mondriaan',
-          imageSrc: '../assets/Mondriaan.webp',
+          imageSrc: 'Mondriaan.webp',
         },
         {
           name: 'Frida Kahlo',
-          imageSrc: '../assets/Frida Kahlo.png',
+          imageSrc: 'Frida Kahlo.png',
         },
         {
           name: 'Andy Warhol',
-          imageSrc: '../assets/Andy Warhol.jpg',
+          imageSrc: 'Andy Warhol.jpg',
         },
       ],
       selectedPainter: '',
