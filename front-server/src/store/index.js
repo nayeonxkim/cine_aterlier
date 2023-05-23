@@ -90,6 +90,7 @@ export default new Vuex.Store({
       state.searchedList = null
     },
     SELECT_MOVIE(state, payload){
+      console.log(payload)
       if(state.selectedMovie1 === null){
         state.selectedMovie1 = payload
       } else{
@@ -97,6 +98,7 @@ export default new Vuex.Store({
       }
     },
     SELECT_PAINTER(state, payload){
+      console.log(payload)
       state.selectedPainter = payload
     },
     TO_KARLO(state, payload){
@@ -292,19 +294,15 @@ export default new Vuex.Store({
     },
 
     to_karlo(context){
-      console.log(context.state.isLoading)
       axios
       .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie1}/${context.state.selectedMovie2}/${context.state.selectedPainter}/`)
       .then((res) => {
-        console.log(context.state.isLoading)
         const payload = res.data
         context.commit('AXIOS_FAIL', true)
         context.commit('TO_KARLO', payload)
         context.commit('SELECTEDMOVIE_RESET')
       })
       .catch((err) => {
-        console.log(context.state.selectedMovie1)
-        console.log(context.state.selectedMovie2)
         // context.commit('AXIOS_FAIL', true)
         context.commit('SELECTEDMOVIE_RESET')
         console.error(err)
