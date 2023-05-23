@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 영화정보
 import MovieView from '../views/MovieView.vue'
-import MovieList from '../components/MovieList.vue'
+import MovieList_Top100 from '../components/MovieList_Top100.vue'
 import MovieDetail from '../components/MovieDetail.vue'
 
 
@@ -30,9 +30,9 @@ const routes = [
     component: MovieView,
     children: [
       {
-        path: '/movielist/:currentPage',
-        name: 'movie-list',
-        component: MovieList
+        path: '/movie/Top100',
+        name: 'movie-100',
+        component: MovieList_Top100
       },
     ]
   },
