@@ -22,6 +22,12 @@ def index(request):
     serializer = MovieSerializer(movies, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def genre(request, genreId):
+    movies = Movie.objects.filter(genre_id=genreId)
+    serializer = MovieSerializer(movies, many=True)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
