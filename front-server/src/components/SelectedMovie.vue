@@ -1,9 +1,8 @@
 <template>
   <div>
-
     <div id="movie" @click="select_movie"  :class="{ 'selected-movie': selected }">
       <img :src="`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`" style="width: 70%; height: 50%px;" alt="">
-      <p>{{selectedMovie.title}}</p>
+      <p>{{ selectedMovie.title }}</p>
     </div>
 
 
@@ -30,9 +29,14 @@ export default {
 </script>
 
 <style>
-.selected-movie {
+.selected-movie:hover {
   border: 2px solid red;
   padding: 10px;
-  background-color: red;
 }
+
+.selected-movie:active {
+  border: 2px solid red;
+  padding: 10px;
+}
+
 </style>
