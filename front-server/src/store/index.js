@@ -27,6 +27,7 @@ export default new Vuex.Store({
     movieList: null,
     movieItem: null,
     movieDetail: null,
+    movie100: null,
 
     // Home
     searchedList: null,
@@ -67,7 +68,7 @@ export default new Vuex.Store({
     },
 
     // Movie의 mutations
-    GET_100_LIST(state, payload){
+    GET_MOVIE_LIST(state, payload){
       state.movieList = payload
     },
     GET_MOVIE_DETAIL(state, payload){
@@ -190,7 +191,7 @@ export default new Vuex.Store({
     },
 
     // Movie의 액션
-    get100List(context){
+    get_movie_List(context){
       axios
       .get('http://127.0.0.1:8000/movies/index/', {
         headers: {
@@ -200,7 +201,7 @@ export default new Vuex.Store({
       .then((res) => {
         console.log(res)
         const payload = res.data
-        context.commit('GET_100_LIST', payload)
+        context.commit('GET_MOVIE_LIST', payload)
       })
       .catch((err) => {
         console.error(err)
