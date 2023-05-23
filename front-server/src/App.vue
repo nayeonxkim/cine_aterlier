@@ -7,6 +7,7 @@
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
 
+    <SpinnerView v-if="isLoading" />
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import SpinnerView from '@/views/SpinnerView'
 
 export default {
   name: 'App',
@@ -27,16 +29,22 @@ export default {
       scrollPosition: 0
     };
   },
+  components: {
+    SpinnerView,
+  },
   computed: {
     isLoggedIn() {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '50px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '100px';
       return {
         fontSize: fontSize
       };
-    }
+    },
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);

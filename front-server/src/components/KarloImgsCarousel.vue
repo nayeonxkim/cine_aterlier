@@ -1,8 +1,9 @@
 <template>
   <div>
     <div v-if="karloImgs != null" id="finish">
-      <h3>영화 1: {{this.$store.state.selectedMovie1}}</h3>
-      <h3>영화 2: {{this.$store.state.selectedMovie2}}</h3>
+      <h1>이미지가 완성되었어요 !</h1>
+      <h3>영화 1: {{karloImgs[0].original_title1}}</h3>
+      <h3>영화 2: {{karloImgs[0].original_title2}}</h3>
       <h3>선택한 화가: {{this.$store.state.selectedPainter}}</h3>
     </div>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
