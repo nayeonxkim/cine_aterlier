@@ -1,0 +1,18 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+        "original_language": "en",
+        "original_title": "avartar",
+        "title": "아바타",
+        "overview": "퍼랭이들",
+        "release_date": "2023-05-23",
+        "poster_path": "sdffaf.jpg",
+        "genre_id": 3,
+        "adult": false,
+        "popularity": "12.340",
+        "vote_average": "7.5"
+    }
+}
+]
