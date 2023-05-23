@@ -5,6 +5,7 @@
         <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
+
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link to="/home" class="custom-cat p-2">Home</router-link> 
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
@@ -13,10 +14,12 @@
     </div>
     <div class="logo" :style="logoStyle">KEBOB TO CAMEL TEAM</div>
     <router-view class="mt-5"/>
+  
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data() {
@@ -36,7 +39,10 @@ export default {
         padding: logoPadding,
         transition: 'font-size 0.5s'
       };
-    }
+    },
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
   mounted() {
     this.scrollPosition = window.scrollY;
