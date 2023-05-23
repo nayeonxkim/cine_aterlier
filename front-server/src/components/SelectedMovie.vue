@@ -28,7 +28,9 @@ export default {
 
 <style>
 .selected-movie {
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  /* position: relative; */
+  border: 3px solid #000;
   padding: 10px;
 }
 
