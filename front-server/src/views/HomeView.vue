@@ -1,10 +1,5 @@
 <template>
   <div class="home">
-    <div v-if="isLoading" class="loading-container">
-      <div class="loading">
-        <Fade-loader />
-      </div>
-    </div>
     <KarloImgsCarousel />
     <SearchModal 
     class="mt-5"/>
