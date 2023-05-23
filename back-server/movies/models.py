@@ -2,6 +2,7 @@ from django.db import models
 from accounts.models import User
 class Movie(models.Model):
     tmdb_id = models.IntegerField(primary_key=True)
+    original_language = models.CharField(max_length=255)
     original_title = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     overview = models.TextField()
@@ -9,7 +10,9 @@ class Movie(models.Model):
     poster_path = models.TextField(null=True)
     genre_id = models.IntegerField()
     adult = models.BooleanField(default=False)
-    popularity = models.DecimalField(default=None, max_digits=20, decimal_places=2)
+    popularity = models.DecimalField(default=None, max_digits=20, decimal_places=3)
+    vote_average = models.DecimalField(max_digits=20, decimal_places=1)
+    vote_count = models.IntegerField()
 
 class Keyword(models.Model):
     keyword_id = models.IntegerField(primary_key=True)
