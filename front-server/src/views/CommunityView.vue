@@ -50,6 +50,19 @@ export default {
 
 
 <style>
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  padding: 2%;  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 /* .custom-btn {
   border: #000 solid 3px;
   border-radius: 0;

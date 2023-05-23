@@ -11,7 +11,8 @@
         </div>
         <div class="col-6 text-right">
           <div class="page-btn">
-            <button class="btn" @click="$router.push(`/articles/${articleDetail.id}/update`)">UPDATE</button>
+            <!-- 동일 링크 처리를 위한 replace 사용 -->
+            <button class="btn" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
             <button class="btn" @click="deleteArticle">DELETE</button>
           </div>
           <div class="temp" style="text-align: left; margin-top: 15%;" >
