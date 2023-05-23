@@ -1,17 +1,18 @@
 <template>
   <div id="app" class="mt-0">
+    <div class="backcolor"></div>
     <div id="navbar-main" class="navbar">
       <div id="left-nav" class="d-flex justify-content-start">
-        <router-link to="/home" class="custom-cat p-2">Home</router-link> 
         <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
         <router-link to="/community" class="custom-cat p-2">Community</router-link> 
       </div>
       <div id="right-nav" class="d-flex justify-content-end">
+        <router-link to="/home" class="custom-cat p-2">Home</router-link> 
         <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">Top 100 Popular</div>
+    <div class="logo" :style="logoStyle">OUR LOGOS</div>
     <router-view class="mt-5"/>
   </div>
 </template>
@@ -29,15 +30,18 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '50px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '110px';
+      const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
-        fontSize: fontSize
+        fontSize: fontSize,
+        padding: logoPadding,
+        transition: 'font-size 0.5s'
       };
     }
   },
   mounted() {
+    this.scrollPosition = window.scrollY;
     window.addEventListener('scroll', this.handleScroll);
-    // 스크롤 이벤트 핸들러를 바인딩합니다.
     this.handleScroll();
   },
   destroyed() {
@@ -46,19 +50,40 @@ export default {
   methods: {
     handleScroll() {
       this.scrollPosition = window.scrollY;
+      // console.log(this.scrollPosition)
     }
   }
 };
 </script>
 
 <style>
-#app {
-  text-align: center;
-  margin-top: 60px;
+  /* .mt-0 {
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    display: block;
+    max-height: 100vh;
+    overflow-y: auto;
+    top: 0;
+  } */
+
+.logo {
   position: sticky;
-  display: block;
-  max-height: 100vh;
-  overflow-y: auto;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
+  background-color: #ffffff;
+  padding: 0;
+  transition: font-size 0.5s;
+  z-index: 990;
+  font-size: 80px;
+  margin: 0;
+}
+
+.backcolor {
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .navbar {
@@ -70,7 +95,9 @@ export default {
   margin: 0;
   z-index: 999;
   background-color: none;
-}
+  /* background-color: #ffffff; */
+} */
+
 
 .navbar-content {
   display: flex;
@@ -79,17 +106,6 @@ export default {
   margin: 0;
 }
 
-.logo {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid black;
-  background-color: #ffffff;
-  padding: 20px 0;
-  transition: font-size 0.5s;
-  z-index: 990;
-}
 
 #navbar-main {
   position: sticky;
