@@ -2,45 +2,45 @@
   <div class="container d-flex justify-content-center">
     <div class="login-container">
       <div v-if="isLogin">
-        <button @click="logout" class="custom-btn">Log Out</button>
+        <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
       </div>
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
           <h1 class="title">Login Page</h1>
           <div class="form-group">
-            <label for="username">Username:</label>
+            <label for="username">Username</label>
             <input type="text" id="username" v-model="username" class="form-control">
           </div>
 
           <div class="form-group">
-            <label for="password">Password:</label>
+            <label for="password">Password</label>
             <input type="password" id="password" v-model="password" class="form-control">
           </div>
 
-          <button @click="login" class="custom-btn">Log In</button>
+          <button @click="login" class="custom-btn" style="padding: 5px 10px;">Log In</button>
         </form>
 
         <form v-else @submit.prevent="signUp">
           <h1 class="title">Sign Up Page</h1>
           <div class="form-group">
-            <label for="signup-username">Username:</label>
+            <label for="signup-username">Username</label>
             <input type="text" id="signup-username" v-model="signupUsername" class="form-control">
           </div>
 
           <div class="form-group">
-            <label for="signup-password1">Password:</label>
+            <label for="signup-password1">Password</label>
             <input type="password" id="signup-password1" v-model="signupPassword1" class="form-control">
           </div>
 
           <div class="form-group">
-            <label for="signup-password2">Password Confirmation:</label>
+            <label for="signup-password2">Password Confirmation</label>
             <input type="password" id="signup-password2" v-model="signupPassword2" class="form-control">
           </div>
 
-          <button @click="signUp" class="custom-btn">Sign Up</button>
+          <button @click="signUp" class="custom-btn" style="padding: 5px 10px;">Sign Up</button>
         </form>
 
-        <button @click="togglePopup" class="custom-btn" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
+        <button @click="togglePopup" class="custom-btn" style="padding: 5px 10px;" v-text="isPopupOpen ? 'Cancel' : 'Sign Up'"></button>
       </div>
     </div>
   </div>
@@ -113,24 +113,31 @@ export default {
   background-color: white;
   padding: 20px;
 }
-/* .btn {
-  margin-top: 15px;
-  width: 221px;
-} */
+
 .title {
   margin-bottom: 15px;
 } 
 
 .custom-btn {
+  font-weight: 700;
+  padding-right: 10px;
+  padding-left: 10px;
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
-  padding: 2%;  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
+  float: right;
+  margin-top: 10%;
+  margin-left: 10px;
 }
 
 .custom-btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.form-control {
+  border: #000 solid 2px !important;
+  border-radius: 0% !important;
+  box-shadow: none !important;
 }
 </style>
