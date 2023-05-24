@@ -3,20 +3,19 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="80%" height="100%">
+        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="100%" height="100%">
       </div>
       <div class="col-md-1"></div>
     </div>
 
-
     <div class="row pt-5 pb-5 pl-0">
       <div class="col-md-1"></div>
-      <div class="col-md-3 pl-0">
-        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="">
+      <div class="col-md-4 pl-0">
+        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="" width="100%">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 pr-0">
         <div class="movie-detail-infomation">
-          <h5 class="moviedetail-title">{{ movieDetail.title }}   {{ movieDetail.original_title }}</h5>
+          <h5 class="moviedetail-title mb-0">{{ movieDetail.title }}   {{ movieDetail.original_title }}</h5>
 
          <div class="star-ratings">
             <div 
@@ -43,6 +42,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -114,6 +114,7 @@ export default {
 
 .moviedetail-title {
   font-weight: bold;
+  font-size: 150%;
 }
 
 .genres-container {
