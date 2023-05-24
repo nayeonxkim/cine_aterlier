@@ -12,7 +12,24 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   plugins: [
-    createPersistedState(),
+    createPersistedState({
+      paths: [
+        'API_URL',
+        'token',
+        'User',
+        'articleList',
+        'articleDetail',
+        'movieList',
+        'movieItem',
+        // 'movieDetail',
+        'searchedList',
+        'selectedPainter',
+        'selectedMovie1',
+        'selectedMovie2',
+        'karloImgs',
+        'axiosFail',
+      ]
+    }),
   ],
   state: {
     API_URL : 'http://127.0.0.1:8000',
@@ -27,7 +44,6 @@ export default new Vuex.Store({
     movieList: null,
     movieItem: null,
     movieDetail: null,
-    movie100: null,
 
     // Home
     searchedList: null,
@@ -298,16 +314,17 @@ export default new Vuex.Store({
     },
 
     to_karlo(context){
+      context.commit('IS_LOADING', true)
       axios
       .get(`http://127.0.0.1:8000/movies/karlo/${context.state.selectedMovie1}/${context.state.selectedMovie2}/${context.state.selectedPainter}/`)
       .then((res) => {
         const payload = res.data
-        context.commit('AXIOS_FAIL', true)
         context.commit('TO_KARLO', payload)
         context.commit('SELECTEDMOVIE_RESET')
+        context.commit('IS_LOADING', false)
       })
       .catch((err) => {
-        // context.commit('AXIOS_FAIL', true)
+        context.commit('IS_LOADING', false)
         context.commit('SELECTEDMOVIE_RESET')
         console.error(err)
       })

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home">    
     <KarloImgsCarousel />
     <SearchModal 
     class="mt-5"/>
@@ -20,9 +20,6 @@ export default {
     KarloImgsCarousel
   },
   computed: {
-    isLoading(){
-      return this.$store.state.isLoading
-    },
     isLogin() {
       return this.$store.getters.isLogin
     },
@@ -43,15 +40,7 @@ export default {
         this.$router.push({ name: 'login' })
       }
     },
-    // searchBar_reset(){
-    //   return this.$store.commit('SEARCHBAR_RESET')
-    // },
   },
-
-  // destroyed(){
-  //   this.searchBar_reset()
-  // }
-
 }
 </script>
 

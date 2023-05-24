@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="genreBtn">
-    <!-- <router-link to="/movie/Top100">인기 Top100</router-link>| -->
     <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
       {{ genre.name[0] }}/{{ genre.name[1] }}
     </button>
@@ -91,6 +90,7 @@ export default {
           return movie.genre_id === genreId1;
         });
       }
+      // location.reload();
     }
   },
   created(){

@@ -1,14 +1,11 @@
 <template>
   <div>
-    <button @click="openModal" class="btn custom-btn">CREATE</button>
-    <div class="modal" tabindex="-1" role="dialog" :class="{ 'show': isModalOpen }">
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModalToggle">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Create New Article</h5>
-            <button type="btn" class="close" @click="closeModal">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="btn" data-bs-dismiss="modal">&times;</button>
           </div>
           <form @submit.prevent="submitForm" enctype="multipart/form-data">
             <div class="modal-body">
@@ -26,13 +23,15 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn custom-btn">Create</button>
-              <button type="button" class="btn custom-btn" @click="closeModal">Close</button>
+
+              <button type="submit" class="btn custom-btn" data-bs-dismiss="modal">Create</button>
+              <button type="button" class="btn custom-btn" data-bs-dismiss="modal">Close</button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <a class="btn custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">CREATE</a>
   </div>
 </template>
 
@@ -43,20 +42,12 @@ export default {
   name: 'CreateArticleModal',
   data() {
     return {
-      isModalOpen: false,
       title: '',
       content: ''
     }
   },
   methods: {
-    openModal() {
-      // console.log('열림!')
-      this.isModalOpen = true
-      // console.log(this.isModalOpen)
-    },
-    closeModal() {
-      this.isModalOpen = false
-    },
+  
     submitForm() {
       const API_URL = 'http://127.0.0.1:8000'
       const formData = new FormData()
@@ -96,13 +87,13 @@ export default {
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
   float: right;
 }
 
 .custom-btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #000 !important;
+  color: #fff !important;
+
 }
 
 .modal-body {
