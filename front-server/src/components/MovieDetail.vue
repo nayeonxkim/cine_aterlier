@@ -7,6 +7,8 @@
       </div>
       <div class="col-md-1"></div>
     </div>
+
+
     <div class="row pt-5 pb-5 pl-0">
       <div class="col-md-1"></div>
       <div class="col-md-3 pl-0">
@@ -15,21 +17,25 @@
       <div class="col-md-6">
         <div class="movie-detail-infomation">
           <h5 class="moviedetail-title">{{ movieDetail.title }}   {{ movieDetail.original_title }}</h5>
-          <span class="star">
-            ★★★★★
-            <span>★★★★★</span>
-            <span>{{ movieDetail.vote_average }}</span>
-            <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
-          </span>
+
+         <div class="star-ratings">
+            <div 
+              class="star-ratings-fill"
+              :style="{ width: ratingToPercent + '%' }"
+            >
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <div class="star-ratings-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+
           <div class="genres-container">
             <span v-for="genre in movieDetail.genres" :key="genre.id" class="genre">{{ genre.name }}</span>
             <p>{{ movieDetail.runtime }}분</p>
           </div>
-          <!-- <p>{{ movieDetail.popularity }}</p> -->
           <p>{{ movieDetail.release_date }}</p>
           <p>{{ movieDetail.overview }}</p>
-          <!-- <p>{{movieDetail}}</p> -->
-
         </div>
         <button class="custom-btn" @click="goBack">BACK</button>
       </div>
@@ -39,86 +45,65 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  computed:{
-    movieId(){
-      return this.$route.params.movieId
+  computed: {
+    movieId() {
+      return this.$route.params.movieId;
     },
-    movieDetail(){
-      return this.$store.state.movieDetail
+    movieDetail() {
+      return this.$store.state.movieDetail;
+    },
+    ratingToPercent() {
+      const score = +(this.movieDetail.vote_average/2) * 20;
+      return score + 1.5;
     }
   },
-  data(){
-    return {
-      movieTrailer:null
-    }
-  },
-  methods:{
-    get_movie_detail(){
-      return this.$store.dispatch('get_movie_detail', this.movieId)
-    },
-
-    getTrailer() {
-      const searchWord = `${this.movieDetail.original_title} trailer`
-      console.log(searchWord)
-      axios
-      .get('https://www.googleapis.com/youtube/v3/search', 
-      {params :{
-        part : 'snippet',
-        type : 'video',
-        key : 'AIzaSyDqAHcO6_gAszogUufo0gNwDR7WGjEl_Mo',
-        q : searchWord
-      }})
-      .then((response) =>{
-        this.movieTrailer = response.data.items
-      })
-    },
+  methods: {
     goBack() {
-      this.$router.go(-1)
-    }
+      this.$router.go(-1);
+    },
   },
-
-  // created() {
-  //   },
-  mounted(){
-
-    this.get_movie_detail()
-  },
-  // beforeUpdate(){
-  //   this.getTrailer()
-
-  // }
+  mounted() {
+    this.$store.dispatch('get_movie_detail', this.movieId);
+  }
 }
 </script>
 
 <style>
-.image-container {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; 
+.star-ratings {
+  color: #aaa9a9; 
   position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+}
+ 
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
   overflow: hidden;
+  -webkit-text-fill-color: gold;
 }
 
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.star-ratings span {
+  font-size: 32px; /* Adjust the size as needed */
 }
 
-.image-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+.star-ratings-fill span {
+  font-size: 32px; /* Adjust the size as needed */
+}
+
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
 }
 
 .movie-detail-infomation {
@@ -131,29 +116,6 @@ export default {
   font-weight: bold;
 }
 
-.star {
-  position: relative;
-  font-size: 32px;
-  color: #ddd;
-}
-
-.star input {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  opacity: 0;
-}
-
-.star span {
-  width: 0;
-  position: absolute;
-  left: 0;
-  color: red;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 .genres-container {
   display: flex;
   flex-wrap: wrap;
@@ -162,5 +124,4 @@ export default {
 .genre {
   margin-right: 10px;
 }
-
 </style>
