@@ -9,11 +9,11 @@
             alt="Article Image"
           >
         </div>
-        <div class="col-6 text-right">
+        <div class="col-5 text-right">
           <div class="page-btn">
             <!-- 동일 링크 처리를 위한 replace 사용 -->
-            <button class="btn" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
-            <button class="btn" @click="deleteArticle">DELETE</button>
+            <button class="custom-btn" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
+            <button id="red-btn" class="custom-btn" @click="deleteArticle">DELETE</button>
           </div>
           <div class="temp" style="text-align: left; margin-top: 15%;" >
             <h3>{{ articleDetail.title }}</h3>
@@ -27,7 +27,7 @@
       <hr class="hori">
       <div class="comment-block">
         <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" style="">
-        <button class="btn" @click="commentCreate">댓글 작성</button>
+        <button class="custom-btn" @click="commentCreate">Add a Comment</button>
       </div>
     </div>
     <ArticleComment
@@ -117,21 +117,26 @@ export default {
   margin: 30px;
 }
 
-.btn {
+.custom-btn {
+  font-weight: 700;
+  padding-right: 10px;
+  padding-left: 10px;
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
   float: right;
+  margin-right: 10px;
+
 }
 
-.page-btn {
-  margin-right: 1.5%;
+.custom-btn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
-.btn:hover {
-  background-color: #000;
-  color: #fff;
+#red-btn:hover {
+  background-color: #ff4429 !important;
+  color: #000000 !important;
 }
 
 .card {
