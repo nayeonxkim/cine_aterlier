@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="image-container">
-      <img :src="`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`" alt="" width="80%" height="80%">
+      <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="80%" height="80%">
     </div>
 
       <h5 class="modal-title">{{movieDetail.title}}</h5>
