@@ -63,25 +63,25 @@ export default {
     SelectMovie,
     SelectPainter
   },
-  computed:{
-       isLoading(){
-      return this.$store.state.isLoading
-      }
-    },
+  // computed:{
+    //    isLoading(){
+    //   return this.$store.state.isLoading
+    //   }
+    // },
   methods:{
     searchedList_reset(){
       return this.$store.commit('SEARCHEDLIST_RESET')
     },
     to_karlo() {
-      this.$store.commit('IS_LOADING', true)
+      // this.$store.commit('IS_LOADING', true)
       this.$store.dispatch('to_karlo')
       .then(() => {
-        this.$store.commit('IS_LOADING', false);
+        // this.$store.commit('IS_LOADING', false);
       })
       .catch((error) => {
         // 요청이 실패한 경우에 대한 처리를 수행합니다.
         console.error(error);
-        this.$store.commit('IS_LOADING', false); // 요청이 실패하더라도 로딩 상태를 false로 설정합니다.
+        // this.$store.commit('IS_LOADING', false); // 요청이 실패하더라도 로딩 상태를 false로 설정합니다.
       });
     }
   },
