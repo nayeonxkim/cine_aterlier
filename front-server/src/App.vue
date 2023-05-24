@@ -14,6 +14,7 @@
         </div>
       </div>
       <div class="logo" :style="logoStyle">FILM PALETTE</div>
+      <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
       <SpinnerView />
@@ -37,7 +38,7 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '150px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '15vw';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
@@ -87,8 +88,8 @@ export default {
   padding: 0;
   transition: font-size 0.5s;
   z-index: 990;
-  font-size: 80px;
-  margin: 0;
+  font-size: 15vw;
+  margin-top: -10%;
 }
 
 .navbar {
@@ -135,12 +136,16 @@ export default {
 
 #left-nav {
   display: block;
-  margin-left: 8px;
+  margin-left: 2.5%;
 }
 
 #right-nav {
-  margin-right: 8px;
+  margin-right: 2.5%;
   display: block;
+}
+
+.corret-margin {
+  padding: 2%;
 }
 
 </style>

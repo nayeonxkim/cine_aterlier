@@ -4,7 +4,7 @@
       <span>{{ commentItem.content }}</span>
     </div>
     <div class="col-1" style="text-align: right; margin-left: 1%">
-      <button id="red-btn" class="custom-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
+      <button id="red-btn" class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
     </div>
   </div>
 </template>
@@ -61,10 +61,13 @@ export default {
 </script>
 
 <style scoped>
-#red-btn:hover {
+.gray-btn {
+  text-decoration-color: #767676;
+}
+/* #red-btn:hover {
   background-color: #ff4429 !important;
   color: #000000 !important;
-}
+} */
 
 .comment-container {
   display: flex;
