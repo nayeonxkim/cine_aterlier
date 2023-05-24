@@ -25,7 +25,7 @@ export default {
       genres:[
         {
           id:[35, 18],
-          name:['comedy', 'drama'],
+          name:['코미디', '드라마'],
         },
         {
           id:[28, 12],
@@ -33,7 +33,7 @@ export default {
         },
         {
           id:[16],
-          name:['애니메이션'],
+          name:['애니메이션', '어린이'],
         },
         {
           id:[80, 53],
