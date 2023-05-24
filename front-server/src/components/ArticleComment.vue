@@ -1,11 +1,13 @@
 <template>
   <div>
-    {{commentItem.content}}
-    {{commentItem.author}}
-    <button v-if="true" @click="deleteComment">X</button>
+    <div id="comment">
+      <div class="comment-container">
+        <span>{{commentItem.content}}</span>
+        <button class="custom-btn" v-if="true" @click="deleteComment">X</button>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
 import axios from 'axios'
 
@@ -58,5 +60,28 @@ export default {
 </script>
 
 <style>
+.comment-container {
+  display: flex;
+  align-items: center;
+}
 
+.custom-btn {
+  text-align: center;
+  border: #000 solid 3px;
+  border-radius: 0;
+  padding: 0.5%;
+  background-color: transparent;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
 </style>
+
+
+
+
+
+
+

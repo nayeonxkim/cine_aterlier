@@ -9,7 +9,7 @@
         :class="{ selected: selectedPainter === painter.name }"
         class="col-3"
       >
-        <img :src="require(`../assets/${painter.imageSrc}`)" alt="" >
+        <img id="painter-img" :src="require(`../assets/${painter.imageSrc}`)" alt="" >
         <p>{{ painter.name }}</p>
       </div>
     </div>
