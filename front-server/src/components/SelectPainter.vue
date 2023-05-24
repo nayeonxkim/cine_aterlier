@@ -28,12 +28,12 @@ export default {
           imageSrc: 'Vincent Van Gogh.jpg',
         },
         {
-          name: 'Edvard Munch',
-          imageSrc: 'Edvard_Munch.jpg',
+          name: 'Egon Schiele',
+          imageSrc: 'Egon Schiele.png',
         },
         {
-          name: 'Georges Seurat',
-          imageSrc: 'Georges Seurat.webp',
+          name: 'Pablo Picasso',
+          imageSrc: 'Pablo Picasso.jpg',
         },
         {
           name: 'Renoir',
