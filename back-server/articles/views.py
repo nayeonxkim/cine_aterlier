@@ -47,8 +47,8 @@ def detail(request, article_pk):
 @permission_classes([IsAuthenticated])
 def update(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
-    # if article.author != request.user:
-    #     return Response(status=status.HTTP_403_FORBIDDEN)
+    if article.author != request.user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     
     serializer = ArticleSerializer(article, data=request.data)
     if serializer.is_valid(raise_exception=True):
@@ -61,8 +61,8 @@ def update(request, article_pk):
 @permission_classes([IsAuthenticated])
 def delete(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
-    # if article.author != request.user:
-    #     return Response(status=status.HTTP_403_FORBIDDEN)
+    if article.author != request.user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     article.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
