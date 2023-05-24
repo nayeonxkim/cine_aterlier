@@ -75,7 +75,6 @@ export default new Vuex.Store({
     },
     SET_USER(state, user) {
       state.User = user
-      console.log(state.User)
     },
     LOGOUT(state) {
       state.token = null
@@ -107,7 +106,6 @@ export default new Vuex.Store({
       state.searchedList = null
     },
     SELECT_MOVIE(state, payload){
-      console.log(payload)
       if(state.selectedMovie1 === null){
         state.selectedMovie1 = payload
       } else{
@@ -160,7 +158,7 @@ export default new Vuex.Store({
         router.push({ name: 'home' })
       })
       .catch((err) => {
-        console.log(err)
+        console.error(err)
       })
     },
     
@@ -183,7 +181,7 @@ export default new Vuex.Store({
       })
       .catch((err) => {
         alert('username 혹은 password를 다시 확인해주세요.')
-        console.log(err)
+        console.error(err)
       })
     },
     logout(context) {
@@ -200,7 +198,7 @@ export default new Vuex.Store({
           resolve()
         })
         .catch((err) => {
-          console.log(err)
+          console.error(err)
           reject(err)
         })
       })
@@ -215,7 +213,6 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
-        console.log(res)
         const payload = res.data
         context.commit('GET_MOVIE_LIST', payload)
       })
@@ -243,8 +240,8 @@ export default new Vuex.Store({
 
     // community의 액션
     get_article_list(context, currentPage) {
-      const start = 8 * (currentPage - 1)
-      const end = 8 * currentPage
+      const start = 20 * (currentPage - 1)
+      const end = 20 * currentPage
     
       axios
         .get(`${API_URL}/articles/index`, {
@@ -253,13 +250,11 @@ export default new Vuex.Store({
           }
         })
         .then((res) => {
-          // console.log(res)
           const payload = res.data.articles.slice(start, end)
-          // console.log(payload)
           context.commit('GET_ARTICLE_LIST', payload)
         })
         .catch((err) => {
-          console.log(err)
+          console.error(err)
         })
     },
     create_article(context, formData) {
@@ -295,7 +290,7 @@ export default new Vuex.Store({
           context.commit('GET_ARTICLE_DETAIL', payload)
         })
         .catch((err) => {
-          console.log(err)
+          console.error(err)
         })
     },
     
