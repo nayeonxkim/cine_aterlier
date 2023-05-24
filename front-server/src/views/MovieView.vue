@@ -90,6 +90,7 @@ export default {
           return movie.genre_id === genreId1;
         });
       }
+      // location.reload();
     }
   },
   created(){
