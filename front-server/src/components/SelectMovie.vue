@@ -1,7 +1,15 @@
 <template>
-  <div>
-    <input id="search-input" v-model="inputValue" @keyup.enter="get_searchedList" type="text" placeholder="영화제목을 입력하세요.">
-    <button id="search-btn" @click="get_searchedList" class="btn-btn-primary"> 검색 </button>
+  <div class="justify-content-center align-items-center">
+    <div class="row d-flex">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+        <input id="search-input" v-model="inputValue" @keyup.enter="get_searchedList" type="text" placeholder="영화 제목을 입력하세요.">
+      </div>
+      <div class="col-md-2">
+        <button id="search-btn" @click="get_searchedList" class="custom-btn">SEARCH</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
     
     <div class="row">
       <SelectedMovie
@@ -9,7 +17,7 @@
         :key="movie.tmdb_id"
         :selected-movie="movie"
         id="selMovie"
-        class="col-6 justify-content-center align-items-center"
+        class="col-6 text-center"
         @click="selectMovie(movie)"
       />
     </div>
@@ -64,16 +72,16 @@ export default {
 </script>
 
 <style>
+
 #search-input {
   margin-right: 20px;
   border: solid 3px black;
-  border-radius: 2%;
   padding-left: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
 
-#search-btn {
+/* #search-btn {
   color: #fff;
   border: solid 0.5px black;
   background-color: black;
@@ -83,7 +91,7 @@ export default {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 5%;
-} 
+}  */
 
 .row {
   margin-top: 50px;
