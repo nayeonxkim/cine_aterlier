@@ -1,18 +1,28 @@
 <template>
   <div>
-    <div class="image-container">
-      <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="80%" height="80%">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="80%" height="100%">
+      </div>
+      <div class="col-md-1"></div>
     </div>
-
-      <h5 class="modal-title">{{movieDetail.title}}</h5>
-      <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="">
-      <p>{{movieDetail.release_date}}</p>
-      <p v-for="genre in movieDetail.genres"
-      :key="genre.id">{{genre.name}}</p>
-      <p>{{movieDetail.runtime}}분</p>
-      <p>{{movieDetail.popularity}}</p>
-      <p>{{movieDetail.overview}}</p>
-      <p>{{movieDetail}}</p> 
+    <div class="row pt-5 pb-5">
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="">
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <h5 class="modal-title">{{movieDetail.title}}</h5>
+        <p>{{movieDetail.release_date}}</p>
+        <p v-for="genre in movieDetail.genres" :key="genre.id">{{genre.name}}</p>
+        <p>{{movieDetail.runtime}}분</p>
+        <p>{{movieDetail.popularity}}</p>
+        <p>{{movieDetail.overview}}</p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
   </div>
 </template>
 
