@@ -70,7 +70,6 @@ export default {
       .then(() => {
         console.log(this.Authorization)
         this.$store.dispatch('get_article_list', 1)
-        this.closeModal()
         this.title = ''
         this.content = ''
       })
