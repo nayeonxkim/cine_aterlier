@@ -1,7 +1,7 @@
 <template>
   <div class="mt-0">
     <div class="row">
-      <ArticleList :articles="articleList" />
+    <ArticleList :articles="articleList" />
     <CreateArticleModal />
     </div>
     <ArticlePageNav />
