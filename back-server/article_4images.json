@@ -1,0 +1,46 @@
+[
+{
+    "model": "articles.article",
+    "pk": 4,
+    "fields": {
+        "img": "Image_Pasted_at_2023-5-17_15-36.png",
+        "author": 5,
+        "title": "에곤쉴레의 슈퍼마리오",
+        "content": "최근 개봉한 슈퍼마리오를 두 번 선택하고, 에곤쉴레의 화풍을 적용했습니다. 에곤쉴레의 화풍을 유지하면서도 슈퍼마리오 특유의 동그란 코와 색감이 잘적용되어 마음에 드는 작품이 나와서 공유합니다 ! 에곤쉴레가 슈퍼마리오를 그린다면 정말로 이런 그림이지 않을까요?",
+        "like_user": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 5,
+    "fields": {
+        "img": "super_mario_Masquerade__by_Pablo_Picasso.png",
+        "author": 5,
+        "title": "슈퍼마리오 + 관상",
+        "content": "슈퍼마리오랑 관상 넣음. 피카소했는데 꽤 잘나오더라",
+        "like_user": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 7,
+    "fields": {
+        "img": "kill_bill_Ratatouille_by_Salvador_Dali_vBS4D1W.png",
+        "author": 5,
+        "title": "징그러운 그림을 만들어냈습니다..",
+        "content": "제 최애 화가인 달리와 제 최애 영화 킬빌을 합쳐봤어요. 킬빌이랑 전혀 다른 라따뚜이를 넣으면 어떻게 될까? 싶어서 이미지를 생성해보았는데.. 분명 킬빌, 라따뚜이가 모두 존재하지만 달리의 영향력이 매우 컸다봅니다. 징그럽군요.",
+        "like_user": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 8,
+    "fields": {
+        "img": "다운로드.png",
+        "author": 5,
+        "title": "프리다 칼로가 마지 심슨이 되었네요.",
+        "content": "니모를 찾아서도 함께 넣었는데 니모는 어디로 간거죠? 뒤에 돼지코 잠수함이 떠있는데 저게 니모의 잔상일까요?",
+        "like_user": []
+    }
+}
+]
