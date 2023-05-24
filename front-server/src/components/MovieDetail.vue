@@ -7,19 +7,31 @@
       </div>
       <div class="col-md-1"></div>
     </div>
-    <div class="row pt-5 pb-5">
+    <div class="row pt-5 pb-5 pl-0">
       <div class="col-md-1"></div>
-      <div class="col-md-3">
+      <div class="col-md-3 pl-0">
         <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="">
       </div>
-      <div class="col-md-1"></div>
       <div class="col-md-6">
-        <h5 class="modal-title">{{movieDetail.title}}</h5>
-        <p>{{movieDetail.release_date}}</p>
-        <p v-for="genre in movieDetail.genres" :key="genre.id">{{genre.name}}</p>
-        <p>{{movieDetail.runtime}}분</p>
-        <p>{{movieDetail.popularity}}</p>
-        <p>{{movieDetail.overview}}</p>
+        <div class="movie-detail-infomation">
+          <h5 class="moviedetail-title">{{ movieDetail.title }}   {{ movieDetail.original_title }}</h5>
+          <span class="star">
+            ★★★★★
+            <span>★★★★★</span>
+            <span>{{ movieDetail.vote_average }}</span>
+            <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
+          </span>
+          <div class="genres-container">
+            <span v-for="genre in movieDetail.genres" :key="genre.id" class="genre">{{ genre.name }}</span>
+            <p>{{ movieDetail.runtime }}분</p>
+          </div>
+          <!-- <p>{{ movieDetail.popularity }}</p> -->
+          <p>{{ movieDetail.release_date }}</p>
+          <p>{{ movieDetail.overview }}</p>
+          <!-- <p>{{movieDetail}}</p> -->
+
+        </div>
+        <button class="custom-btn" @click="goBack">BACK</button>
       </div>
       <div class="col-md-1"></div>
     </div>
@@ -63,6 +75,9 @@ export default {
         this.movieTrailer = response.data.items
       })
     },
+    goBack() {
+      this.$router.go(-1)
+    }
   },
 
   // created() {
@@ -105,4 +120,47 @@ export default {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 }
+
+.movie-detail-infomation {
+  margin-top: 5%;
+  margin-right: 10%;
+  text-align: left;
+}
+
+.moviedetail-title {
+  font-weight: bold;
+}
+
+.star {
+  position: relative;
+  font-size: 32px;
+  color: #ddd;
+}
+
+.star input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+.star span {
+  width: 0;
+  position: absolute;
+  left: 0;
+  color: red;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre {
+  margin-right: 10px;
+}
+
 </style>
