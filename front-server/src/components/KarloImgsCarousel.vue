@@ -35,7 +35,7 @@ export default {
   computed:{
     karloImgs(){
       return this.$store.state.karloImgs
-    }
+    },
   },
   methods:{
     karloImgs_reset(){
