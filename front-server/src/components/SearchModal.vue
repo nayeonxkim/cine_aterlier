@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px;">영화 검색</a>
+  <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px; text-decoration:none;">영화 검색</a>
   </div>
 </template>
 

@@ -13,7 +13,7 @@
           <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
         </div>
       </div>
-      <div class="logo" :style="logoStyle">FILM PALETTE</div>
+      <div class="logo" :style="logoStyle">PJY NAME</div>
       <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
