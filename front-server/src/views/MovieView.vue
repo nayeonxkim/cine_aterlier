@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="genreBtn">
-    <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
-      {{ genre.name[0] }}/{{ genre.name[1] }}
-    </button>
+      <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
+        {{ genre.name[0] }}/{{ genre.name[1] }}
+      </button>
     </div>
     <div class="movie-row">
       <div v-for="(movie, idx) in nowShowMovie" :key="idx" class="movie-item">
@@ -101,39 +101,35 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap');
-
-h1{
-  font-family: 'Blinker', sans-serif;
-  margin: 30px !important;
+.genreBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.genreBtn > button{
-  border:solid 2px black;
-}
-
-.custom-btn {
+.genreBtn > button {
+  font-weight: 700;
+  padding: 5px 10px;
+  margin: 0 5px;
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
-  /* padding: 2%;  여기 윈도우, 맥 호환 문제인지 확인 할 것 */
 }
 
-.custom-btn:hover {
-  background-color: #000;
-  color: #fff;
+.genreBtn > button:hover {
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 .movie-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.movie-row > div {
-  width: 25%;
+.movie-row > .movie-item {
+  flex-basis: 25%;
   padding: 10px;
   box-sizing: border-box;
 }
-
 </style>
