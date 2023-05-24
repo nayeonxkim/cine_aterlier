@@ -11,7 +11,9 @@
           <SelectMovie />
         </div>
         <div class="modal-footer">
-          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">다음으로</button>
+          <button @click="searchedList_reset" class="custom-btn"
+          data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+          data-bs-dismiss="modal" style="padding: 5px 10px;">다음으로</button>
         </div>
       </div>
     </div>
@@ -27,8 +29,12 @@
           <SelectMovie />
         </div>
         <div class="modal-footer">
-          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">영화 다시 고르기</button>
-          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">다음으로</button>
+          <button @click="searchedList_reset" class="custom-btn"
+          data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+          data-bs-dismiss="modal" style="padding: 5px 10px;">영화 다시 고르기</button>
+          <button @click="searchedList_reset" class="custom-btn"
+          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
+          data-bs-dismiss="modal" style="padding: 5px 10px;">다음으로</button>
         </div>
       </div>
     </div>
@@ -44,13 +50,17 @@
           <SelectPainter />
         </div>
         <div class="modal-footer">
-          <button @click="searchedList_reset" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">영화 다시 고르기</button>
-          <button @click="to_karlo" type="button" class="btn btn-secondary" data-bs-dismiss="modal">이미지 생성하기</button>
+          <button @click="searchedList_reset" class="custom-btn"
+          data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+          data-bs-dismiss="modal" style="padding: 5px 10px;">영화 다시 고르기</button>
+
+          <button @click="to_karlo" type="button" class="custom-btn"
+          data-bs-dismiss="modal" style="padding: 5px 10px;">이미지 생성하기</button>
         </div>
       </div>
     </div>
   </div>
-  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">영화 검색</a>
+  <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px;">영화 검색</a>
   </div>
 </template>
 
@@ -103,5 +113,18 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 9999px;
+}
+
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  padding: 1% 2%  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
 }
 </style>
