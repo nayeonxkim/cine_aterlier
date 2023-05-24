@@ -50,7 +50,7 @@
       </div>
     </div>
   </div>
-  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">영화검색</a>
+  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">영화 검색</a>
   </div>
 </template>
 
