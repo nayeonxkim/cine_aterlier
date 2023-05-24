@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-6">
+    <div class="col-6" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
         style="width: 100%; margin: 5%;"
@@ -8,7 +8,7 @@
       >
     </div>
     <div class="col-6 d-flex flex-column">
-      <div class="text-right flex-grow-1">
+      <div class="text-right flex-grow-1" style="height: 100%;">
         <div class="temp" style="text-align: left; margin: 5%;">
           <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
           <hr class="article-detail-horizen">
