@@ -1,31 +1,36 @@
 <template>
-  <div id="app" class="mt-0" style="background-color: #ffffff;">
-    <div id="navbar-main" class="navbar">
-      <div id="left-nav" class="d-flex justify-content-start">
-        <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
-        <router-link to="/community" class="custom-cat p-2">Community</router-link> 
-      </div>
+  <div>
+    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff;">
+      <div id="navbar-main" class="navbar">
+        <div id="left-nav" class="d-flex justify-content-start">
+          <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
+          <router-link to="/community" class="custom-cat p-2">Community</router-link> 
+        </div>
 
-      <div id="right-nav" class="d-flex justify-content-end">
-        <router-link to="/home" class="custom-cat p-2">Home</router-link> 
-        <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
-        <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+        <div id="right-nav" class="d-flex justify-content-end">
+          <router-link to="/home" class="custom-cat p-2">Home</router-link> 
+          <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+        </div>
       </div>
+      <div class="logo" :style="logoStyle">PJT NAME</div>
+      <router-view class="mt-5"/>
     </div>
-    <div class="logo" :style="logoStyle">PJT NAME</div>
-    <router-view class="mt-5"/>
-  
+      <SpinnerView />
   </div>
 </template>
 
 <script>
-
+import SpinnerView from '@/views/SpinnerView'
 export default {
   name: 'App',
   data() {
     return {
       scrollPosition: 0
     };
+  },
+  components:{
+    SpinnerView
   },
   computed: {
     isLoggedIn() {
@@ -55,25 +60,20 @@ export default {
   methods: {
     handleScroll() {
       this.scrollPosition = window.scrollY;
-      // console.log(this.scrollPosition)
-    }
+    },
   }
 };
 </script>
 
 <style>
-/* #app {
-  text-align: center;
-  margin-top: 60px;
-  position: relative;
-  display: block;
-  max-height: 100vh;
-  overflow-y: auto;
-  top: 0;
-} */
 
 #app {
   text-align: center;
+}
+
+.opacity-bg{
+  opacity: 50%;
+  pointer-events: none;
 }
 
 .logo {
