@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div @click="$router.push(`/movies/${movieItem.tmdb_id}`)" style="display: flex; justify-content: center;">
+    <div @click="$router.push(`/movies/${movieItem.tmdb_id}`)"
+    style="display: flex; justify-content: center;">
+
       <!-- 포스터와 제목 보여주기 -->
       <div class="movie-container">
         <div class="movie-image-container">
