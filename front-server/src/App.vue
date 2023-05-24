@@ -13,7 +13,7 @@
           <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
         </div>
       </div>
-      <div class="logo" :style="logoStyle">PJT NAME</div>
+      <div class="logo" :style="logoStyle">FILM PALETTE</div>
       <router-view class="mt-5"/>
     </div>
       <SpinnerView />
@@ -69,6 +69,7 @@ export default {
 
 #app {
   text-align: center;
+  margin-bottom: 10%;
 }
 
 .opacity-bg{

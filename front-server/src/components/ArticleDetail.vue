@@ -1,43 +1,45 @@
 <template>
-  <div class="mt-0">
-    <div class="mt-0">
-      <div class="row">
-        <div class="col-6">
-          <img
-            :src="getFullImagePath(articleDetail.img)"
-            style="width: 100%; margin: 5%;"
-            alt="Article Image"
-          >
-        </div>
-        <div class="col-5 text-right">
-          <div class="page-btn">
-            <!-- 동일 링크 처리를 위한 replace 사용 -->
-            <button class="custom-btn" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
-            <button id="red-btn" class="custom-btn" @click="deleteArticle">DELETE</button>
-          </div>
-          <div class="temp" style="text-align: left; margin-top: 15%;" >
-            <h3>{{ articleDetail.title }}</h3>
-            <!-- <h5>{{ articleDetail.id }}번 게시글</h5> -->
-            <h5>{{ articleDetail.content }}</h5>
-          </div>
-        </div>
-        <div class="col-6">
+  <div class="row">
+    <div class="col-6">
+      <img
+        :src="getFullImagePath(articleDetail.img)"
+        style="width: 100%; margin: 5%;"
+        alt="Article Image"
+      >
+    </div>
+    <div class="col-6 d-flex flex-column">
+      <div class="text-right flex-grow-1">
+        <div class="temp" style="text-align: left; margin: 5%;">
+          <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
+          <hr class="article-detail-horizen">
+          <h5 class="article-detail-content">{{ articleDetail.content }}</h5>
         </div>
       </div>
-      <hr class="hori">
-      <div class="comment-block">
-        <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" style="">
-        <button class="custom-btn" @click="commentCreate">Add a Comment</button>
+      <div class="mt-0" style="text-right padding: 0px 0px">
+        <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle">DELETE</button>
+        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
       </div>
     </div>
-    <ArticleComment
-      v-for="(comment, idx) in articleDetail.comment_set"
-      :key="idx"
-      :comment-item="comment"
-      :article-id="articleDetail.id"
-    />
+    <hr>
+    <div class="comment-block d-flex justify-content-between" style="margin: 0% 2.5%; padding: 0;">
+      <div class="d-flex" style="width: 100%; margin-right: 1%; padding: 0;">
+        <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" class="article-detail-input" style="margin: 0% 1%; padding: 0;">
+        <button class="custom-btn mt-0" style="padding: 5px 10px; margin: 0;" @click="commentCreate">Add</button>
+      </div>
+    </div>
+    <div class="col-12 comment-block">
+      <ArticleComment
+        v-for="(comment, idx) in articleDetail.comment_set"
+        :key="idx"
+        :comment-item="comment"
+        :article-id="articleDetail.id"
+        class="comment-item"
+      />
+    </div>
   </div>
 </template>
+
+
 
 <script>
 import axios from 'axios'
@@ -113,20 +115,20 @@ export default {
 </script>
 
 <style scoped>
-.comment-block {
-  margin: 30px;
+.comment-item {
+  margin-bottom: 10px;
+}
+
+.comment-content {
+  flex: 1;
 }
 
 .custom-btn {
   font-weight: 700;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 5px 10px;
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  float: right;
-  margin-right: 10px;
-
 }
 
 .custom-btn:hover {
@@ -137,6 +139,10 @@ export default {
 #red-btn:hover {
   background-color: #ff4429 !important;
   color: #000000 !important;
+}
+
+.page-btn {
+  align-items: flex-end;
 }
 
 .card {
@@ -153,4 +159,38 @@ export default {
   margin-bottom: 10px;
 }
 
+.article-detail-title {
+  font-size: 300%;
+}
+
+.article-detail-content {
+  margin-top: 10%;
+  font-size: 150%;
+  margin-bottom: auto;
+  line-height: 3;
+}
+
+.article-detail-horizen {
+  border-color: #000 !important;
+}
+
+.article-detail-input {
+  border: 2px solid black;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0.05%;
+  height: 100%;
+  width: calc(98% - 110px);
+}
+
+.custom-width {
+  width: 80%;
+}
+
+.article-detail-input:focus,
+.article-detail-input:active {
+  border-color: black !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
 </style>
