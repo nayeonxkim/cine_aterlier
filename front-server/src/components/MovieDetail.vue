@@ -37,7 +37,7 @@
           <p>{{ movieDetail.release_date }}</p>
           <p>{{ movieDetail.overview }}</p>
         </div>
-        <button class="custom-btn" @click="goBack">BACK</button>
+        <button class="custom-btn" @click="goBack" style="padding: 5px 10px;">BACK</button>
       </div>
       <div class="col-md-1"></div>
     </div>
@@ -123,5 +123,22 @@ export default {
 
 .genre {
   margin-right: 10px;
+}
+
+.custom-btn {
+  font-weight: 700;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  float: right;
+  margin-right: 10px;
+
+}
+
+.custom-btn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
 }
 </style>
