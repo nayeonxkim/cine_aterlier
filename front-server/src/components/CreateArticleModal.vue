@@ -78,6 +78,10 @@ export default {
         console.error(error)
       })
     }
+  },
+  created(){
+      this.title = ''
+      this.content = ''
   }
 }
 </script>
