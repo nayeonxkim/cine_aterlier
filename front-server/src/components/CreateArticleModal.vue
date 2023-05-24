@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-0">
     <div class="modal" tabindex="-1" role="dialog" id="exampleModalToggle">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -24,14 +24,14 @@
             </div>
             <div class="modal-footer">
 
-              <button type="submit" class="btn custom-btn" data-bs-dismiss="modal">Create</button>
-              <button type="button" class="btn custom-btn" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="custom-btn" data-bs-dismiss="modal" style="padding: 5px 10px;">Create</button>
+              <button type="button" class="custom-btn" data-bs-dismiss="modal" style="padding: 5px 10px;">Close</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <a class="btn custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">CREATE</a>
+      <a class="mt-1 mb-1 custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px;">CREATE</a>
   </div>
 </template>
 
@@ -86,18 +86,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .custom-btn {
+  font-weight: 700;
+  padding-right: 10px;
+  padding-left: 10px;
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  float: right;
+  margin: 0 auto; /* 가운데 정렬을 위한 margin 속성 추가 */
+  display: block; /* 가운데 정렬을 위해 block 요소로 변경 */
+  text-decoration: none; /* 텍스트의 밑줄 제거 */
 }
 
 .custom-btn:hover {
   background-color: #000 !important;
   color: #fff !important;
-
+  text-decoration: none; /* 텍스트의 밑줄 제거 */
 }
 
 .modal-body {
