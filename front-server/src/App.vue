@@ -7,17 +7,17 @@
           <router-link to="/community" class="custom-cat p-2">Community</router-link> 
         </div>
 
-      <div id="right-nav" class="d-flex justify-content-end">
-        <router-link to="/home" class="custom-cat p-2">Home</router-link> 
-        <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
-        <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+        <div id="right-nav" class="d-flex justify-content-end">
+          <router-link to="/home" class="custom-cat p-2">Home</router-link> 
+          <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+        </div>
       </div>
+      <div class="logo" :style="logoStyle">PJT NAME</div>
+      <router-view class="mt-5"/>
     </div>
-    <div class="logo" :style="logoStyle">GROUNDSEESAW</div>
-    <router-view class="mt-5"/>
-    </div>
+      <SpinnerView />
   </div>
-
 </template>
 
 <script>
@@ -37,12 +37,12 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '220px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '150px';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
         padding: logoPadding,
-        transition: 'font-size 0.5s'
+        transition: 'font-size 0.6s'
       };
     },
     isLoading() {
@@ -71,6 +71,11 @@ export default {
   text-align: center;
 }
 
+.opacity-bg{
+  opacity: 50%;
+  pointer-events: none;
+}
+
 .logo {
   position: sticky;
   top: 0;
@@ -97,14 +102,12 @@ export default {
   /* background-color: #ffffff; */
 } */
 
-
 .navbar-content {
   display: flex;
   justify-content: space-between;
   padding: 8px;
   margin: 0;
 }
-
 
 #navbar-main {
   position: sticky;
@@ -137,5 +140,17 @@ export default {
 #right-nav {
   margin-right: 8px;
   display: block;
+}
+
+.custom-btn {
+  border: #000 solid 3px;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  color: #fff;
 }
 </style>
