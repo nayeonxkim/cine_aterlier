@@ -2,12 +2,13 @@
   <div class="article-list">
     <div class="row">
       <p>{{userId}}</p>
-      <ArticleItem
+      <div
         v-for="(article, idx) in articleList"
         :key="idx"
-        :article-item="article"
         class="col-6 col-md-4 col-lg-3 mb-4"
-      />
+      >
+        <ArticleItem :article-item="article" />
+      </div>
     </div>
   </div>
 </template>

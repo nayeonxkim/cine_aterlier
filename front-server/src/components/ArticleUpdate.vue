@@ -14,9 +14,9 @@
         </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">수정</button>
-          <button type="button" class="btn btn-secondary"
-          @click="$router.push(`/articles/${articleDetail.id}`)">취소</button>
+          <button type="submit" class="custom-btn">SAVE</button>
+          <button type="button" class="custom-btn"
+          @click="$router.push(`/articles/${articleDetail.id}`)">BACK</button>
         </div>
     </form>
   </div>
