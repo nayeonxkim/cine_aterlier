@@ -1,5 +1,13 @@
 <template>
   <div class="home">
+        
+    <div v-if="isLoading">
+      <h1>{{isLoading}}</h1>
+      <h2>{{this.$store.state.isLoading}}</h2>
+      <h2>로딩중이에요</h2>
+      <hr>
+    </div>
+    
     <KarloImgsCarousel />
     <SearchModal 
     class="mt-5"/>
