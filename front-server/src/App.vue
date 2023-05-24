@@ -12,7 +12,7 @@
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">GROUNDSEESAW</div>
+    <div class="logo" :style="logoStyle">PJT NAME</div>
     <router-view class="mt-5"/>
   
   </div>
@@ -32,7 +32,7 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '220px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '150px';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
