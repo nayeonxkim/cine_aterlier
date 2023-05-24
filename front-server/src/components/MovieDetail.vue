@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .star-ratings {
   color: #aaa9a9; 
   position: relative;
