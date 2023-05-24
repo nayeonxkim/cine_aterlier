@@ -177,7 +177,7 @@ export default new Vuex.Store({
       .then((res) => {
         context.commit('SAVE_TOKEN', res.data.key)
         context.commit('SET_USER', res.data)
-        router.push({ name: 'home' })
+        // router.push({ name: 'home' })
       })
       .catch((err) => {
         alert('username 혹은 password를 다시 확인해주세요.')
