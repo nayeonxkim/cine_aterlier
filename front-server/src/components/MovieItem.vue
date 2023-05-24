@@ -1,16 +1,21 @@
 <template>
   <div>
-    <div @click="$router.push(`/movies/${movieItem.tmdb_id}`)">
+    <div @click="$router.push(`/movies/${movieItem.tmdb_id}`)"
+    style="display: flex; justify-content: center;">
+>
       <!-- 포스터와 제목 보여주기 -->
-      <div class="container">
-      <img :src="`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`"
-      alt="Avatar"
-      style="width:321px; height:460px; ">
-      <div class="overlay">
-        <h5><b>{{ movieItem.title }}</b></h5> 
-        <p>{{ movieItem.release_date }}</p> 
+      <div class="movie-container">
+        <div class="movie-image-container">
+          <img :src="`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`"
+            alt="Avatar"
+            class="image"
+          >
+          <div class="overlay">
+            <h5><b>{{ movieItem.title }}</b></h5>
+            <p>{{ movieItem.release_date }}</p>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -38,67 +43,68 @@ export default {
 }
 </script>
 
-<style>
-* {box-sizing: border-box}
 
-/* Container needed to position the overlay. Adjust the width as needed */
-.container {
-  position: relative;
-  width: 50%;
-  max-width: 300px;
+<style>
+/* div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+* {
+  box-sizing: border-box;
 }
 
-/* Make the image to responsive */
+.movie-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-image-container {
+  position: relative;
+  width: 100%;
+  max-height: 0;
+  padding-bottom: 140%;
+  overflow: hidden;
+}
+
 .image {
-  display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-/* The overlay effect - lays on top of the container and over the image */
 .overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.8); /* Black see-through */
-  color: #f1f1f1; 
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  transition: .5s ease;
-  opacity:0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1;
+  transition: 0.5s ease;
+  opacity: 0;
   color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35%;
 }
 
-/* When you mouse over the container, fade in the overlay title */
-.container:hover .overlay {
+.movie-container:hover .overlay {
   opacity: 1;
+  white-space: normal;
+  overflow: visible;
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
-img{
-  margin-bottom: 2px;
-}
-
-#movie-title{
-  font-size:25px !important;
-}
-
-div {
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-.temp{
-  width: 100%;
-}
-
-#movie-hr{
-  
-  height:3px; 
-  border-color: #000000;
-  margin-left : auto;
-  margin-right : auto;
-} */
 </style>
