@@ -2,7 +2,7 @@
   <div>
     <div class="genreBtn">
       <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
-        {{ genre.name[0] }}/{{ genre.name[1] }}
+        {{genre.name[0]}} | {{genre.name[1]}}
       </button>
     </div>
     <div class="movie-row">
@@ -25,35 +25,35 @@ export default {
       genres:[
         {
           id:[35, 18],
-          name:['코미디', '드라마'],
+          name:['Comedy', 'Drama'],
         },
         {
           id:[28, 12],
-          name:['액션', '어드벤쳐'],
+          name:['Action', 'Adventure'],
         },
         {
           id:[16],
-          name:['애니메이션'],
+          name:['Animation', 'Cartoon'],
         },
         {
           id:[80, 53],
-          name:['범죄', '스릴러'],
+          name:['Crime', 'Thriller'],
         },
         {
           id:[27, 9648],
-          name:['호러', '미스터리'],
+          name:['Horror', 'Mistery'],
         },
         {
           id:[878, 14],
-          name:['SF', '판타지'],
+          name:['SF', 'Fantasy'],
         },
         {
           id:[10752, 36],
-          name:['전쟁', '역사'],
+          name:['War', 'History'],
         },
         {
           id:[10402, 99],
-          name:['음악', '다큐멘터리'],
+          name:['Music', 'Documentary'],
         },
       ],
       nowShowMovie: null // 선택한 장르
