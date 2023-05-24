@@ -6,11 +6,11 @@
       {{ genre.name[0] }}/{{ genre.name[1] }}
     </button>
     </div>
-    <MovieItem
-    v-for="(movie, idx) in nowShowMovie" 
-    :key="idx"
-    :movie-item="movie"
-    />
+    <div class="movie-row">
+      <div v-for="(movie, idx) in nowShowMovie" :key="idx" class="movie-item">
+        <MovieItem :movie-item="movie" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -117,12 +117,23 @@ h1{
   border-radius: 0;
   background-color: transparent;
   margin: 0.5% 0.5% 0.5% 0.5%;
-  padding: 2%;  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
+  /* padding: 2%;  여기 윈도우, 맥 호환 문제인지 확인 할 것 */
 }
 
 .custom-btn:hover {
   background-color: #000;
   color: #fff;
+}
+
+.movie-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-row > div {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 </style>
