@@ -12,7 +12,7 @@
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">GROUNDSEESAW</div>
+    <div class="logo" :style="logoStyle">KEBOB TO CAMEL TEAM</div>
     <router-view class="mt-5"/>
   
   </div>
@@ -32,12 +32,12 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '220px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '110px';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
         padding: logoPadding,
-        transition: 'font-size 0.6s'
+        transition: 'font-size 0.5s'
       };
     },
     isLoading() {
@@ -72,10 +72,6 @@ export default {
   top: 0;
 } */
 
-#app {
-  text-align: center;
-}
-
 .logo {
   position: sticky;
   top: 0;
@@ -102,12 +98,14 @@ export default {
   /* background-color: #ffffff; */
 } */
 
+
 .navbar-content {
   display: flex;
   justify-content: space-between;
   padding: 8px;
   margin: 0;
 }
+
 
 #navbar-main {
   position: sticky;
@@ -140,17 +138,5 @@ export default {
 #right-nav {
   margin-right: 8px;
   display: block;
-}
-
-.custom-btn {
-  border: #000 solid 3px;
-  border-radius: 0;
-  background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
-}
-
-.custom-btn:hover {
-  background-color: #000;
-  color: #fff;
 }
 </style>

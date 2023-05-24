@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="image-container">
-      <img :src="`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`" alt="" width="80%" height="80%">
+      <img :src="`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`" alt="" width="80%" height="80%">
     </div>
 
       <h5 class="modal-title">{{movieDetail.title}}</h5>
-      <img :src="`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`" alt="">
+      <img :src="`https://image.tmdb.org/t/p/original${movieDetail.poster_path}`" alt="">
       <p>{{movieDetail.release_date}}</p>
       <p v-for="genre in movieDetail.genres"
       :key="genre.id">{{genre.name}}</p>
