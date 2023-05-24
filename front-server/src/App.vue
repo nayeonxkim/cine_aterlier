@@ -1,10 +1,11 @@
 <template>
-  <div id="app" class="mt-0" style="background-color: #ffffff;">
-    <div id="navbar-main" class="navbar">
-      <div id="left-nav" class="d-flex justify-content-start">
-        <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
-        <router-link to="/community" class="custom-cat p-2">Community</router-link> 
-      </div>
+  <div>
+    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff;">
+      <div id="navbar-main" class="navbar">
+        <div id="left-nav" class="d-flex justify-content-start">
+          <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
+          <router-link to="/community" class="custom-cat p-2">Community</router-link> 
+        </div>
 
       <div id="right-nav" class="d-flex justify-content-end">
         <router-link to="/home" class="custom-cat p-2">Home</router-link> 
@@ -12,14 +13,15 @@
         <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
       </div>
     </div>
-    <div class="logo" :style="logoStyle">KEBOB TO CAMEL TEAM</div>
+    <div class="logo" :style="logoStyle">GROUNDSEESAW</div>
     <router-view class="mt-5"/>
-  
+    </div>
   </div>
+
 </template>
 
 <script>
-
+import SpinnerView from '@/views/SpinnerView'
 export default {
   name: 'App',
   data() {
@@ -27,12 +29,15 @@ export default {
       scrollPosition: 0
     };
   },
+  components:{
+    SpinnerView
+  },
   computed: {
     isLoggedIn() {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '110px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '220px';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
@@ -55,22 +60,16 @@ export default {
   methods: {
     handleScroll() {
       this.scrollPosition = window.scrollY;
-      // console.log(this.scrollPosition)
-    }
+    },
   }
 };
 </script>
 
 <style>
-/* #app {
+
+#app {
   text-align: center;
-  margin-top: 60px;
-  position: relative;
-  display: block;
-  max-height: 100vh;
-  overflow-y: auto;
-  top: 0;
-} */
+}
 
 .logo {
   position: sticky;
