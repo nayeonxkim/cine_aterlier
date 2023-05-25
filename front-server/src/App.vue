@@ -73,10 +73,10 @@ export default {
 </script>
 
 <style>
-
 #app {
   text-align: center;
   margin-bottom: 10%;
+  font-family: 'Welcome Regular';
 }
 
 .opacity-bg{
@@ -167,4 +167,5 @@ export default {
   padding-top: 1%;
   /* margin-top: 20%; */
 }
+
 </style>
