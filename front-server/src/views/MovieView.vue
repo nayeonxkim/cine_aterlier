@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="genreBtn">
-      <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)">
-        {{genre.name[0]}} | {{genre.name[1]}}
+
+      <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)" :class="{ active: isSelectedGenre(genre.id) }">
+        {{ genre.name[0] }} | {{ genre.name[1] }}
       </button>
     </div>
     <div class="movie-row">
@@ -33,7 +34,7 @@ export default {
         },
         {
           id:[16],
-          name:['Animation', 'Cartoon'],
+          name:['애니메이션', '어린이'],
         },
         {
           id:[80, 53],
@@ -56,7 +57,8 @@ export default {
           name:['Music', 'Documentary'],
         },
       ],
-      nowShowMovie: null // 선택한 장르
+      nowShowMovie: null, // 선택한 장르
+      selectedGenre: null // 선택된 장르 ID
     }
   },
   computed: {
@@ -78,6 +80,7 @@ export default {
       this.nowShowMovie = movieTop100
     },
     filterMoviesByGenre(genreId) {
+      this.selectedGenre = genreId;
       if (genreId.length === 2) {
         const genreId1 = genreId[0];
         const genreId2 = genreId[1];
@@ -90,7 +93,9 @@ export default {
           return movie.genre_id === genreId1;
         });
       }
-      // location.reload();
+    },
+    isSelectedGenre(genreId) {
+      return this.selectedGenre !== null && this.selectedGenre.toString() === genreId.toString();
     }
   },
   created(){
@@ -116,7 +121,7 @@ export default {
   background-color: transparent;
 }
 
-.genreBtn > button:hover {
+.genreBtn > button.active {
   background-color: #000 !important;
   color: #fff !important;
 }

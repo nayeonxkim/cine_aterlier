@@ -112,7 +112,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-link {
   color: #000000;
   border-color: #fff !important;

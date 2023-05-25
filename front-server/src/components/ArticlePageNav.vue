@@ -1,6 +1,5 @@
 <template>
-  <div>
-
+  <div class="article-pagenation">
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item" @click="onPrevious">
@@ -114,7 +113,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-link {
   color: #000000 !important;
   border-color: #fff !important;
@@ -152,4 +151,9 @@ export default {
   border-color: #fff !important;
   box-shadow: none !important;
 }
+
+.article-pagenation {
+  margin-bottom: 5%;
+}
+
 </style>
