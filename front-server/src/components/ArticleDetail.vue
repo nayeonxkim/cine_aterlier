@@ -18,6 +18,7 @@
       <div class="mt-0" style="text-right padding: 0px 0px; margin-bottom: 2%;">
         <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle">DELETE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
+        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/community')">BACK</button>
       </div>
     </div>
     <hr>
@@ -31,7 +32,7 @@
         <button class="custom-btn mt-0" style="padding: 5px 10px; margin-left: -0.8%; margin-right: 2%;" @click="commentCreate">Add</button>
       </div>
     </div>
-    <div class="col-12 comment-block">
+    <div class="col-12 comment-block" style="margin-bottom: 3%;">
       <ArticleComment
         v-for="(comment, idx) in articleDetail.comment_set"
         :key="idx"
@@ -141,7 +142,7 @@ export default {
 }
 
 #red-btn:hover {
-  background-color: #ff4429;
+  background-color: #ff4429 !important;
   color: #000000;
 }
 

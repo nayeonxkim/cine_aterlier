@@ -70,7 +70,7 @@ export default {
 }
 
 .comment-container:hover {
-  color: #ff4429 !important;
+  text-decoration-color: #ff4429 !important;
 }
 
 /* #red-btn:hover {
