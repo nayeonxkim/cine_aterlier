@@ -71,7 +71,7 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '13vw';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '9vw';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
@@ -95,11 +95,7 @@ export default {
     handleScroll() {
       this.scrollPosition = window.scrollY;
     },
-    isLinkActive(path) {
-      const currentPath = this.$route.path;
-      return currentPath.includes(path);
-    },
-  }
+  },
 };
 </script>
 
