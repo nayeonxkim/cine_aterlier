@@ -90,7 +90,7 @@ export default {
       newComment: {
         content: ''
       },
-      likeMessage :'',
+      likeMessage: '', // 이 부분을 추가합니다
     }
   },
   components:{
@@ -98,6 +98,10 @@ export default {
   },
   created() {
     this.getArticleDetail()
+  },
+  mounted() {
+    const likeMessageKey = `likeMessage_${this.articleDetail.id}`
+    this.likeMessage = localStorage.getItem(likeMessageKey) || ''
   },
   methods: {
     getArticleDetail() {
@@ -148,7 +152,9 @@ export default {
           },
         })
         .then((res) => {
+          const likeMessageKey = `likeMessage_${this.articleDetail.id}`
           this.likeMessage = res.data.message
+          localStorage.setItem(likeMessageKey, this.likeMessage)
         })
         .catch(err => {
           console.error(err)
@@ -157,6 +163,8 @@ export default {
   },
 }
 </script>
+
+
 
 <style scoped>
 #like-heart{
