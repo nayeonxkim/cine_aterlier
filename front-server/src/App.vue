@@ -13,7 +13,7 @@
           <router-link v-else to="/" class="custom-cat p-2">MYPAGE</router-link> 
         </div>
       </div>
-      <div class="logo" :style="logoStyle">CINE ATELIER</div>
+      <div class="logo" :style="logoStyle" style="font-family: 'Blinker', sans-serif;">CINE ATELIER</div>
       <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
@@ -80,7 +80,6 @@ export default {
 </script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Blinker&family=Noto+Sans+KR:wght@700&display=swap');
 #app {
   text-align: center;
@@ -94,7 +93,6 @@ export default {
 }
 
 .logo {
-  
   font-family: 'Blinker', sans-serif;
   position: sticky;
   top: 0;
