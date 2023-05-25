@@ -1,13 +1,13 @@
 <template>
   <div class="row">
-    <div class="col-6" style="height: auto;">
+    <div class="col-4" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
         style="width: 100%; margin: 5%;"
         alt="Article Image"
       >
     </div>
-    <div class="col-6 d-flex flex-column">
+    <div class="col-8 d-flex flex-column">
       <div class="text-right flex-grow-1" style="height: 100%;">
         <div class="temp" style="text-align: left; margin: 5%;">
           <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
@@ -18,7 +18,7 @@
       <div class="mt-0" style="text-right padding: 0px 0px; margin-bottom: 2%;">
         <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle">DELETE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
-        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/community')">BACK</button>
+        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/articles/index')">BACK</button>
       </div>
     </div>
     <hr>
