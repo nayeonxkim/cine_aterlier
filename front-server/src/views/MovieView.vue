@@ -26,11 +26,11 @@ export default {
       genres:[
         {
           id:[35, 18],
-          name:['Comedy', 'Drama'],
+          name:['코미디', '드라마'],
         },
         {
           id:[28, 12],
-          name:['Action', 'Adventure'],
+          name:['액션', '어드벤처'],
         },
         {
           id:[16],
@@ -38,23 +38,23 @@ export default {
         },
         {
           id:[80, 53],
-          name:['Crime', 'Thriller'],
+          name:['범죄', '스릴러'],
         },
         {
           id:[27, 9648],
-          name:['Horror', 'Mistery'],
+          name:['호러', '미스터리'],
         },
         {
           id:[878, 14],
-          name:['SF', 'Fantasy'],
+          name:['SF', '판타지'],
         },
         {
           id:[10752, 36],
-          name:['War', 'History'],
+          name:['전쟁', '역사'],
         },
         {
           id:[10402, 99],
-          name:['Music', 'Documentary'],
+          name:['음악', '다큐멘터리'],
         },
       ],
       nowShowMovie: null, // 선택한 장르
