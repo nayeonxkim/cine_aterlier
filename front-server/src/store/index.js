@@ -17,6 +17,7 @@ export default new Vuex.Store({
         'API_URL',
         'token',
         'User',
+        'currentUser',
         // 'articleList',
         // 'articleDetail',
         // 'movieList',
@@ -34,6 +35,7 @@ export default new Vuex.Store({
     API_URL : 'http://127.0.0.1:8000',
     token: null,
     User: null,
+    currentUser : null,
 
     // Article
     articleList: null,
@@ -80,6 +82,9 @@ export default new Vuex.Store({
       state.token = null
       state.User = null
       delete axios.defaults.headers.common['Authorization'] // 로그아웃 시 헤더에서 토큰 제거
+    },
+    SET_CURRENT_USER(state, payload){
+      state.currentUser = payload
     },
 
     // Movie의 mutations
@@ -170,6 +175,64 @@ export default new Vuex.Store({
         console.error(err)
       })
     },
+
+   
+    getUserInfo(context){
+ 
+      axios
+      .get(`${API_URL}/users/info/`,
+        {
+          headers: {
+            Authorization: `Token ${context.state.token}`,
+          },
+        })
+        .then((res) => {
+          const payload = res.data
+          context.commit('SET_CURRENT_USER', payload)
+
+        })
+        .catch(err => {
+          console.error(err)
+        })
+    },
+
+
+
+
+    // fetchCurrentUser({ commit, getters, dispatch }) {
+
+    //   // 토큰값 있으면 loggedin => true
+    //   if (getters.isLoggedIn) {
+    //     axios({
+    //       url: drf.accounts.currentUserInfo(),
+    //       method: 'get',
+    //       // 토큰값 넣어서 정보 요청 합니다~ 
+    //       headers: getters.authHeader,
+    //     })
+    //       // current user에 정보 저장
+    //       .then(res => commit('SET_CURRENT_USER', res.data))
+    //       // 실패하면 (토큰 오류임)
+    //       .catch(err => {
+    //         if (err.response.status === 401) {
+    //           dispatch('removeToken')
+    //           swal("다시 로그인해주세요!", {
+    //             title: "오류",
+    //             icon: "error",
+    //             buttons: false,
+    //             timer: 2000,
+    //           })
+    //           router.push({ name: 'start' })
+    //         }
+    //       })
+    //   }
+    // },
+
+
+
+
+
+
+
     
     login(context, payload) {
       const username = payload.username
@@ -184,6 +247,7 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
+        this.dispatch('getUserInfo')
         context.commit('SAVE_TOKEN', res.data.key)
         context.commit('SET_USER', res.data)
         // router.push({ name: 'home' })
