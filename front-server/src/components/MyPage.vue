@@ -1,40 +1,38 @@
 <template>
-  <div class="row text-left">
+  <div class="row text-left" style="font-family: 'Noto Sans KR', sans-serif;">
     <div class="col-1"></div>
-    <div class="col-10">
-      <!-- 마이페이지 제목 -->
-      <h1>마이페이지</h1>
+    <div class="col-10" style="height:50%;">
       <!-- 사용자 이름 -->
       <h2>안녕하세요, {{ userMypage.username }}님</h2>
       <hr>
-      <h1>내가 작성한 글</h1>
+      <h2>내가 작성한 글</h2>
       <div v-if="userMypage.article_set.length === 0">
         <p>작성한 글이 없습니다.</p>
       </div>
-      <div v-else>
-        <div class="article-row" v-for="article in userMypage.article_set" :key="article.id" @click="goToDetail(article.id)">
-          <div class="article-item">
-            <img :src="`http://127.0.0.1:8000${article.img}`" alt="글 사진">
+      <div v-else class="row">
+        <div class="article-item col-6" v-for="article in userMypage.article_set" :key="article.id" @click="goToDetail(article.id)">
+          <div>
+            <img style="width :60%; height:60%;" :src="`http://127.0.0.1:8000${article.img}`" alt="글 사진">
             <!-- <h2 class="article-title">제목: {{ article.title }}</h2> -->
           </div>
         </div>
       </div>
       <hr>
-      <h1>내가 좋아요한 글</h1>
+      <h2>내가 좋아요한 글</h2>
       <div v-if="userMypage.like_articles.length === 0">
         <p>좋아요한 글이 없습니다.</p>
       </div>
       <div v-else>
         <div class="article-row" v-for="likedArticle in userMypage.like_articles" :key="likedArticle.id" @click="goToDetail(likedArticle.id)">
           <div class="article-item">
-            <img :src="likedArticle.image" alt="글 사진">
-            <h2 class="article-title">제목: {{ likedArticle.img }}</h2>
-            <h2 class="article-title">제목: {{ likedArticle.title }}</h2>
+            <img :src="`http://127.0.0.1:8000${likedArticle.img}`" alt="글 사진">
           </div>
         </div>
       </div>
       <hr>
-      <p>{{ userMypage }}</p>
+      <div class="box">
+
+      </div>
     </div>
   </div>
 </template>
@@ -75,8 +73,13 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 .text-left {
   text-align: left;
+}
+
+.box{
+  height: 400px;
 }
 
 .article-row {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="font-family: 'Blinker', sans-serif;">
     <div v-if="karloImgs != null" id="finish" style="margin: 6% 0% 3%">
       <h3 style="margin-bottom: 1%;">{{ karloImgs[0].original_title1 }} & {{ karloImgs[0].original_title2 }}</h3>
       <h3>by {{ this.$store.state.selectedPainter }}</h3>
@@ -9,7 +9,7 @@
         <div class="carousel-item active">
 
           <!-- 화면에 맞게 수정 필요 -->
-          <img src="../assets/tip.png" style="width: 80%; height: 80%; margin: -10%">
+          <img src="../assets/tip.png" style="width: 100%; height: 80%; margin: -10%">
           
         </div>
         <div class="carousel-item"
@@ -51,5 +51,5 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Noto+Sans+KR:wght@700&display=swap');
 </style>

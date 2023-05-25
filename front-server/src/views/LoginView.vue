@@ -3,7 +3,7 @@
     <div class="login-container">
       <div v-if="isLogin">
         <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
-        <MyPage />
+        <MyPage/>
       </div>
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
