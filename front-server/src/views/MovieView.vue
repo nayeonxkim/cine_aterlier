@@ -1,7 +1,8 @@
 <template>
   <div>
+    <h1 v-if="movieTop100" class="mb-5">인기영화 TOP 100</h1>
     <div class="genreBtn">
-
+ 
       <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)" :class="{ active: isSelectedGenre(genre.id) }">
         {{ genre.name[0] }} | {{ genre.name[1] }}
       </button>
@@ -13,7 +14,6 @@
       </div>
     </div>
 
-    <h1 v-if="movieTop100">인기영화 TOP 100</h1>
     <div v-if="movieTop100" class="movie-row">
       <div v-for="(movie, idx) in movieTop100" :key="idx" class="movie-item">
         <MovieItem :movie-item="movie" />
