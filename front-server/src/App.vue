@@ -17,7 +17,13 @@
       <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
-      <SpinnerView />
+    <SpinnerView />
+    <div class="app-footer">
+      <div class="app-footer-text">
+        <h6>nayeon  |  meeseeks</h6>
+        <h6>sojeong  |  chadireoroonu</h6>
+      </div>
+    </div>
   </div>
 </template>
 
