@@ -6,16 +6,16 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
-        read_only_fields = ('article', 'token',)
+        read_only_fields = ('id','article', 'token',)
 
 class ArticleSerializer(serializers.ModelSerializer):
     comment_set = CommentSerializer(many=True, read_only=True)
     class Meta:
         model = Article
         fields = '__all__'
-        read_only_fields = ('author', 'like_user',)
+        read_only_fields = ('id','author', 'like_user',)
 
 class ArticleLikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('like_user', 'author', 'title','img')
+        fields = ('id','like_user', 'author', 'title','img')

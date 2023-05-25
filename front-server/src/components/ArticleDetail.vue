@@ -1,5 +1,5 @@
 <template>
-  <div id="detail-font" class="row">
+  <div v-if="articleDetail" id="detail-font" class="row">
     <div class="col-4" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
@@ -99,10 +99,6 @@ export default {
   },
   created() {
     this.getArticleDetail()
-  },
-  mounted() {
-    const likeMessageKey = `likeMessage_${this.articleDetail.id}`
-    this.likeMessage = localStorage.getItem(likeMessageKey) || ''
   },
   methods: {
     getArticleDetail() {

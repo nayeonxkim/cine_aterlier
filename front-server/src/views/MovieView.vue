@@ -117,7 +117,7 @@ export default {
 
       setTimeout(() => {
       this.$store.commit('IS_LOADING', false); // 데이터 로딩 완료
-    }, 2500);
+    }, 2800);
     },
 
     isSelectedGenre(genreId) {

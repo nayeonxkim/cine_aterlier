@@ -65,7 +65,7 @@ export default {
       this.$router.back();
     },
   },
-  mounted() {
+  created() {
     this.$store.dispatch('get_movie_detail', this.movieId);
   }
 }
