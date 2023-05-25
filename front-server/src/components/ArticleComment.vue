@@ -45,8 +45,7 @@ export default {
             },
           }
         )
-        .then((res) => {
-          console.log(res)
+        .then(() => {
           this.$store.dispatch('getArticleDetail', this.articleId)
         })
         .catch((err) => {

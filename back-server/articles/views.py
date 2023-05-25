@@ -52,7 +52,7 @@ def detail(request, article_pk):
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update(request, article_pk):
-    user = User.objects.get(username=request.user.username)
+    user = User.objects.get(id=request.user.id)
     article = get_object_or_404(Article, pk=article_pk)
 
     if article.author != user:
@@ -68,7 +68,7 @@ def update(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete(request, article_pk):
-    user = User.objects.get(username=request.user.username)
+    user = User.objects.get(id=request.user.id)
     article = get_object_or_404(Article, pk=article_pk)
 
     article = get_object_or_404(Article, pk=article_pk)
@@ -92,13 +92,13 @@ def comment_create(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def comment_delete(request, article_pk, comment_pk):
-    user = User.objects.get(username=request.user.username)
+    user = User.objects.get(id=request.user.id)
 
     comment = get_object_or_404(Comment, pk=comment_pk)
     if comment.author != user:
         return Response(status=status.HTTP_403_FORBIDDEN)
-    if comment.token != request.auth.key:
-        return Response(status=status.HTTP_403_FORBIDDEN)
+    # if comment.token != request.auth.key:
+    #     return Response(status=status.HTTP_403_FORBIDDEN)
     
     comment.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
@@ -108,15 +108,12 @@ def comment_delete(request, article_pk, comment_pk):
 @permission_classes([IsAuthenticated])
 def likes(request, article_pk):
     article = Article.objects.get(pk=article_pk)
-    print(request.user)
-    if article.like_user.filter(username=request.user.username).exists():
+    if article.like_user.filter(id=request.user.id).exists():
         article.like_user.remove(request.user)
-        message = 'cancle'
+        message = 'cancel'
     else:
         article.like_user.add(request.user)
         message = 'like'
-    
-    # like_count = article.like_user.count()
 
     context = {
         'message': message
