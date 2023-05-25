@@ -1,12 +1,12 @@
 <template>
   <div class="justify-content-center align-items-center">
-    <div class="row d-flex">
+    <div class="row d-flex mx-0">
       <div class="col-md-1"></div>
-      <div class="col-md-8">
-        <input id="search-input" v-model="inputValue" @keyup.enter="get_searchedList" type="text" placeholder="영화 제목을 입력하세요.">
+      <div class="col-md-8" style="margin-top: 1.4%">
+        <input id="search-input" v-model="inputValue" @keyup.enter="get_searchedList" type="text" placeholder="영화 제목을 입력하세요." style="width: 110%;">
       </div>
       <div class="col-md-2">
-        <button id="search-btn" @click="get_searchedList" class="custom-btn">SEARCH</button>
+        <button id="search-btn" @click="get_searchedList" class="custom-btn" style="padding: 5px 10px;">검색</button>
       </div>
       <div class="col-md-1"></div>
     </div>
