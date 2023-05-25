@@ -152,6 +152,9 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
+        console.log(res)
+        const userId = res.data.id; 
+        console.log(userId)
         context.commit('SAVE_TOKEN', res.data.key)
         context.commit('SET_USER', res.data)
         router.push({ name: 'home' })
