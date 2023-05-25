@@ -23,7 +23,6 @@
               </div>
             </div>
             <div class="modal-footer">
-
               <button type="submit" class="custom-btn" data-bs-dismiss="modal" style="padding: 5px 10px;">Create</button>
               <button type="button" class="custom-btn" data-bs-dismiss="modal" style="padding: 5px 10px;">Close</button>
             </div>
@@ -93,9 +92,8 @@ export default {
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0 auto; /* 가운데 정렬을 위한 margin 속성 추가 */
-  display: block; /* 가운데 정렬을 위해 block 요소로 변경 */
-  text-decoration: none; /* 텍스트의 밑줄 제거 */
+  float: right;
+  text-decoration: none;
 }
 
 .custom-btn:hover {
