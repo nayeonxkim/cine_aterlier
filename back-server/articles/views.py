@@ -17,6 +17,7 @@ from .serializers import ArticleSerializer, CommentSerializer
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def index(request):
+    print(request.user)
     articles = Article.objects.all()
     article_count = articles.count()
     serializer = ArticleSerializer(articles, many=True)

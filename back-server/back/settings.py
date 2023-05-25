@@ -71,8 +71,8 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PERMISSION_CLASSES': [
          # 로그인 안하면 로그인 페이지만 이용 가능
-        'rest_framework.permissions.IsAuthenticated', # 나중에 변경하기
-        # 'rest_framework.permissions.AllowAny', # 나중에 변경하기
+        # 'rest_framework.permissions.IsAuthenticated', # 나중에 변경하기
+        'rest_framework.permissions.AllowAny', # 나중에 변경하기
     ]
 }
 
