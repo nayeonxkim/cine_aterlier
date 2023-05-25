@@ -13,7 +13,6 @@ import LoginView from '../views/LoginView.vue'
 import ArticleDetail from '../components/ArticleDetail.vue'
 import ArticleUpdate from '../components/ArticleUpdate.vue'
 
-import DarkView from '../views/DarkView.vue'
 
 Vue.use(VueRouter)
 
@@ -64,11 +63,6 @@ const routes = [
     path: '/',
     name: 'login',
     component: LoginView,
-  },
-  {
-    path: '/dark',
-    name: 'dark',
-    component: DarkView,
   },
 ]
 

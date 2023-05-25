@@ -17,7 +17,7 @@ export default new Vuex.Store({
         'API_URL',
         'token',
         'User',
-        'currentUser',
+        // 'currentUser',
         // 'articleList',
         // 'articleDetail',
         // 'movieList',
