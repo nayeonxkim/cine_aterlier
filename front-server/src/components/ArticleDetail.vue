@@ -99,6 +99,9 @@ export default {
   },
   created() {
     this.getArticleDetail()
+    const likeMessageKey = `likeMessage_${this.articleDetail.id}`
+    const storedLikeMessage = localStorage.getItem(likeMessageKey)
+    this.likeMessage = storedLikeMessage || ''
   },
   methods: {
     getArticleDetail() {
