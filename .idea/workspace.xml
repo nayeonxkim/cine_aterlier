@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f2a4839d-9eb9-4021-8865-119808e665b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/back-server/media/157336_12_18bfd09b-09c2-4029-bb12-81e8f1b6c0e8_0_9KC60qY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-server/media/157336_12_18bfd09b-09c2-4029-bb12-81e8f1b6c0e8_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-server/media/157336_12_a014cd22-ad55-44d8-9162-d0f3c3e2897b_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-server/media/157336_12_a014cd22-ad55-44d8-9162-d0f3c3e2897b_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-server/media/157336_12_a014cd22-ad55-44d8-9162-d0f3c3e2897b_3.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QIg3ImuDAFe7JNkcHj0NfZvZ0C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2a4839d-9eb9-4021-8865-119808e665b9" name="Default Changelist" comment="" />
+      <created>1685046310345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685046310345</updated>
+    </task>
+    <servers />
+  </component>
+</project>
