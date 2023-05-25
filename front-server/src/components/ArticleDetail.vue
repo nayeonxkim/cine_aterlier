@@ -12,6 +12,7 @@
         <div class="temp" style="text-align: left; margin: 5%;">
           <div class="d-flex justify-content-between">
             <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
+            <!-- 제목 옆 위치로 하트 이동 -->
             <img
               id="like-heart"
               v-if="likeMessage != 'like'"
