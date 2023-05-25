@@ -1,6 +1,6 @@
 <template>
   <div class="justify-content-center align-items-center">
-    <div class="row d-flex">
+    <div class="row d-flex mx-0">
       <div class="col-md-1"></div>
       <div class="col-md-8" style="margin-top: 1.4%">
         <input id="search-input" v-model="inputValue" @keyup.enter="get_searchedList" type="text" placeholder="영화 제목을 입력하세요." style="width: 110%;">
