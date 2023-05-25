@@ -27,7 +27,7 @@ export default new Vuex.Store({
       //   'selectedPainter',
       //   'selectedMovie1',
       //   'selectedMovie2',
-      //   'karloImgs',
+        'karloImgs',
       ]
     }),
   ],

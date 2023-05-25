@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-if="karloImgs != null" id="finish" style="margin: 6% 0% 3%">
-      <!-- <h1>이미지가 완성되었어요 !</h1> -->
       <h3 style="margin-bottom: 1%;">{{ karloImgs[0].original_title1 }} & {{ karloImgs[0].original_title2 }}</h3>
       <h3>by {{ this.$store.state.selectedPainter }}</h3>
     </div>

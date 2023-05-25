@@ -2,16 +2,18 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 영화정보
 import MovieView from '../views/MovieView.vue'
-// import MovieList_Top100 from '../components/MovieList_Top100.vue'
 import MovieDetail from '../components/MovieDetail.vue'
 
 
 import HomeView from '../views/HomeView.vue'
 import CommunityView from '../views/CommunityView.vue'
-
 import LoginView from '../views/LoginView.vue'
+
+
 import ArticleDetail from '../components/ArticleDetail.vue'
 import ArticleUpdate from '../components/ArticleUpdate.vue'
+
+import DarkView from '../views/DarkView.vue'
 
 Vue.use(VueRouter)
 
@@ -62,6 +64,11 @@ const routes = [
     path: '/',
     name: 'login',
     component: LoginView,
+  },
+  {
+    path: '/dark',
+    name: 'dark',
+    component: DarkView,
   },
 ]
 
