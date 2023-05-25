@@ -1,7 +1,5 @@
 <template>
   <div class="row">
-    <button @click="likeArticle">좋아요</button>
-    <h1>{{likeMessage}}</h1>
     <div class="col-4" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
@@ -21,6 +19,8 @@
         <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle">DELETE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/community')">BACK</button>
+        <img id="like-heart" v-if="likeMessage != 'like'" @click="likeArticle" src="../assets/like_blank.png" alt="">
+        <img id="like-heart" v-if="likeMessage === 'like'" @click="likeArticle" src="../assets/like_full.png" alt="">
       </div>
     </div>
     <hr>
@@ -138,6 +138,11 @@ export default {
 </script>
 
 <style scoped>
+#like-heart{
+  height: 50px;
+  width: 48px;
+}
+
 .comment-item {
   margin-bottom: 10px;
 }
