@@ -3,7 +3,7 @@
     <div class="col-10" style="text-align: left; margin: 0% 2%; padding: 0;">
       <span>{{ commentItem.content }}</span>
     </div>
-    <div class="col-1" style="text-align: right; margin-left: 2.3%">
+    <div class="col-1" style="text-align: right; margin-left: 3%">
       <button class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
     </div>
   </div>
@@ -62,15 +62,15 @@ export default {
 
 <style scoped>
 .gray-btn {
-  text-decoration-color: #767676;
+  color: #767676;
 }
 
 .gray-btn:hover {
-  text-decoration-color: #ff4429 !important;
+  color: #ff4429 !important;
 }
 
 .comment-container:hover {
-  text-decoration-color: #ff4429 !important;
+  color: #ff4429 !important;
 }
 
 /* #red-btn:hover {

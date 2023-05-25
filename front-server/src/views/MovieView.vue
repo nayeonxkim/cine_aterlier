@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="genreBtn">
+
       <button v-for="(genre, idx) in genres" :key="idx" @click="filterMoviesByGenre(genre.id)" :class="{ active: isSelectedGenre(genre.id) }">
         {{ genre.name[0] }} | {{ genre.name[1] }}
       </button>
@@ -29,7 +30,7 @@ export default {
         },
         {
           id:[28, 12],
-          name:['액션', '어드벤쳐'],
+          name:['액션', '어드벤처'],
         },
         {
           id:[16],
