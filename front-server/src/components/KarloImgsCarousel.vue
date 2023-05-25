@@ -9,7 +9,7 @@
         <div class="carousel-item active">
 
           <!-- 화면에 맞게 수정 필요 -->
-          <img src="http://127.0.0.1:8000/media/tip.png" style="width: 80%; height: 80%; margin: -10%">
+          <img src="../assets/tip.png" style="width: 80%; height: 80%; margin: -10%">
           
         </div>
         <div class="carousel-item"
