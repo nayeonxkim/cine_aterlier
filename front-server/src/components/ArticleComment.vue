@@ -1,10 +1,10 @@
 <template>
-  <div class="comment-container ml-2" style="overflow: hidden;">
-    <div class="col-10" style="text-align: left; margin: 0% 3%; padding: 0;">
+  <div class=" row comment-container ml-2" style="overflow: hidden;">
+    <div class="col-10" style="text-align: left; margin: 0% 2%; padding: 0;">
       <span>{{ commentItem.content }}</span>
     </div>
-    <div class="col-1" style="text-align: right; margin-left: 1%">
-      <button id="red-btn" class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
+    <div class="col-1" style="text-align: right; margin-left: 3%">
+      <button class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
     </div>
   </div>
 </template>
@@ -62,8 +62,17 @@ export default {
 
 <style scoped>
 .gray-btn {
-  text-decoration-color: #767676;
+  color: #767676;
 }
+
+.gray-btn:hover {
+  color: #ff4429 !important;
+}
+
+.comment-container:hover {
+  text-decoration-color: #ff4429 !important;
+}
+
 /* #red-btn:hover {
   background-color: #ff4429 !important;
   color: #000000 !important;
