@@ -1,5 +1,5 @@
 <template>
-  <div class=" row comment-container ml-2" style="overflow: hidden;">
+  <div id="comment-container" class="row ml-2" style="overflow: hidden;">
     <div class="col-10" style="text-align: left; margin: 0% 2%; padding: 0;">
       <span>{{ commentItem.content }}</span>
     </div>
@@ -69,8 +69,8 @@ export default {
   color: #ff4429 !important;
 }
 
-.comment-container:hover {
-  text-decoration-color: #ff4429 !important;
+#comment-container:hover {
+  color: #ff4429 !important;
 }
 
 /* #red-btn:hover {
