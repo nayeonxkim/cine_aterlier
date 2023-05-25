@@ -107,6 +107,7 @@ export default {
 <style>
 .container {
   margin-top: 50px;
+  height: 34vh;
 }
 
 .login-container {

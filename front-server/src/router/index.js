@@ -25,8 +25,8 @@ const routes = [
 
   // 영화정보
   {
-    path: '/movie',
-    name: 'movie',
+    path: '/movies',
+    name: 'movies',
     component: MovieView,
     // children: [
     //   {
