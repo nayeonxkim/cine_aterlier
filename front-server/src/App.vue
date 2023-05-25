@@ -3,36 +3,14 @@
     <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff;">
       <div id="navbar-main" class="navbar">
         <div id="left-nav" class="d-flex justify-content-start">
-          <router-link
-            to="/movies"
-          >
-            Movie
-          </router-link> 
-          <router-link
-            to="/community"
-          >
-            Community
-          </router-link> 
+          <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
+          <router-link to="/community" class="custom-cat p-2">Community</router-link> 
         </div>
 
         <div id="right-nav" class="d-flex justify-content-end">
-          <router-link
-            to="/home"
-          >
-            Home
-          </router-link> 
-          <router-link
-            v-if="!isLoggedIn"
-            to="/"
-          >
-            Login
-          </router-link> 
-          <router-link
-            v-else
-            to="/"
-          >
-            Logout
-          </router-link> 
+          <router-link to="/home" class="custom-cat p-2">Home</router-link> 
+          <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
         </div>
       </div>
       <div class="logo" :style="logoStyle">FFFF FFFFFFF</div>
@@ -176,15 +154,4 @@ export default {
   padding: 3%;
 }
 
-.app-footer {
-  background-color: #000;
-  width: 100%;
-  height: 100px;
-}
-
-.app-footer-text {
-  padding-top: 1.5%;
-  text-align: center;
-  color: #ffffff;
-}
 </style>
