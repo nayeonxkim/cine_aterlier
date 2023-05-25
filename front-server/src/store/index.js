@@ -43,6 +43,7 @@ export default new Vuex.Store({
     movieList: null,
     movieItem: null,
     movieDetail: null,
+    movieTop100:null,
 
     // Home
     searchedList: null,
@@ -87,6 +88,12 @@ export default new Vuex.Store({
     },
     GET_MOVIE_DETAIL(state, payload){
       state.movieDetail = payload
+    },
+    GET_MOVIE_100(state, payload){
+      state.movieTop100 = payload
+    },
+    GET_MOVIE_100_RESET(state){
+      state.movieTop100 = null
     },
 
     // Article mutations
@@ -207,7 +214,9 @@ export default new Vuex.Store({
     },
 
     // Movie의 액션
-    get_movie_List(context){
+    get_movie_List(context) {
+      context.commit('IS_LOADING', true); // 로딩 상태를 true로 변경
+      
       axios
       .get('http://127.0.0.1:8000/movies/index/', {
         headers: {
@@ -215,13 +224,36 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
-        const payload = res.data
-        context.commit('GET_MOVIE_LIST', payload)
+          const payload = res.data
+          context.commit('GET_MOVIE_LIST', payload);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (응답 완료)
+        })
+        .catch((err) => {
+          console.error(err);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (에러 발생)
+        });
+      },
+
+      get_movie_100(context){
+      context.commit('IS_LOADING', true); // 로딩 상태를 true로 변경
+      
+      axios
+      .get('http://127.0.0.1:8000/movies/top100/', {
+        headers: {
+          Authorization: `Token ${context.state.token}`
+        }
       })
-      .catch((err) => {
-        console.error(err)
-      })
-    },
+      .then((res) => {
+          const payload = res.data
+          context.commit('GET_MOVIE_100', payload);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (응답 완료)
+        })
+        .catch((err) => {
+          console.error(err);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (에러 발생)
+        });
+      },
+
     get_movie_detail(context, movieId){
       axios
       .get(`https://api.themoviedb.org/3/movie/${movieId}`,{
@@ -324,6 +356,7 @@ export default new Vuex.Store({
         context.commit('IS_LOADING', false)
         context.commit('SELECTEDMOVIE_RESET')
         console.error(err)
+        alert('부적절한 영화입니다!')
       })
   },
 },
