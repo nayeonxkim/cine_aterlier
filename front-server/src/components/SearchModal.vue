@@ -60,7 +60,11 @@
       </div>
     </div>
   </div>
-  <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px; text-decoration:none;">영화 검색</a>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px; text-decoration:none;">ㄴㅁㅇ ㅇㅎㅇㅁㅈ ㅁㄷㄱ</a>
+    </div>
+  </div>
   </div>
 </template>
 
