@@ -27,7 +27,7 @@
 
         <input @keyup.enter="commentCreate" type="text"
         v-model="newComment.content" class="article-detail-input"
-        style="margin-left: -0.8%; margin-right: 2%; padding: 0; height: 80%">
+        style="margin-left: -0.8%; margin-right: 2%; padding: 0; height: 100%">
 
         <button class="custom-btn mt-0" style="padding: 5px 10px; margin-left: -0.8%; margin-right: 2%;" @click="commentCreate">Add</button>
       </div>
