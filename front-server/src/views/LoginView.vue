@@ -2,8 +2,8 @@
   <div class="container d-flex justify-content-center">
     <div class="login-container">
       <div v-if="isLogin">
-        <MyPage />
         <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
+        <MyPage />
       </div>
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
