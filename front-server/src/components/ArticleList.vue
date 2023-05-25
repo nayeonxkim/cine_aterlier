@@ -1,7 +1,7 @@
 <template>
   <div class="article-list">
     <div class="row">
-      <p>{{userId}}</p>
+      <p>{{ userId }}</p>
       <div
         v-for="(article, idx) in articleList"
         :key="idx"
