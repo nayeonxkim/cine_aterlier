@@ -13,8 +13,8 @@
       </div>
     </div>
 
+    <h1 v-if="movieTop100">인기영화 TOP 100</h1>
     <div v-if="movieTop100" class="movie-row">
-      <h1>인기영화 TOP 100</h1>
       <div v-for="(movie, idx) in movieTop100" :key="idx" class="movie-item">
         <MovieItem :movie-item="movie" />
       </div>
