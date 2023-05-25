@@ -14,3 +14,8 @@ class ArticleSerializer(serializers.ModelSerializer):
         model = Article
         fields = '__all__'
         read_only_fields = ('author', 'like_user',)
+
+class ArticleLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ('like_user', 'author', 'title','img')
