@@ -3,14 +3,14 @@
     <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff; min-height: 76.8vh;">
       <div id="navbar-main" class="navbar">
         <div id="left-nav" class="d-flex justify-content-start">
-          <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
-          <router-link to="/community" class="custom-cat p-2">Community</router-link> 
+          <router-link to="/movie" class="custom-cat p-2">MOVIE</router-link> 
+          <router-link to="/community" class="custom-cat p-2">COMMUNITY</router-link> 
         </div>
 
         <div id="right-nav" class="d-flex justify-content-end">
-          <router-link to="/home" class="custom-cat p-2">Home</router-link> 
+          <router-link to="/home" class="custom-cat p-2">HOME</router-link> 
           <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
-          <router-link v-else to="/" class="custom-cat p-2">MyPage</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">MYPAGE</router-link> 
         </div>
       </div>
       <div class="logo" :style="logoStyle">CINE ATELIER</div>
@@ -18,12 +18,17 @@
       <router-view class="mt-5"/>
     </div>
     <SpinnerView />
-    <div class="app-footer">
-      <div class="app-footer-text">
-        <h6>nayeon  |  meeseeks</h6>
-        <h6>sojeong  |  chadireoroonu</h6>
-      </div>
+
+    <div style="position: relative; min-height: 30vh;">
+      <footer class="py-5 mt-auto" style="position: absolute; bottom: 0; width: 100%; background-color: #000; color:#000; text-align: center;">
+        <div class="app-footer-text">
+          <h6 style="color: #fff;">nayeon  |  meeseeks</h6>
+          <h6 style="color: #fff;">sojeong  |  chadireoroonu</h6>
+        </div>
+      </footer>
     </div>
+
+
   </div>
 </template>
 
@@ -46,9 +51,11 @@ export default {
     logoStyle() {
       const fontSize = this.scrollPosition > 0 ? '30px' : '9vw';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
+      const letterSpacing = this.scrollPosition > 0 ? '0px' : '30px';
       return {
         fontSize: fontSize,
         padding: logoPadding,
+        letterSpacing:letterSpacing,
         transition: 'font-size 0.6s'
       };
     },
@@ -73,11 +80,13 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Noto+Sans+KR:wght@700&display=swap');
 #app {
   text-align: center;
   margin-bottom: 10%;
-  font-family: 'Welcome Regular';
 }
+
 
 .opacity-bg{
   opacity: 50%;
@@ -85,6 +94,8 @@ export default {
 }
 
 .logo {
+  
+  font-family: 'Blinker', sans-serif;
   position: sticky;
   top: 0;
   display: flex;

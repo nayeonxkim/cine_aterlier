@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div id="detail-font" class="row">
     <div class="col-4" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
@@ -63,6 +63,7 @@
 
 
 <script>
+
 import axios from 'axios'
 import store from '@/store'
 import ArticleComment from '@/components/ArticleComment.vue'
@@ -167,6 +168,13 @@ export default {
 
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.detail-font{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 #like-heart{
   height: 50px;
   width: 48px;
