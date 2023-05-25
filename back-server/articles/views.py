@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, get_list_or_404
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
+from django.http  import JsonResponse
 from rest_framework.decorators import permission_classes
 
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -102,3 +102,23 @@ def comment_delete(request, article_pk, comment_pk):
     
     comment.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def likes(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    print(request.user)
+    if article.like_user.filter(username=request.user.username).exists():
+        article.like_user.remove(request.user)
+        message = 'cancle'
+    else:
+        article.like_user.add(request.user)
+        message = 'like'
+    
+    # like_count = article.like_user.count()
+
+    context = {
+        'message': message
+        }
+    return Response(context, status=status.HTTP_200_OK)

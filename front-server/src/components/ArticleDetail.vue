@@ -1,5 +1,7 @@
 <template>
   <div class="row">
+    <button @click="likeArticle">좋아요</button>
+    <h1>{{likeMessage}}</h1>
     <div class="col-4" style="height: auto;">
       <img
         :src="getFullImagePath(articleDetail.img)"
@@ -67,6 +69,7 @@ export default {
       newComment: {
         content: ''
       },
+      likeMessage :'',
     }
   },
   components:{
@@ -112,9 +115,24 @@ export default {
           this.getArticleDetail()
         })
         .catch(err => {
-          console.log(err)
+          console.error(err)
         })
     },
+    likeArticle(){
+      axios
+      .post(`${API_URL}/articles/${this.articleDetail.id}/likes/`,
+        {
+          headers: {
+            Authorization: `Token ${store.state.token}`,
+          },
+        })
+        .then((res) => {
+          this.likeMessage = res.data.message
+        })
+        .catch(err => {
+          console.error(err)
+        })
+    }
   },
 }
 </script>
