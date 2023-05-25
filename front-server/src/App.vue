@@ -5,13 +5,11 @@
         <div id="left-nav" class="d-flex justify-content-start">
           <router-link
             to="/movies"
-            :class="['custom-cat', 'p-2', {'active': isLinkActive('/movies')}]"
           >
             Movie
           </router-link> 
           <router-link
             to="/community"
-            :class="['custom-cat', 'p-2', {'active': isLinkActive('/community')}]"
           >
             Community
           </router-link> 
@@ -20,21 +18,18 @@
         <div id="right-nav" class="d-flex justify-content-end">
           <router-link
             to="/home"
-            :class="['custom-cat', 'p-2', {'active': isLinkActive('/home')}]"
           >
             Home
           </router-link> 
           <router-link
             v-if="!isLoggedIn"
             to="/"
-            :class="['custom-cat', 'p-2', {'active': isLinkActive('/')}]"
           >
             Login
           </router-link> 
           <router-link
             v-else
             to="/"
-            :class="['custom-cat', 'p-2', {'active': isLinkActive('/')}]"
           >
             Logout
           </router-link> 
