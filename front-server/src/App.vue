@@ -13,7 +13,7 @@
           <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
         </div>
       </div>
-      <div class="logo" :style="logoStyle">FILM PALETTE</div>
+      <div class="logo" :style="logoStyle">FFFF FFFFFFF</div>
       <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
@@ -38,7 +38,7 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '15vw';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '13vw';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
@@ -88,7 +88,7 @@ export default {
   padding: 0;
   transition: font-size 0.5s;
   z-index: 990;
-  font-size: 15vw;
+  font-size: 13vw;
   margin-top: -10%;
 }
 
@@ -145,7 +145,7 @@ export default {
 }
 
 .corret-margin {
-  padding: 2%;
+  padding: 3%;
 }
 
 </style>

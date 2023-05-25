@@ -22,9 +22,13 @@
     </div>
     <hr>
     <div class="comment-block d-flex justify-content-between" style="margin: 0% 2.5%; padding: 0;">
-      <div class="d-flex" style="width: 100%; margin-right: 1%; padding: 0;">
-        <input @keyup.enter="commentCreate" type="text" v-model="newComment.content" class="article-detail-input" style="margin: 0% 1%; padding: 0;">
-        <button class="custom-btn mt-0" style="padding: 5px 10px; margin: 0;" @click="commentCreate">Add</button>
+      <div class="d-flex" style="width: 100%; padding: 0;">
+
+        <input @keyup.enter="commentCreate" type="text"
+        v-model="newComment.content" class="article-detail-input"
+        style="margin-left: -1%; margin-right: 2%; padding: 0; height: 80%">
+
+        <button class="custom-btn mt-0" style="padding: 5px 10px; margin-left: -0.8%; margin-right: 2%;;" @click="commentCreate">Add</button>
       </div>
     </div>
     <div class="col-12 comment-block">
