@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, get_list_or_404
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
+from django.http  import JsonResponse
 from rest_framework.decorators import permission_classes
 
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -11,12 +11,18 @@ from rest_framework.authtoken.models import Token
 from rest_framework import status
 
 from .models import Article, Comment
+from django.contrib.auth import get_user_model
+
+
+
 from .serializers import ArticleSerializer, CommentSerializer
+User = get_user_model()
 
 # 게시글 전체 조회
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def index(request):
+    print(request.user)
     articles = Article.objects.all()
     article_count = articles.count()
     serializer = ArticleSerializer(articles, many=True)
@@ -46,9 +52,11 @@ def detail(request, article_pk):
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update(request, article_pk):
+    user = User.objects.get(username=request.user.username)
     article = get_object_or_404(Article, pk=article_pk)
-    # if article.author != request.user:
-    #     return Response(status=status.HTTP_403_FORBIDDEN)
+
+    if article.author != user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     
     serializer = ArticleSerializer(article, data=request.data)
     if serializer.is_valid(raise_exception=True):
@@ -60,9 +68,12 @@ def update(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete(request, article_pk):
+    user = User.objects.get(username=request.user.username)
     article = get_object_or_404(Article, pk=article_pk)
-    # if article.author != request.user:
-    #     return Response(status=status.HTTP_403_FORBIDDEN)
+
+    article = get_object_or_404(Article, pk=article_pk)
+    if article.author != user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     article.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
@@ -81,10 +92,33 @@ def comment_create(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def comment_delete(request, article_pk, comment_pk):
-    article = get_object_or_404(Article, pk=article_pk)
+    user = User.objects.get(username=request.user.username)
+
     comment = get_object_or_404(Comment, pk=comment_pk)
+    if comment.author != user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     if comment.token != request.auth.key:
         return Response(status=status.HTTP_403_FORBIDDEN)
     
     comment.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def likes(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    print(request.user)
+    if article.like_user.filter(username=request.user.username).exists():
+        article.like_user.remove(request.user)
+        message = 'cancle'
+    else:
+        article.like_user.add(request.user)
+        message = 'like'
+    
+    # like_count = article.like_user.count()
+
+    context = {
+        'message': message
+        }
+    return Response(context, status=status.HTTP_200_OK)

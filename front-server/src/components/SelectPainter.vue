@@ -29,7 +29,7 @@ export default {
         },
         {
           name: 'Egon Schiele',
-          imageSrc: 'Egon Schiele.png',
+          imageSrc: 'Egon Schiele.jpg',
         },
         {
           name: 'Pablo Picasso',
@@ -41,15 +41,15 @@ export default {
         },
         {
           name: 'Katsushika Hokusai',
-          imageSrc: 'Katsushika Hokusai.webp',
+          imageSrc: 'Katsushika Hokusai.jpg',
         },
         {
           name: 'Mondriaan',
-          imageSrc: 'Mondriaan.webp',
+          imageSrc: 'Mondriaan.jpg',
         },
         {
           name: 'Frida Kahlo',
-          imageSrc: 'Frida Kahlo.png',
+          imageSrc: 'Frida Kahlo.jpg',
         },
         {
           name: 'Andy Warhol',
@@ -72,7 +72,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #painter:hover,
 .selected {
   cursor: pointer;
