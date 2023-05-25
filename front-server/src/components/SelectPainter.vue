@@ -13,7 +13,8 @@
         <p>{{ painter.name }}</p>
       </div>
     </div>
-    <button @click="clearSelection">Clear Selection</button>
+    <input id="search-input" @keyup.enter="selectCustomPainter" type="text" placeholder="그 외 입력 후 엔터">
+    <h3 class="mt-3">{{selectedPainter}}</h3>
   </div>
 </template>
 
@@ -68,11 +69,29 @@ export default {
       this.selectedPainter = '';
       this.$store.commit('SELECT_PAINTER', '');
     },
+    selectCustomPainter(event){
+      const painterInput = event.target.value
+      if(/^[a-zA-Z0-9]+$/.test(painterInput)){
+        this.selectedPainter = painterInput
+        this.$store.commit('SELECT_PAINTER', this.selectedPainter);
+      } else{
+        alert('영어와 숫자만 입력가능합니다.')
+      }
+        event.target.value = ''
+    }
   },
 };
 </script>
 
 <style scoped>
+#search-input {
+  margin-right: 20px;
+  border: solid 3px black;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 #painter:hover,
 .selected {
   cursor: pointer;
