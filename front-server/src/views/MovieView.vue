@@ -6,11 +6,19 @@
         {{ genre.name[0] }} | {{ genre.name[1] }}
       </button>
     </div>
-    <div class="movie-row">
+
+    <div v-if="TOP100 === false" class="movie-row">
       <div v-for="(movie, idx) in nowShowMovie" :key="idx" class="movie-item">
         <MovieItem :movie-item="movie" />
       </div>
     </div>
+
+    <div v-if="TOP100 === true" class="movie-row">
+      <div v-for="(movie, idx) in movieTop100" :key="idx" class="movie-item">
+        <MovieItem :movie-item="movie" />
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -58,13 +66,17 @@ export default {
         },
       ],
       nowShowMovie: null, // 선택한 장르
-      selectedGenre: null // 선택된 장르 ID
+      selectedGenre: null,
+      TOP100: true
     }
   },
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
     },
+    movieTop100(){
+      return this.$store.state.movieList.slice(0,100);
+    }
   },
   methods: {
     get_movie_List() {
@@ -75,11 +87,12 @@ export default {
         this.$router.push({ name: 'login' })
       }
     },
-    get_movieTop100(){
-      const movieTop100 = this.$store.state.movieList.slice(0,100);
-      this.nowShowMovie = movieTop100
-    },
+    // get_movieTop100(){
+    //   const movieTop100 = this.$store.state.movieList.slice(0,100);
+    // },
     filterMoviesByGenre(genreId) {
+      this.TOP100 = false
+      this.$store.commit('IS_LOADING', true);
       this.selectedGenre = genreId;
       if (genreId.length === 2) {
         const genreId1 = genreId[0];
@@ -93,6 +106,10 @@ export default {
           return movie.genre_id === genreId1;
         });
       }
+
+      setTimeout(() => {
+      this.$store.commit('IS_LOADING', false); // 데이터 로딩 완료
+    }, 2500);
     },
     isSelectedGenre(genreId) {
       return this.selectedGenre !== null && this.selectedGenre.toString() === genreId.toString();
@@ -100,7 +117,6 @@ export default {
   },
   created(){
     this.get_movie_List()
-    this.get_movieTop100()
   },
 }
 </script>
