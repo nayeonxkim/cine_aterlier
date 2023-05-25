@@ -3,11 +3,10 @@
     <div class="login-container">
       <div v-if="isLogin">
         <h1>{{this.$store.state.User}}</h1>
+        <h1>{{currentUser.username}}님, 안녕하세요</h1>
+
         <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
       </div>
-
-
-
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
           <h1 class="title">Login Page</h1>
@@ -51,6 +50,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'LoginView',
   data() {
@@ -90,15 +90,16 @@ export default {
     },
     logout() {
       this.$store.dispatch('logout')
-    }
+    },
+
   },
   computed: {
     isLogin() {
       return this.$store.getters.isLogin
     },
-    // username() {
-    //   return this.$store.getters.username
-    // }
+    currentUser(){
+      return this.$store.state.currentUser
+    }
   },
   created() {
     if (this.isLogin) {
