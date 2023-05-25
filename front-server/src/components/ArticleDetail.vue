@@ -10,7 +10,22 @@
     <div class="col-8 d-flex flex-column">
       <div class="text-right flex-grow-1" style="height: 100%;">
         <div class="temp" style="text-align: left; margin: 5%;">
-          <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
+          <div class="d-flex justify-content-between">
+            <h3 class="article-detail-title">{{ articleDetail.title }}</h3>
+            <!-- 제목 옆 위치로 하트 이동 -->
+            <img
+              id="like-heart"
+              v-if="likeMessage != 'like'"
+              @click="likeArticle"
+              src="../assets/like_blank.png"
+            >
+            <img
+              id="like-heart"
+              v-if="likeMessage === 'like'"
+              @click="likeArticle"
+              src="../assets/like_full.png"
+            >
+          </div>
           <hr class="article-detail-horizen">
           <h5 class="article-detail-content">{{ articleDetail.content }}</h5>
         </div>
@@ -19,8 +34,7 @@
         <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle" v-if="isAuthor">DELETE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)" v-if="isAuthor">UPDATE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/community')">BACK</button>
-        <img id="like-heart" v-if="likeMessage != 'like'" @click="likeArticle" src="../assets/like_blank.png" alt="">
-        <img id="like-heart" v-if="likeMessage === 'like'" @click="likeArticle" src="../assets/like_full.png" alt="">
+        
       </div>
     </div>
     <hr>
