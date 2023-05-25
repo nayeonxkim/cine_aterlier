@@ -207,21 +207,26 @@ export default new Vuex.Store({
     },
 
     // Movie의 액션
-    get_movie_List(context){
+    get_movie_List(context) {
+      context.commit('IS_LOADING', true); // 로딩 상태를 true로 변경
+
       axios
-      .get('http://127.0.0.1:8000/movies/index/', {
-        headers: {
-          Authorization: `Token ${context.state.token}`
-        }
-      })
-      .then((res) => {
-        const payload = res.data
-        context.commit('GET_MOVIE_LIST', payload)
-      })
-      .catch((err) => {
-        console.error(err)
-      })
+        .get('http://127.0.0.1:8000/movies/index/', {
+          headers: {
+            Authorization: `Token ${context.state.token}`
+          }
+        })
+        .then((res) => {
+          const payload = res.data;
+          context.commit('GET_MOVIE_LIST', payload);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (응답 완료)
+        })
+        .catch((err) => {
+          console.error(err);
+          context.commit('IS_LOADING', false); // 로딩 상태를 false로 변경 (에러 발생)
+        });
     },
+
     get_movie_detail(context, movieId){
       axios
       .get(`https://api.themoviedb.org/3/movie/${movieId}`,{
