@@ -18,7 +18,7 @@
       <div class="mt-0" style="text-right padding: 0px 0px; margin-bottom: 2%;">
         <button id="red-btn" class="custom-btn" style="padding: 5px 10px; margin-right: 3%" @click="deleteArticle">DELETE</button>
         <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace(`/articles/${articleDetail.id}/update`)">UPDATE</button>
-        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/articles/index')">BACK</button>
+        <button class="custom-btn" style="padding: 5px 10px;" @click="$router.replace('/community')">BACK</button>
       </div>
     </div>
     <hr>
