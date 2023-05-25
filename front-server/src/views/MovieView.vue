@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="font-family: 'Noto Sans KR', sans-serif;">
     <h1 v-if="movieTop100" class="mb-5">인기영화 TOP 100</h1>
     <div class="genreBtn">
  
@@ -133,6 +133,10 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
 .genreBtn {
   display: flex;
   justify-content: center;
