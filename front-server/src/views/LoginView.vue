@@ -2,8 +2,12 @@
   <div class="container d-flex justify-content-center">
     <div class="login-container">
       <div v-if="isLogin">
+        <h1>{{this.$store.state.User}}</h1>
         <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
       </div>
+
+
+
       <div v-else>
         <form v-if="!isPopupOpen" @submit.prevent="login">
           <h1 class="title">Login Page</h1>
@@ -107,6 +111,7 @@ export default {
 <style>
 .container {
   margin-top: 50px;
+  height: 34vh;
 }
 
 .login-container {

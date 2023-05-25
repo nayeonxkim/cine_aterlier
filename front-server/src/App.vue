@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff;">
+    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff; min-height: 76.8vh;">
       <div id="navbar-main" class="navbar">
         <div id="left-nav" class="d-flex justify-content-start">
           <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
@@ -10,13 +10,20 @@
         <div id="right-nav" class="d-flex justify-content-end">
           <router-link to="/home" class="custom-cat p-2">Home</router-link> 
           <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
-          <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">MyPage</router-link> 
         </div>
       </div>
-      <div class="logo" :style="logoStyle">PJT NAME</div>
+      <div class="logo" :style="logoStyle">CINE ATELIER</div>
+      <div class="corret-margin"></div>
       <router-view class="mt-5"/>
     </div>
-      <SpinnerView />
+    <SpinnerView />
+    <div class="app-footer">
+      <div class="app-footer-text">
+        <h6>nayeon  |  meeseeks</h6>
+        <h6>sojeong  |  chadireoroonu</h6>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,7 +44,7 @@ export default {
       return this.$store.getters.isLogin;
     },
     logoStyle() {
-      const fontSize = this.scrollPosition > 0 ? '30px' : '150px';
+      const fontSize = this.scrollPosition > 0 ? '30px' : '9vw';
       const logoPadding = this.scrollPosition > 0 ? '11px' : '0px';
       return {
         fontSize: fontSize,
@@ -61,7 +68,7 @@ export default {
     handleScroll() {
       this.scrollPosition = window.scrollY;
     },
-  }
+  },
 };
 </script>
 
@@ -69,6 +76,7 @@ export default {
 
 #app {
   text-align: center;
+  margin-bottom: 10%;
 }
 
 .opacity-bg{
@@ -86,8 +94,8 @@ export default {
   padding: 0;
   transition: font-size 0.5s;
   z-index: 990;
-  font-size: 80px;
-  margin: 0;
+  font-size: 13vw;
+  margin-top: -10%;
 }
 
 .navbar {
@@ -134,12 +142,29 @@ export default {
 
 #left-nav {
   display: block;
-  margin-left: 8px;
+  margin-left: 2.5%;
 }
 
 #right-nav {
-  margin-right: 8px;
+  margin-right: 2.5%;
   display: block;
 }
 
+.corret-margin {
+  padding: 3%;
+}
+
+.app-footer {
+  background-color: #000;
+  height: 80px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.app-footer-text {
+  color: #ffffff;
+  padding-top: 1%;
+  /* margin-top: 20%; */
+}
 </style>

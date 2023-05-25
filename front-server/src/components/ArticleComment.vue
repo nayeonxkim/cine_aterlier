@@ -1,13 +1,14 @@
 <template>
-  <div>
-    <div id="comment">
-      <div class="comment-container">
-        <span>{{commentItem.content}}</span>
-        <button class="custom-btn" v-if="true" @click="deleteComment">X</button>
-      </div>
+  <div id="comment-container" class="row ml-2" style="overflow: hidden;">
+    <div class="col-10" style="text-align: left; margin: 0% 2%; padding: 0;">
+      <span>{{ commentItem.content }}</span>
+    </div>
+    <div class="col-1" style="text-align: right; margin-left: 3%">
+      <button class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
     </div>
   </div>
 </template>
+
 <script>
 import axios from 'axios'
 
@@ -59,7 +60,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.gray-btn {
+  color: #767676;
+}
+
+.gray-btn:hover {
+  color: #ff4429 !important;
+}
+
+#comment-container:hover {
+  color: #ff4429 !important;
+}
+
+/* #red-btn:hover {
+  background-color: #ff4429 !important;
+  color: #000000 !important;
+} */
+
 .comment-container {
   display: flex;
   align-items: center;
