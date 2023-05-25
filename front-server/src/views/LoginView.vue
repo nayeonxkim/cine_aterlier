@@ -2,9 +2,7 @@
   <div class="container d-flex justify-content-center">
     <div class="login-container">
       <div v-if="isLogin">
-        <h1>{{this.$store.state.User}}</h1>
-        <h1>{{currentUser.username}}님, 안녕하세요</h1>
-
+        <MyPage />
         <button @click="logout" class="custom-btn" style="padding: 5px 10px;">Log Out</button>
       </div>
       <div v-else>
@@ -50,9 +48,13 @@
 </template>
 
 <script>
+import MyPage from '@/components/MyPage'
 
 export default {
   name: 'LoginView',
+  components:{
+    MyPage,
+  },
   data() {
     return {
       username: null,
