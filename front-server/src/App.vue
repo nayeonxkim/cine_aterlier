@@ -42,7 +42,7 @@
     <SpinnerView />
     <div class="app-footer">
       <div class="app-footer-text">
-        <h6>nayeon  |  </h6>
+        <h6>nayeon  |  meeseeks</h6>
         <h6>sojeong  |  chadireoroonu</h6>
       </div>
     </div>
