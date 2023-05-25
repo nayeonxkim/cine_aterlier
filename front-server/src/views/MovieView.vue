@@ -125,6 +125,7 @@ export default {
     }
   },
   created(){
+    console.log('생성됨')
     this.get_movie_100()
     this.get_movie_List()
   },
