@@ -141,7 +141,7 @@ export default {
     },
     likeArticle(){
       axios
-      .post(`${API_URL}/articles/${this.articleDetail.id}/likes/`,
+      .post(`${API_URL}/articles/${this.articleDetail.id}/likes/`,{},
         {
           headers: {
             Authorization: `Token ${store.state.token}`,
