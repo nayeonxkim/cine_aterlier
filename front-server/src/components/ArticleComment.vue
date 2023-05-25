@@ -4,7 +4,7 @@
       <span>{{ commentItem.content }}</span>
     </div>
     <div class="col-1" style="text-align: right; margin-left: 3%">
-      <button class="gray-btn" style="padding: 5px 19px;" v-if="true" @click="deleteComment">X</button>
+      <button class="gray-btn" style="padding: 5px 19px;" v-if="isAuthor" @click="deleteComment">X</button>
     </div>
   </div>
 </template>
@@ -25,16 +25,16 @@ export default {
       showDelete:false
     }
   },
-  methods:{
-    showDeleteFunction(){
-      // console.log(this.$store.state.User)
-      // console.log(this.commentItem.author)
-      if(this.$store.state.User.id === this.commentItem.author){
-        this.showDelete = true
-      } else {
-        this.showDelete = false
+  computed:{
+    isAuthor(){
+      if(this.commentItem.author === this.$store.state.currentUser.id){
+        return true
+      } else{
+        return false
       }
-    },
+    }
+  },
+  methods:{
     deleteComment() {
       axios
         .delete(
@@ -54,9 +54,7 @@ export default {
         })
     },
   },
-  created(){
-    this.showDeleteFunction()
-  }
+
 }
 </script>
 
