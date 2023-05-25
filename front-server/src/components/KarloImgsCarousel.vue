@@ -44,9 +44,9 @@ export default {
     }
   },
 
-  // destroyed(){
-  //   this.karloImgs_reset()
-  // }
+  destroyed(){
+    this.karloImgs_reset()
+  }
 }
 </script>
 

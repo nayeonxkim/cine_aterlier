@@ -17,7 +17,7 @@ export default new Vuex.Store({
         'API_URL',
         'token',
         'User',
-        // 'currentUser',
+        'currentUser',
         // 'articleList',
         // 'articleDetail',
         // 'movieList',
@@ -164,10 +164,8 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
-        console.log(res)
-        // const userId = res.data.id; 
-        console.log(res)
         context.commit('SAVE_TOKEN', res.data.key)
+        this.dispatch('getUserInfo')
         context.commit('SET_USER', res.data)
         router.push({ name: 'home' })
       })
@@ -194,46 +192,9 @@ export default new Vuex.Store({
         .catch(err => {
           console.error(err)
         })
-    },
+      },
 
 
-
-
-    // fetchCurrentUser({ commit, getters, dispatch }) {
-
-    //   // 토큰값 있으면 loggedin => true
-    //   if (getters.isLoggedIn) {
-    //     axios({
-    //       url: drf.accounts.currentUserInfo(),
-    //       method: 'get',
-    //       // 토큰값 넣어서 정보 요청 합니다~ 
-    //       headers: getters.authHeader,
-    //     })
-    //       // current user에 정보 저장
-    //       .then(res => commit('SET_CURRENT_USER', res.data))
-    //       // 실패하면 (토큰 오류임)
-    //       .catch(err => {
-    //         if (err.response.status === 401) {
-    //           dispatch('removeToken')
-    //           swal("다시 로그인해주세요!", {
-    //             title: "오류",
-    //             icon: "error",
-    //             buttons: false,
-    //             timer: 2000,
-    //           })
-    //           router.push({ name: 'start' })
-    //         }
-    //       })
-    //   }
-    // },
-
-
-
-
-
-
-
-    
     login(context, payload) {
       const username = payload.username
       const password = payload.password
@@ -247,8 +208,8 @@ export default new Vuex.Store({
         }
       })
       .then((res) => {
-        this.dispatch('getUserInfo')
         context.commit('SAVE_TOKEN', res.data.key)
+        this.dispatch('getUserInfo')
         context.commit('SET_USER', res.data)
         // router.push({ name: 'home' })
       })

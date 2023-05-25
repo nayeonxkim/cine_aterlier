@@ -1,5 +1,5 @@
 <template>
-  <div class="row text-left" style="font-family: 'Noto Sans KR', sans-serif;">
+  <div v-if="userMypage" class="row text-left" style="font-family: 'Noto Sans KR', sans-serif;">
     <div class="col-1"></div>
     <div class="col-10" style="height:50%;">
       <!-- 사용자 이름 -->
@@ -10,7 +10,7 @@
         <p>작성한 글이 없습니다.</p>
       </div>
       <div v-else class="row">
-        <div class="article-item col-6" v-for="article in userMypage.article_set" :key="article.id" @click="goToDetail(article.id)">
+        <div class="article-item col-6" v-for="article in userMypage.article_set" :key="article.id" @click="goToDetail(article)">
           <div>
             <img style="width :60%; height:60%;" :src="`http://127.0.0.1:8000${article.img}`" alt="글 사진">
             <!-- <h2 class="article-title">제목: {{ article.title }}</h2> -->
@@ -23,7 +23,7 @@
         <p>좋아요한 글이 없습니다.</p>
       </div>
       <div v-else>
-        <div class="article-row" v-for="likedArticle in userMypage.like_articles" :key="likedArticle.id" @click="goToDetail(likedArticle.id)">
+        <div class="article-row" v-for="likedArticle in userMypage.like_articles" :key="likedArticle.id" @click="goToDetail(likedArticle)">
           <div class="article-item">
             <img :src="`http://127.0.0.1:8000${likedArticle.img}`" alt="글 사진">
           </div>
@@ -62,8 +62,9 @@ export default {
           console.error(err)
         })
     },
-    goToDetail(articleId) {
-      this.$router.push(`/articles/${articleId}`)
+    goToDetail(article) {
+      console.log(article.id)
+      this.$router.push(`/articles/${article.id}`)
     },
   },
   created() {

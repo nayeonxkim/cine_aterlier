@@ -1,10 +1,10 @@
 <template>
   <div id="comment-container" class="row ml-2" style="overflow: hidden;">
-    <div class="col-10" style="text-align: left; margin: 0% 2%; padding: 0;">
+    <div class="col-8" style="text-align: left; margin: 0% 2%; padding: 0;">
       <span>{{ commentItem.content }}</span>
     </div>
     <div class="col-1" style="text-align: right; margin-left: 3%">
-      <button class="gray-btn" style="padding: 5px 19px;" v-if="isAuthor" @click="deleteComment">X</button>
+      <button class="gray-btn" style="padding: 5px 19px;" @click="deleteComment">X</button>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   },
   computed:{
     isAuthor(){
-      if(this.commentItem.author === this.$store.state.currentUser.id){
+      if(this.commentItem.author.id === this.$store.state.currentUser.id){
         return true
       } else{
         return false

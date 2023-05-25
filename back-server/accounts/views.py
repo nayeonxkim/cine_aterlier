@@ -6,14 +6,14 @@ from rest_framework.decorators import permission_classes
 from .serializers import UserSerializer, UserMypageSerializer
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+@permission_classes([AllowAny])
 def info(request):
     current_user = request.user
     serializer = UserSerializer(current_user)
     return Response(serializer.data)
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+@permission_classes([AllowAny])
 def mypage(request):
     current_user = request.user
     serializer = UserMypageSerializer(current_user)
