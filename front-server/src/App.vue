@@ -10,7 +10,7 @@
         <div id="right-nav" class="d-flex justify-content-end">
           <router-link to="/home" class="custom-cat p-2">Home</router-link> 
           <router-link v-if="!isLoggedIn" to="/" class="custom-cat p-2">Login</router-link> 
-          <router-link v-else to="/" class="custom-cat p-2">Logout</router-link> 
+          <router-link v-else to="/" class="custom-cat p-2">MyPage</router-link> 
         </div>
       </div>
       <div class="logo" :style="logoStyle">CINE ATELIER</div>

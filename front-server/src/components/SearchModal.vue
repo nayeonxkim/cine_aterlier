@@ -65,6 +65,7 @@
       <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="margin: 10px; padding: 5px 10px; text-decoration:none;">나만의 영화 이미지 만들기</a>
     </div>
   </div>
+
   </div>
 </template>
 
