@@ -93,10 +93,9 @@ def comment_create(request, article_pk):
 @permission_classes([IsAuthenticated])
 def comment_delete(request, article_pk, comment_pk):
     user = User.objects.get(id=request.user.id)
-
-    comment = get_object_or_404(Comment, pk=comment_pk)
-    if comment.author != user:
-        return Response(status=status.HTTP_403_FORBIDDEN)
+    comment = get_object_or_404(Comment,article_id=article_pk, pk=comment_pk)
+    # if comment.author != user:
+    #     return Response(status=status.HTTP_403_FORBIDDEN)
     # if comment.token != request.auth.key:
     #     return Response(status=status.HTTP_403_FORBIDDEN)
     

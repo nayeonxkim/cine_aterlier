@@ -68,7 +68,7 @@ def img(request, movie_pk):
 # 6. context에 영화 제목, 화가, 이미지 경로를 넣어서 반환
 
 # [내 애플리케이션] > [앱 키] 에서 확인한 REST API 키 값 입력
-REST_API_KEY = '9a5517b855fcd53e94751f63e3795c75'
+REST_API_KEY = '0110af0cf7c705c71a00c15f68e93b58'
 
 # 이미지 생성하기 요청
 def t2i(text, batch_size=2):
@@ -111,7 +111,7 @@ def getKarloImg(request, movieId1, movieId2, painter):
     
     
     response = t2i(prompt, 5)
-    # return JsonResponse(response)
+
     for image_data in response["images"]:
         image_id = image_data["id"]
         image_url = image_data["image"]
