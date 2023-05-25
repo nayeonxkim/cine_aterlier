@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff;">
+    <div id="app" class="mt-0" :class="{'opacity-bg':isLoading}" style="background-color: #ffffff; min-height: 76.8vh;">
       <div id="navbar-main" class="navbar">
         <div id="left-nav" class="d-flex justify-content-start">
           <router-link to="/movie" class="custom-cat p-2">Movie</router-link> 
@@ -154,4 +154,17 @@ export default {
   padding: 3%;
 }
 
+.app-footer {
+  background-color: #000;
+  height: 80px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.app-footer-text {
+  color: #ffffff;
+  padding-top: 1%;
+  /* margin-top: 20%; */
+}
 </style>
