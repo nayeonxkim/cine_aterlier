@@ -11,7 +11,12 @@ from rest_framework.authtoken.models import Token
 from rest_framework import status
 
 from .models import Article, Comment
+from django.contrib.auth import get_user_model
+
+
+
 from .serializers import ArticleSerializer, CommentSerializer
+User = get_user_model()
 
 # 게시글 전체 조회
 @api_view(['GET'])
@@ -46,8 +51,10 @@ def detail(request, article_pk):
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update(request, article_pk):
+    user = User.objects.get(username=request.user.username)
     article = get_object_or_404(Article, pk=article_pk)
-    if article.author != request.user:
+
+    if article.author != user:
         return Response(status=status.HTTP_403_FORBIDDEN)
     
     serializer = ArticleSerializer(article, data=request.data)
@@ -60,8 +67,11 @@ def update(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete(request, article_pk):
+    user = User.objects.get(username=request.user.username)
     article = get_object_or_404(Article, pk=article_pk)
-    if article.author != request.user:
+
+    article = get_object_or_404(Article, pk=article_pk)
+    if article.author != user:
         return Response(status=status.HTTP_403_FORBIDDEN)
     article.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
@@ -81,8 +91,11 @@ def comment_create(request, article_pk):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def comment_delete(request, article_pk, comment_pk):
-    article = get_object_or_404(Article, pk=article_pk)
+    user = User.objects.get(username=request.user.username)
+
     comment = get_object_or_404(Comment, pk=comment_pk)
+    if comment.author != user:
+        return Response(status=status.HTTP_403_FORBIDDEN)
     if comment.token != request.auth.key:
         return Response(status=status.HTTP_403_FORBIDDEN)
     

@@ -1,15 +1,16 @@
 from django.db import models
 from accounts.models import User
+from django.conf import settings
 
 class Article(models.Model):
     img = models.ImageField(upload_to='', blank=False, null=True) 
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     like_user = models.ManyToManyField(User, blank=True, related_name='like_articles')
     title = models.CharField(max_length=100)
     content = models.TextField()
 
 class Comment(models.Model):
-    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.TextField()
     token = models.CharField(max_length=255, blank=True)
