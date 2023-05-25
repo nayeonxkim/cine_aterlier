@@ -7,13 +7,13 @@
           <h5 class="modal-title" id="exampleModalToggleLabel">영화 검색</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <SelectMovie />
-        </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="margin-right: 8.5%">
           <button @click="searchedList_reset" class="custom-btn"
           data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
           data-bs-dismiss="modal" style="padding: 5px 10px;">다음으로</button>
+        </div>
+        <div class="modal-body">
+          <SelectMovie />
         </div>
       </div>
     </div>
@@ -25,16 +25,16 @@
           <h5 class="modal-title" id="exampleModalToggleLabel2">두 번째 영화 선택하기</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <SelectMovie />
-        </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="margin-right: 8.5%">
           <button @click="searchedList_reset" class="custom-btn"
           data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
           data-bs-dismiss="modal" style="padding: 5px 10px;">영화 다시 고르기</button>
           <button @click="searchedList_reset" class="custom-btn"
           data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
           data-bs-dismiss="modal" style="padding: 5px 10px;">다음으로</button>
+        </div>
+        <div class="modal-body">
+          <SelectMovie />
         </div>
       </div>
     </div>
@@ -60,7 +60,11 @@
       </div>
     </div>
   </div>
-  <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px; text-decoration:none;">영화 검색</a>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <a class="custom-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button" style="padding: 5px 10px; text-decoration:none;">ㄴㅁㅇ ㅇㅎㅇㅁㅈ ㅁㄷㄱ</a>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -102,9 +106,9 @@ export default {
 </script>
 
 <style scoped>
-.modal-body{
+/* .modal-body{
   padding: 20px;
-}
+} */
 
 .loading {
   z-index: 2;
@@ -119,8 +123,6 @@ export default {
   border: #000 solid 3px;
   border-radius: 0;
   background-color: transparent;
-  margin: 0.5% 0.5% 0.5% 0.5%;
-  padding: 1% 2%  /* 여기 윈도우, 맥 호환 문제인지 확인 할 것 */
 }
 
 .custom-btn:hover {
