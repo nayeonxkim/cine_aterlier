@@ -62,7 +62,7 @@ export default {
     handleScroll() {
       this.scrollPosition = window.scrollY;
     },
-  }
+  },
 };
 </script>
 
