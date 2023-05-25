@@ -13,7 +13,7 @@
         <p>{{ painter.name }}</p>
       </div>
     </div>
-    <input @keyup.enter="selectCustomPainter" style="width: 50%; text-align: center; border: 1px solid #000; border-radius:5px;" type="text" placeholder="기타 입력 후 엔터">
+    <input id="search-input" @keyup.enter="selectCustomPainter" type="text" placeholder="그 외 입력 후 엔터">
     <h3 class="mt-3">{{selectedPainter}}</h3>
   </div>
 </template>
@@ -84,6 +84,14 @@ export default {
 </script>
 
 <style scoped>
+#search-input {
+  margin-right: 20px;
+  border: solid 3px black;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 #painter:hover,
 .selected {
   cursor: pointer;
