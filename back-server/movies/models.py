@@ -1,5 +1,6 @@
 from django.db import models
-from accounts.models import User
+from django.conf import settings
+
 class Movie(models.Model):
     tmdb_id = models.IntegerField(primary_key=True)
     original_language = models.CharField(max_length=255)
@@ -25,7 +26,7 @@ class MovieKeyword(models.Model):
     keyword_id = models.ForeignKey(Keyword, on_delete=models.CASCADE)
 
 class Rating(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='ratings')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='ratings')
     score = models.DecimalField(max_digits=2, decimal_places=1, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
